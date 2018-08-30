@@ -1,0 +1,49 @@
+.top-scorers-head {
+	font-size: 11px;
+	font-family: @font-HelveticaNeueCyr-Medium;
+	text-align: right;
+
+	> .th {
+		display: inline-block;
+		line-height: 1.25;
+		text-align: right;
+		vertical-align: top;
+		width: 45px;
+	}
+}
+
+.top-scorers-detail {
+	align-items: center;
+	border-bottom: @border-base;
+	display: flex;
+	font-family: @font-HelveticaNeueCyr-Light;
+	font-size: 11px;
+	line-height: 28px;
+	justify-content: space-between;
+	padding: 7px 0;
+	width: 100%;
+
+	> .name {
+		cursor: pointer;
+		display: inline-block;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	> .name:hover {
+		color: @text-hover-color;
+	}
+}
+
+.top-scorers-outcome {
+	display: flex;
+	font-family: @font-HelveticaNeueCyr-Medium;
+	justify-content: flex-end;
+
+	> .count {
+		flex-basis: 45px;
+		text-align: right;
+		width: 45px;
+	}
+}

@@ -1,0 +1,334 @@
+/*================================================*/
+/*					 FAVORITES			      */
+/*================================================*/
+.homepage .favorites main {
+  margin: 0 30px 0 0;
+}
+.favorites .pr-main {
+  padding: 30px 0;
+  overflow: hidden;
+}
+.favorites .pr-main .pr-main-content {
+  z-index: 79;
+}
+.favorites .pr-main .pr-main-title {
+  width: 100%;
+  position: relative;
+  border-bottom: solid 1px #f4f4f4;
+  z-index: 79;
+}
+.favorites .pr-main .pr-main-title-box {
+  width: 434px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 32px;
+}
+.favorites .pr-main .pr-clear-list {
+  font-family: 'HelveticaNeueCyr';
+  font-size: 14px;
+  font-weight: 500;
+  color: #486e7c;
+}
+.favorites .pr-main .pr-clear-list a {
+  background: url('../img/icons/icon-clear-list.svg') no-repeat 0 0;
+  display: inline-block;
+  height: 19px;
+  padding: 0 0 0 20px;
+}
+.favorites .pr-main .pr-clear-list a p {
+  color: #486e7c;
+}
+.pr-favorites-main {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 0 0 25px;
+}
+.pr-favorites-main .pr-favorites-left {
+  width: 384px;
+  margin-top: 15px;
+}
+.pr-favorites-main .pr-favorites-left .pr-main-content-row {
+  border: 0;
+  border-bottom: solid 1px #f4f4f4;
+}
+.pr-favorites-main .pr-favorites-left .pr-favorites-left-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 7px;
+  margin: 0 0 20px 0;
+  position: relative;
+  z-index: 79;
+}
+.pr-favorites-main .pr-favorites-left .pr-favorites-left-nav a {
+  display: block;
+  border: solid 1px #c9cccf;
+  border-radius: 4px;
+  font-family: 'HelveticaNeueCyr';
+  font-size: 14px;
+}
+.pr-favorites-main .pr-favorites-left .pr-favorites-left-nav a:nth-child(1) {
+  padding: 5px 10px 5px 26px;
+  background: url('../img/icons/icon-arrow-left-grey.png') no-repeat 9% 50%;
+}
+.pr-favorites-main .pr-favorites-left .pr-favorites-left-nav a:nth-child(1):hover {
+  background: url('../img/icons/icons-arrow-left.svg') no-repeat 9% 50%;
+}
+.pr-favorites-main .pr-favorites-left .pr-favorites-left-nav a:nth-child(2) {
+  padding: 5px 26px 5px 10px;
+  background: url('../img/icons/icon-arrow-right-grey.svg') no-repeat 91% 50%;
+}
+.pr-favorites-main .pr-favorites-left .pr-favorites-left-nav a:nth-child(2):hover {
+  background: url('../img/icons/icons-arrow-right.svg') no-repeat 91% 50%;
+}
+.pr-favorites-main .pr-favorites-left .pr-favorites-left-nav a p {
+  color: #c9cccf;
+}
+.pr-favorites-main .pr-favorites-left .pr-favorites-left-nav a:hover {
+  border-color: #486e7c;
+}
+.pr-favorites-main .pr-favorites-left .pr-favorites-left-nav a:hover p {
+  color: #486e7c;
+}
+.pr-favorites-main .pr-favorites-right {
+  width: 433px;
+  position: relative;
+  overflow: hidden;
+}
+.pr-favorites-main .pr-favorites-right .aside-right-scrollable {
+  align-self: flex-end;
+}
+.pr-favorites-main .pr-favorites-right .aside-right-scrollable-wrapper {
+  width: 433px;
+  height: 580px!important;
+}
+.pr-favorites-main .pr-favorites-right .aside-right .nm-tab-content .odds__left {
+  flex-basis: 70%;
+}
+.pr-favorites-main .pr-favorites-right .aside-right .nm-tab-content .odds__right {
+  flex-basis: 45%;
+}
+.favorites .aside-right .pr-favorite-container .pr-favorite-btn i {
+  margin: 0;
+}
+.favorites .aside-right .pr-favorite-container .pr-fvr-muted::after {
+  width: 30px;
+  right: -15px;
+}
+#teams {
+  padding: 30px;
+}
+#teams .pr-main-content-row {
+  border: 0;
+  padding: 0;
+}
+#teams .pr-match-row {
+  border: 0;
+  border-bottom: solid 1px #f5f5fd;
+  margin: 0;
+  padding: 5px 0;
+}
+#teams .pr-match-row:hover {
+  background-color: #fff;
+  border-bottom: solid 1px #f5f5fd;
+  border-radius: 0;
+}
+#teams .pr-match-team-name {
+  font-weight: 400;
+}
+#teams .pr-favorite-btn {
+  width: 24px;
+  height: 24px;
+}
+#teams .pr-left-col {
+  min-width: 22px;
+  max-width: 22px;
+  padding: 0;
+}
+#teams .pr-left-col::after {
+  display: none;
+}
+#teams .pr-match-team-name {
+  max-width: 145px;
+}
+.pr-favorites-main .nm-block {
+  border-radius: 0;
+}
+.pr-favorites-main .aside-right-wrapper {
+  border-radius: 0;
+}
+.pr-match-rows-wrap .pr-favorites-main .aside-right .nm-aside-headblock {
+  background: #f4f4f4;
+}
+.aside-right.aside-right-favorites {
+  background-color: #fff;
+}
+.aside-right.aside-right-favorites .nm-tabs-content {
+  padding: 0;
+}
+.aside-right.aside-right-favorites .nm-aside-bigtabs-block .nm-tabs-wrapper .nm-tabs-list {
+  padding-top: 20px;
+}
+.favorites .aside-right .odds__goals .odds__right-bottom .odds__value:last-of-type::before {
+  left: 78px;
+}
+.nm-moz .favorites .pr-favorites-main .aside-right-scrollable-wrapper > .scroll-wrapper.nm-scroll-area > .scroll-content {
+  width: 449px!important;
+  max-height: 100%!important;
+}
+.favorites .aside-right-scrollable-wrapper > .scroll-wrapper.nm-scroll-area > .scroll-content {
+  width: 433px!important;
+}
+.nm-ie .favorites .aside-right-scrollable-wrapper > .nm-scroll-area.scroll-wrapper > .scroll-content {
+  width: 449px!important;
+}
+/*================================================*/
+/*						  MEDIA				      */
+/*================================================*/
+@media (max-width: 1200px) {
+  .homepage main .pr-nopage {
+    padding: 50px 0;
+  }
+  .homepage main .pr-nopage-left img {
+    right: -150px;
+  }
+  .pr-favorites-main .pr-favorites-left {
+    max-width: 320px;
+    width: 100%;
+  }
+}
+@media (max-width: 920px) {
+  .favorites .pr-main {
+    overflow: visible;
+  }
+  .favorites .scroll-element.scroll-x.scroll-scrollx_visible {
+    display: none;
+  }
+  .pr-favorites-main .pr-favorites-right {
+    position: absolute;
+    top: -65px;
+    right: -29px;
+    overflow: visible;
+  }
+  .pr-favorites-main .pr-favorites-right.open {
+    z-index: 81;
+  }
+  .pr-favorites-main .pr-favorites-right .aside-right {
+    overflow: hidden;
+  }
+  .pr-favorites-right.pr-favorites-scrollable {
+    background-color: transparent;
+    transform: none;
+  }
+  .pr-favorites-right.pr-favorites-scrollable:not(.open) .aside-right-scrollable-wrapper {
+    transform: translateX(434px);
+  }
+  .favorites .pr-main .pr-main-title-box {
+    width: 100%;
+  }
+  .pr-favorites-main .pr-favorites-left {
+    max-width: none;
+    width: 100%;
+    padding: 0 25px 0 0;
+  }
+  .pr-favorites-main .pr-favorites-left .pr-favorites-left-nav {
+    padding: 0;
+  }
+  .pr-favorites-main .pr-favorites-right .aside-right-scrollable-wrapper {
+    height: 317px !important;
+  }
+  .aside-right.aside-right-favorites {
+    position: static !important;
+  }
+}
+@media (max-width: 800px) and (min-width: 701px) {
+  .pr-favorites-main .pr-favorites-right {
+    width: 270px;
+  }
+  .pr-favorites-main .pr-favorites-right .aside-right-scrollable-wrapper {
+    width: 270px;
+  }
+  .pr-favorites-main .pr-favorites-right .aside-right .nm-tab-content .odds__left {
+    flex-basis: 35%;
+  }
+  .nm-moz .favorites .pr-favorites-main .aside-right-scrollable-wrapper > .scroll-wrapper.nm-scroll-area > .scroll-content {
+    width: 287px!important;
+  }
+  .favorites .aside-right-scrollable-wrapper > .scroll-wrapper.nm-scroll-area > .scroll-content {
+    width: 271px!important;
+  }
+  .nm-ie .favorites .aside-right-scrollable-wrapper > .nm-scroll-area.scroll-wrapper > .scroll-content {
+    width: 287px!important;
+  }
+}
+@media (max-width: 700px) {
+  .favorites .nm-grow {
+    flex-direction: column;
+  }
+  .favorites main {
+    width: 100%;
+    margin: 7px 0 8px 0!important;
+  }
+  .favorites .pr-main-odds,
+  .favorites .pr-main-title-right {
+    display: block;
+  }
+  .favorites .above-content-block-homepage {
+    margin: 29px 0 23px 0;
+  }
+  .favorites .above-content-block-homepage .nm-h1 {
+    font-size: 24px;
+  }
+  .favorites .pr-match-row {
+    flex-direction: row;
+  }
+  .favorites .pr-main-content-row .pr-match-rows-wrap {
+    display: block;
+  }
+  .favorites .pr-main-content-row .pr-match-row-right-wrap {
+    display: flex;
+    align-items: center;
+    opacity: 1;
+    box-shadow: none;
+  }
+  aside {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .favorites .above-content-block-homepage {
+    margin: 0;
+  }
+  .favorites .above-content-block-homepage .nm-h1 {
+    font-size: 16px;
+  }
+  .favorites .pr-main {
+    padding: 25px 0 8px 0;
+    overflow: visible;
+  }
+  .favorites .pr-main .pr-main-title-box {
+    padding: 0 11px;
+  }
+  .favorites .aside-right .nm-aside-bigtabs-block .nm-tabs-wrapper .nm-tabs-list {
+    padding: 20px 9px 12px;
+  }
+  .pr-favorites-main {
+    padding: 0 0 0 11px;
+  }
+  .pr-favorites-main .pr-favorites-left {
+    padding: 0 11px 0 0;
+  }
+  .pr-favorites-main .pr-main-content-row {
+    padding: 0 0 18px 0;
+  }
+  .pr-favorites-main .pr-favorites-right {
+    display: none;
+  }
+  #teams {
+    padding: 29px 9px 27px 9px;
+  }
+  .pr-main-content-row .pr-match-row-right-wrap .pr-favorite-container .nm-dropdown {
+    opacity: 0.8;
+  }
+}

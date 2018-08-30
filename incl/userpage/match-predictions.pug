@@ -1,0 +1,46 @@
+-
+    var matchPredictions = [
+        { date: '09 Apr 17',teams: [{name: 'Real Madrid', score: 2}, {name: 'RSC Anderlecht', score: 3}], event: 4, eventStatus: 'win', ratio: '15.00', isFavorite: false},
+        { date: '03 Apr 17',teams: [{name: 'Trindad and Tobago', score: 1}, {name: 'Real Madrid', score: 2}], event: 1,eventStatus: 'undefined', ratio: '2.50', isFavorite: false},
+        { date: '02 Apr 17',teams: [{name: 'Real Madrid', score: 3}, {name: 'RSC Anderlecht', score: 3, record: 'pass'}], event: null, ratio: '9.50', isFavorite: false},
+        { date: '01 Apr 17',teams: [{name: 'Trindad and Tobago', score: 1}, {name: 'Real Madrid', score: 2}], event: 3, eventStatus: 'win', ratio: '4.33', isFavorite: true},
+        { date: '01 Apr 17',teams: [{name: 'Real Madrid', score: 2}, {name: 'RSC Anderlecht', score: 4}], event: 2, eventStatus: 'loss', ratio: '1.33', isFavorite: false}
+    ]
+
+.box-container
+    .box-title.-bottom-border
+        .title MATCH PREDICTIONS
+    .box-inner
+        .box-pagination
+            a.btn-userpage-navigation.-prev
+                svg.svg-ic(width="6" height="9")
+                    use(xlink:href="#arrow-left")
+                | Older
+
+            a.btn-userpage-navigation.-next
+                | Newer
+                svg.svg-ic(width="6" height="9")
+                    use(xlink:href="#arrow-right")
+
+        .box-content.-bottom-border
+            each val in matchPredictions
+                .match-predictions-item
+                    .match-prediction-event
+                        .date= val.date
+                        .match-prediction-title
+                            - var firstTeamScore = val.teams[0].score;
+                            each team in val.teams
+                                .match-prediction-team
+                                    span.name= team.name
+                                    span.score(class= team.score > firstTeamScore ? '-bold' : '')= team.score
+                                    if team.record
+                                        span.mp-record
+                                            span(class='mp-record-' + team.record)
+                    .match-predictions-outcome
+                        .event-count
+                            if val.event
+                                .event-count-badge(class=val.eventStatus)= val.event
+                            else
+                                | N/A
+                        .ratio= val.ratio
+                        include favorite

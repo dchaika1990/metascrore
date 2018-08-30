@@ -1,0 +1,60 @@
+@import "../common/settings";
+
+.team-media-item {
+	display: block;
+	margin-top: 10px;
+	overflow: hidden;
+	width: 100%;
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&:hover > .team-media-caption {
+		> .title {
+			color: @text-hover-color;
+		}
+		> .subtext {
+			color: #a8adb2;
+		}
+	}
+}
+
+
+.team-media-screensaver {
+	border-radius: 4px;
+	float: left;
+	height: 53px;
+	margin-right: 17px;
+	position: relative;
+	overflow: hidden;
+	width: 84px;
+
+	> .screen {
+		display: block;
+		width: 100%;
+	}
+
+	> .play {
+		fill: #F9F9F2;
+		left: 50%;
+		margin-left: -13px;
+		margin-top: -13.5px;
+		position: absolute;
+		top: 50%;
+	}
+}
+
+.team-media-caption {
+	font-size: 11px;
+
+	> .title {
+		color: #56595e;
+		font-family: @font-HelveticaNeueCyr-Roman;
+	}
+
+	> .subtext {
+		color: #a8adb2;
+		font-family: @font-HelveticaNeueCyr-Light;
+	}
+}

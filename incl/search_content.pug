@@ -1,0 +1,143 @@
+//SEARCH CONTENT BEGIN
+main.sr-main-wrapper
+    .sr-mobile-tabs
+        ul.sr-tabs__caption
+            li.active
+                .sr-title Teams
+                    span.sr-count.sr-count-teams (8)
+            li
+                .sr-title Players
+                    span.sr-count.sr-count-players (6)
+            li
+                .sr-title Tournaments
+                    span.sr-count.sr-count-tournaments (7)
+        .sr-block-teams.sr-block.sr-tabs__content.active
+            .sr-block__header.sr-title
+                .sr-title-left Teams
+                .sr-title-right 15 results
+            .sr-block__body
+                -for(var k=0; k<8; k++) {
+                    .sr-block-row
+                        .sr-block-row-left
+                            .sr-icon.team-icon
+                                img(src="img/temp/photo-team-1.jpg" alt='millan')
+                        .sr-block-row-right
+                            ul.sr-breadcrumbs
+                                li: a(href="javascript:void(0)") Football
+                                li: a(href="javascript:void(0)") Primeira Liga
+                            -if(k==0 || k==4) {
+                            .sr-team-name
+                                a(href="javascript:void(0)").sr-name-link.sr-team-name-link FC&nbsp;
+                                    span.search-hint Porto
+                            -}
+                            -if(k==1 || k==5) {
+                            .sr-team-name
+                                a(href="javascript:void(0)").sr-name-link.sr-team-name-link FC&nbsp;
+                                    span.search-hint Porto &nbsp;
+                                    | B
+                            -}
+                            -if(k==2 || k==6) {
+                            .sr-team-name
+                                a(href="javascript:void(0)").sr-name-link.sr-team-name-link FC&nbsp;
+                                    span.search-hint Porto &nbsp;
+                                    | U19
+                            -}
+                            -if(k==3 || k==7) {
+                            .sr-team-name
+                                a(href="javascript:void(0)").sr-name-link.sr-team-name-link FC&nbsp;
+                                    span.search-hint Porto &nbsp;
+                                    | Vitalis
+                            -}
+                -}
+            .sr-block__footer
+                a(href="javascript:void(0)").sr-more-btn
+                    i.line-icon
+                    |Show more
+
+
+
+        .sr-block-players.sr-block.sr-tabs__content
+            .sr-block__header.sr-title
+                .sr-title-left Players
+                .sr-title-right 7 results
+            .sr-block__body
+                -for(var k=0; k<6; k++) {
+                .sr-block-row.player
+                    .sr-block-row-left
+                        .sr-icon.player-icon
+                            img(src="img/photo-player-default.jpg")
+                    .sr-block-row-right
+                        .sr-player-name.sr-name
+                            -if(k==0 || k==3) {
+                            a.sr-name-link(href="javascript:void(0)") Segundo Arlen&nbsp;
+                                span.search-hint Porto
+                                | carrero
+                            -}
+                            -if(k==1 || k==4) {
+                            a.sr-name-link(href="javascript:void(0)") Alessio Lo&nbsp;
+                                span.search-hint Porto
+                            -}
+                            -if(k==2 || k==5) {
+                            a.sr-name-link(href="javascript:void(0)") Alex&nbsp;
+                                span.search-hint Porto
+                            -}
+                -}
+
+        .sr-block-tournaments.sr-block.sr-tabs__content
+            .sr-block__header.sr-title
+                .sr-title-left Tournaments
+                .sr-title-right 15 results
+            .sr-block__body
+                -for(var k=0; k<7; k++) {
+                .sr-block-row
+                    .sr-block-row-left
+                        .sr-icon.team-icon
+                            img(src="img/temp/photo-team-1.jpg" alt='millan')
+                    .sr-block-row-right
+                        ul.sr-breadcrumbs
+                            -if(k==0 || k==1 || k==4 || k==5) {
+                            li: a(href="javascript:void(0)") Challenger
+                            -} else {
+                            li: a(href="javascript:void(0)") WTA
+                            - }
+                        .sr-team-namec
+                            -if(k==0) {
+                            a(href='#').sr-name-link.sr-tournament-name-link ATP Challenger&nbsp;
+                                span.search-hint Porto
+                                |, Portugal Men Singles
+                            -}
+                            -if(k==1) {
+                            a(href='#').sr-name-link.sr-tournament-name-link
+                                span.search-hint Porto&nbsp;
+                                | roz, Slovenia
+                            -}
+                            -if(k==2) {
+                            a(href='#').sr-name-link.sr-tournament-name-link
+                                span.search-hint Porto&nbsp;
+                            -}
+                            -if(k==3) {
+                            a(href='#').sr-name-link.sr-tournament-name-link ATP Challenger&nbsp;
+                                span.search-hint Porto&nbsp;
+                                | Alegre, Brazil Singles
+                            -}
+                            -if(k==4) {
+                            a(href='#').sr-name-link.sr-tournament-name-link ATP Challenger&nbsp;
+                                span.search-hint Porto&nbsp;
+                                | Alegre, Brazil Men Singles
+                            -}
+                            -if(k==5) {
+                            a(href='#').sr-name-link.sr-tournament-name-link
+                                span.search-hint Porto
+                                | roz
+                            -}
+                            -if(k==6) {
+                            a(href='#').sr-name-link.sr-tournament-name-link
+                                span.search-hint Porto
+                                | roz, Doubles
+                            -}
+                -}
+            .sr-block__footer
+                a(href="javascript:void(0)").sr-more-btn
+                    i.line-icon
+                    | Show more
+//SEARCH CONTEND END

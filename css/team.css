@@ -1,0 +1,471 @@
+/* шрифты для userpage подключены отдельно, так как некорректно объявлены в main.css */
+@font-face {
+  font-family: 'GothamPro-user';
+  src: url('../fonts/GothamPro.eot');
+  src: url('../fonts/GothamPro.eot?#iefix') format('embedded-opentype'), url('../fonts/GothamPro.woff') format('woff'), url('../fonts/GothamPro.ttf') format('truetype'), url('../fonts/GothamPro.svg#../fonts/GothamPro') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GothamPro-Medium-user';
+  src: url('../fonts/GothamPro-Medium.eot');
+  src: url('../fonts/GothamPro-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/GothamPro-Medium.woff') format('woff'), url('../fonts/GothamPro-Medium.ttf') format('truetype'), url('../fonts/GothamPro-Medium.svg#../fonts/GothamPro-Medium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'HelveticaNeueCyr-Light-user';
+  src: url('../fonts/HelveticaNeueCyr-Light.eot');
+  src: url('../fonts/HelveticaNeueCyr-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/HelveticaNeueCyr-Light.woff') format('woff'), url('../fonts/HelveticaNeueCyr-Light.ttf') format('truetype'), url('../fonts/HelveticaNeueCyr-Light.svg#../fonts/HelveticaNeueCyr-Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'HelveticaNeueCyr-Roman-user';
+  src: url('../fonts/HelveticaNeueCyr-Roman.eot');
+  src: url('../fonts/HelveticaNeueCyr-Roman.eot?#iefix') format('embedded-opentype'), url('../fonts/HelveticaNeueCyr-Roman.woff') format('woff'), url('../fonts/HelveticaNeueCyr-Roman.ttf') format('truetype'), url('../fonts/HelveticaNeueCyr-Roman.svg#../fonts/HelveticaNeueCyr-Roman') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'HelveticaNeueCyr-Medium-user';
+  src: url('../fonts/HelveticaNeueCyr-Medium.eot');
+  src: url('../fonts/HelveticaNeueCyr-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/HelveticaNeueCyr-Medium.woff') format('woff'), url('../fonts/HelveticaNeueCyr-Medium.ttf') format('truetype'), url('../fonts/HelveticaNeueCyr-Medium.svg#../fonts/HelveticaNeueCyr-Medium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.division-dropdown {
+  display: inline-block;
+  margin-left: -10px;
+  position: relative;
+  vertical-align: top;
+}
+.division-dropdown-selected {
+  color: #486e7c;
+  font-family: 'HelveticaNeueCyr-Medium-user', sans-serif;
+  font-size: 14px;
+  line-height: 1.2;
+  padding: 6px 21px 6px 10px;
+  position: relative;
+  white-space: nowrap;
+}
+.division-dropdown-selected:after {
+  border-color: #486e7c transparent transparent transparent;
+  border-style: solid;
+  border-width: 3px 3px 0 3px;
+  content: '';
+  display: block;
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  margin-top: -2px;
+}
+.division-dropdown-list {
+  display: none;
+  left: 0;
+  font-family: 'GothamPro-Medium-user', sans-serif;
+  font-size: 9px;
+  position: absolute;
+  text-transform: uppercase;
+  top: 100%;
+  width: 100%;
+}
+.division-dropdown-list > .item:first-child {
+  border-top: none;
+}
+.division-dropdown-list > .item:last-child {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.division-dropdown-list > .item {
+  background: #fff;
+  color: #a1a6ac;
+  cursor: pointer;
+  border-top: 1px solid #c9cccf;
+  padding: 8px 10px;
+}
+.division-dropdown-list > .item.-selected {
+  color: #3e80a9;
+}
+.division-dropdown-list > .item.-selected:before {
+  background-color: #3e80a9;
+  border-radius: 50%;
+  display: inline-block;
+  content: '';
+  height: 7px;
+  margin-right: 12px;
+  width: 7px;
+}
+.division-dropdown-list > .item.-selected:hover,
+.division-dropdown-list > .item:hover {
+  background-color: #3e80a9;
+  color: #fff;
+}
+.division-dropdown-list > .item.-selected:hover:before {
+  background-color: #fff;
+}
+.standings-table {
+  margin-bottom: 30px;
+}
+.standings-row {
+  border-bottom: 1px solid #f4f4f4;
+  color: #43474d;
+  cursor: pointer;
+  display: flex;
+  font-family: 'HelveticaNeueCyr-Roman-user', sans-serif;
+  font-size: 11px;
+  justify-content: space-between;
+  padding: 6px 0;
+}
+.standings-row:not(.-th-row):hover {
+  background-color: #f4f4f4;
+}
+.standings-row:not(.-th-row):hover .team-title {
+  color: #4186b1;
+}
+.standings-row.-th-row {
+  justify-content: flex-end;
+}
+.standings-col {
+  display: flex;
+}
+.standings-col.-to-right {
+  justify-content: flex-end;
+}
+.standings-col > .team-logo > .ic {
+  display: block;
+  height: 15px;
+  margin: 0 5px;
+  width: auto;
+}
+.standings-col > .points,
+.standings-col > .team-title {
+  color: #000;
+}
+.standings-col > .score {
+  margin: 0 5px;
+  min-width: 15px;
+  text-align: center;
+}
+.standings-col > .goals {
+  justify-content: center;
+  width: 36px;
+}
+.standings-col > .last {
+  display: flex;
+  justify-content: center;
+  width: 100px;
+}
+.standings-col > .points {
+  width: 20px;
+}
+.standings-th {
+  color: #a1a6ac;
+  margin: 0 5px;
+  min-width: 15px;
+  text-align: center;
+}
+.standings-position {
+  border-radius: 50%;
+  height: 15px;
+  line-height: 15px;
+  margin: 0 5px;
+  text-align: center;
+  width: 15px;
+}
+.standings-position.-first {
+  background-color: #33ed9c;
+}
+.standings-position.-top {
+  background-color: #486e7c;
+  color: #fff;
+}
+.standings-position.-penult {
+  background-color: #f7c24f;
+  color: #fff;
+}
+.standings-position.-last {
+  background-color: #ed334d;
+  color: #fff;
+}
+.match-result {
+  border-radius: 50%;
+  height: 15px;
+  line-height: 15px;
+  margin: 0 1.5px;
+  position: relative;
+  width: 15px;
+}
+.match-result:after {
+  color: #fff;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+}
+.match-result.-loss {
+  background-color: #f05d6e;
+}
+.match-result.-loss:after {
+  content: 'L';
+}
+.match-result.-draw {
+  background-color: #a8adb2;
+}
+.match-result.-draw:after {
+  content: 'D';
+}
+.match-result.-win {
+  background-color: #2ad48e;
+}
+.match-result.-win:after {
+  content: 'W';
+}
+.team-players-caption {
+  border-bottom: 1px solid #dcdce3;
+  font-family: 'HelveticaNeueCyr-Medium-user', sans-serif;
+  font-size: 14px;
+  line-height: 1.25;
+  margin-bottom: 15px;
+  padding: 10px 10px 10px 31px;
+}
+.team-players-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -2.5px 30px;
+}
+.team-player-item {
+  flex-basis: 20%;
+  padding: 2.5px;
+}
+.team-player-item:hover > .box-container {
+  background-image: linear-gradient(to top, #486e7c, #3e80a9);
+  box-shadow: inset 0 5px 18px 0 rgba(0, 0, 0, 0.26);
+}
+.team-player-item > .box-container {
+  height: 100%;
+}
+.team-player-header {
+  border-bottom: 1px solid #f4f4f4;
+  display: flex;
+  font-size: 14px;
+  line-height: 1.2;
+  justify-content: space-between;
+  padding: 13px 15px;
+}
+.team-player-item:hover .team-player-header {
+  display: none;
+}
+.team-player-position {
+  font-family: 'HelveticaNeueCyr-Medium-user', sans-serif;
+  text-transform: capitalize;
+}
+.team-player-position.-forward {
+  color: #f69051;
+}
+.team-player-position.-midfielder {
+  color: #33ed5f;
+}
+.team-player-position.-goalkeeper {
+  color: #dedc25;
+}
+.team-player-position.-defender {
+  color: #90b6f4;
+}
+.team-player-number {
+  font-family: 'HelveticaNeueCyr-Light-user', sans-serif;
+  color: #43474d;
+}
+.team-player-content > .ic {
+  border: 1px solid #f4f4f4;
+  display: block;
+  border-radius: 50%;
+  height: 97px;
+  margin: 15px auto 13px;
+  width: 97px;
+}
+.team-player-item:hover .team-player-content {
+  color: #fff;
+  margin-top: 41px;
+}
+.team-player-name {
+  font-family: 'HelveticaNeueCyr-Light-user', sans-serif;
+  font-size: 18px;
+  margin: 12px auto 12px;
+  text-align: center;
+  width: 100%;
+}
+.team-player-footer {
+  color: #000;
+  border-top: 1px solid #f4f4f4;
+  display: flex;
+  font-size: 11px;
+  line-height: 16px;
+  padding: 8px 15px;
+  width: 100%;
+}
+.team-player-footer > .flag {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  height: 16px;
+  margin-right: 9px;
+  width: 16px;
+}
+.team-player-footer > .name {
+  color: #43474d;
+}
+.team-player-footer > .name:hover {
+  color: #4186b1;
+}
+.team-player-item:hover .team-player-footer {
+  display: none;
+}
+.team-player-controls {
+  display: none;
+  justify-content: space-between;
+  padding: 0 16px;
+  width: 100%;
+}
+.team-player-item:hover .team-player-controls {
+  display: flex;
+}
+.team-player-page-btn {
+  border: 1px solid #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'GothamPro-Medium-user', sans-serif;
+  font-size: 11px;
+  line-height: 1.1;
+  padding: 8px 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.team-player-page-btn:hover {
+  background-color: #fff;
+  color: #3e80a9;
+}
+.team-player-favorite-btn {
+  border: 1px solid #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 30px;
+  padding-top: 5px;
+  padding-left: 1px;
+  text-align: center;
+  width: 30px;
+}
+.team-player-favorite-btn > .icon-icon-favorite {
+  font-size: 13px;
+}
+.team-player-favorite-btn:hover {
+  background-color: #fff;
+  color: #3e80a9;
+}
+.team-about {
+  color: #000;
+  column-gap: 30px;
+  column-count: 2;
+  font-family: 'HelveticaNeueCyr-Light-user', sans-serif;
+  font-size: 14px;
+  margin: 20px 0 -20px;
+}
+.team-about a {
+  color: #486e7c;
+}
+.team-about p {
+  margin-bottom: 20px;
+}
+.top-scorers-head {
+  font-size: 11px;
+  font-family: 'HelveticaNeueCyr-Medium-user', sans-serif;
+  text-align: right;
+}
+.top-scorers-head > .th {
+  display: inline-block;
+  line-height: 1.25;
+  text-align: right;
+  vertical-align: top;
+  width: 45px;
+}
+.top-scorers-detail {
+  align-items: center;
+  border-bottom: 1px solid #f4f4f4;
+  display: flex;
+  font-family: 'HelveticaNeueCyr-Light-user', sans-serif;
+  font-size: 11px;
+  line-height: 28px;
+  justify-content: space-between;
+  padding: 7px 0;
+  width: 100%;
+}
+.top-scorers-detail > .name {
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.top-scorers-detail > .name:hover {
+  color: #4186b1;
+}
+.top-scorers-outcome {
+  display: flex;
+  font-family: 'HelveticaNeueCyr-Medium-user', sans-serif;
+  justify-content: flex-end;
+}
+.top-scorers-outcome > .count {
+  flex-basis: 45px;
+  text-align: right;
+  width: 45px;
+}
+.team-media-item {
+  display: block;
+  margin-top: 10px;
+  overflow: hidden;
+  width: 100%;
+}
+.team-media-item:first-child {
+  margin-top: 0;
+}
+.team-media-item:hover > .team-media-caption > .title {
+  color: #4186b1;
+}
+.team-media-item:hover > .team-media-caption > .subtext {
+  color: #a8adb2;
+}
+.team-media-screensaver {
+  border-radius: 4px;
+  float: left;
+  height: 53px;
+  margin-right: 17px;
+  position: relative;
+  overflow: hidden;
+  width: 84px;
+}
+.team-media-screensaver > .screen {
+  display: block;
+  width: 100%;
+}
+.team-media-screensaver > .play {
+  fill: #F9F9F2;
+  left: 50%;
+  margin-left: -13px;
+  margin-top: -13.5px;
+  position: absolute;
+  top: 50%;
+}
+.team-media-caption {
+  font-size: 11px;
+}
+.team-media-caption > .title {
+  color: #56595e;
+  font-family: 'HelveticaNeueCyr-Roman-user', sans-serif;
+}
+.team-media-caption > .subtext {
+  color: #a8adb2;
+  font-family: 'HelveticaNeueCyr-Light-user', sans-serif;
+}

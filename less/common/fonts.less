@@ -1,0 +1,20 @@
+.font-face(@font-family, @file-path, @font-weight, @font-style) {
+	@font-face {
+		font-family: @font-family;
+		src: url('@{file-path}.eot');
+		src: url('@{file-path}.eot?#iefix') format('embedded-opentype'),
+		url('@{file-path}.woff') format('woff'),
+		url('@{file-path}.ttf') format('truetype'),
+		url('@{file-path}.svg#@{file-path}') format('svg');
+		font-weight: @font-weight;
+		font-style: @font-style;
+	}
+}
+
+/* шрифты для userpage подключены отдельно, так как некорректно объявлены в main.css */
+
+.font-face('GothamPro-user', '../fonts/GothamPro', normal, normal);
+.font-face('GothamPro-Medium-user', '../fonts/GothamPro-Medium', normal, normal);
+.font-face('HelveticaNeueCyr-Light-user', '../fonts/HelveticaNeueCyr-Light', normal, normal);
+.font-face('HelveticaNeueCyr-Roman-user', '../fonts/HelveticaNeueCyr-Roman', normal, normal);
+.font-face('HelveticaNeueCyr-Medium-user', '../fonts/HelveticaNeueCyr-Medium', normal, normal);

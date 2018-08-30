@@ -1,0 +1,167 @@
+.topbar__right .cell__content {
+  display: flex;
+  align-items: center;
+}
+.ma_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  border: 1px solid;
+  background-color: transparent;
+  border-radius: 4px;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 8px 9px;
+}
+.ma_button:hover,
+.ma_button:active {
+  color: #333;
+  background-color: #fff;
+}
+.ma_button-sm {
+  font-family: 'Gotham Pro';
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+/*================================================*/
+/*						  TOPBAR			      */
+/*================================================*/
+.topbar a {
+  color: inherit;
+}
+.topbar__left,
+.topbar__right {
+  height: 100%;
+}
+.topbar__left {
+  flex-basis: 307px;
+  border-right: 1px solid rgba(245, 245, 253, 0.95);
+}
+.topbar__left .cell {
+  padding: 5px 30px;
+}
+.topbar__left .cell__content {
+  text-align: center;
+}
+.topbar__right {
+  flex-grow: 1;
+  padding: 0 30px;
+}
+.topbar__right .cell {
+  height: 100%;
+  align-items: center;
+}
+.topbar__right .cell .favorite {
+  height: 30px;
+  width: 30px;
+  padding: 0;
+  line-height: 28px;
+  font-size: 12px;
+  margin-left: 10px;
+}
+.topbar__right .cell .favorite.active {
+  color: #333;
+  background-color: #fff;
+}
+.topbar__right .cell .favorite.active:hover {
+  color: #fff;
+  background-color: #333;
+}
+.topbar__right .cell .favorite * {
+  pointer-events: none;
+}
+.topbar__right .cell .match-day a {
+  display: flex;
+  align-items: center;
+  cursor: default;
+}
+.topbar__right .cell .match-day a img {
+  margin-right: 11px;
+}
+.topbar__right .cell .match-day a div {
+  font-family: 'Gotham Pro';
+}
+.topbar__right .cell .match-day a span {
+  display: block;
+  font-weight: 500;
+}
+.topbar__block {
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 300;
+  position: relative;
+  background-image: url("../img/temp/topbar_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 60px;
+  margin-bottom: 22px;
+}
+.topbar__block:after {
+  position: absolute;
+  display: block;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 4px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.topbar__block .nm-wrapper {
+  position: relative;
+  border-radius: 4px;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+}
+.cell {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.cell .match-time {
+  padding: 4px 7px;
+  border: 1px solid #c9ccd1;
+  border-radius: 4px;
+  font-weight: 500;
+}
+.cell .match-time-wrap {
+  align-self: center;
+}
+/*================================================*/
+/*						  MEDIA				      */
+/*================================================*/
+@media (max-width: 1200px) {
+  .topbar__left {
+    flex-basis: 312px;
+  }
+}
+@media (max-width: 920px) {
+  .match-day {
+    display: none;
+  }
+  .topbar__right .cell {
+    justify-content: flex-end;
+  }
+}
+@media (max-width: 620px) {
+  .topbar__left {
+    flex-basis: 100%;
+    border-right: none;
+  }
+  .topbar__right {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .topbar__left .cell {
+    padding-left: 0;
+    padding-right: 0;
+    justify-content: space-around;
+  }
+}

@@ -1,0 +1,117 @@
+//MAIN BEGIN
+main
+	.pr-main-wrap
+		.pr-main
+			.pr-main-title
+				.pr-main-title-left
+					p Featured events
+				.pr-main-title-right
+					p Odds
+					.pr-switch
+						.pr-switch-container
+						.pr-switch-circle
+			.pr-main-odds
+				form
+					.pr-radio
+						label(for="odd_decimal")
+							input(name='odds_name' checked id='odd_decimal' type="radio")
+							span.pr-circle
+						span Decimal
+					.pr-radio
+						label(for="odd_fractional")
+							input(name='odds_name' id='odd_fractional' type="radio")
+							span.pr-circle
+						span Fractional
+					.pr-radio
+						label(for="odd_american")
+							input(name='odds_name' id='odd_american' type="radio")
+							span.pr-circle
+						span American
+			.pr-main-content
+				.pr-main-content-row
+					.pr-main-content-row-title
+						.pr-main-content-row-title-left
+							.pr-country-icon
+								svg.nm-svg.pr-green-svg(width="45" height="45")
+											use(xlink:href="#europe")
+							.pr-country-name
+								.pr-mainland-name
+									a.pr-mainland-link(href="#") Bahrain
+								.pr-cup-name
+									a.pr-cup-link(href="javascript:void(0)") League, Knockout Cup
+						.pr-main-content-row-title-right
+							.pr-lightgreen
+								p Player ratings <br> & Heat map
+							.pr-title-score-row
+								.pr-x-col
+									p 1
+								.pr-x-col
+									p X
+								.pr-x-col
+									p 2
+					-for(var k=0; k<2; k++){
+						.pr-match-row(href="javascript:void(0)")
+							.pr-match-row-left
+								.pr-left-col
+									-if(k==0){
+										p.pr-match-time 20:00
+									-}
+									-if(k==1){
+										p.pr-match-time 21:00
+									-}
+								.pr-match-row-center
+									.pr-match-row-center-left(data-href="#")
+										.pr-team-name-cont
+											p.pr-match-team-name APOEL Niscotia
+										.pr-team-name-cont
+											.pr-match-team-name RSC Anderlecht
+								.pr-match-row-center-right
+									-if(k!==1){
+										a(href="javascript:void(0)").pr-event-container
+											svg.nm-svg(width="9" height="8")
+												use(xlink:href="#player-statistics")
+											span 7
+										a(href="javascript:void(0)").pr-event-container
+											svg.nm-svg(width="6" height="5")
+												use(xlink:href="#highlights")
+											span 3
+									-}
+							.pr-match-row-right
+								.pr-match-row-right-wrap
+									.pr-favorite-container.nm-toogle-div
+										a(href='javascript:void(0)').pr-favorite-btn.nm-toggler
+											i(class='icon-icon-favorite')
+										.nm-dropdown.pr-dropdown-favorite
+											ul
+												li
+													a(href="javascript:void(0)").pr-remove
+														| Remove
+														i(class='icon-icon-favorite')
+												li
+													a(href="javascript:void(0)").pr-mute
+														| Mute this event
+									a(href='javascript:void(0)').pr-more-btn more
+									.pr-odds-row
+										.pr-odds-row-wrap
+											.pr-odds-col
+												.pr-odds-up
+												a(href="javascript:void(0)") 2.90
+											.pr-odds-col
+												.pr-odds-down
+												a(href="javascript:void(0)") 3.25
+											.pr-odds-col
+												.pr-odds-up
+												a(href="javascript:void(0)") 2.70
+					-}
+		.pr-main.pr-curr-tournaments
+			.pr-curr-tournaments-title
+				p Leagues and tournaments from 
+					a(href="javascript:void(0)") Bahrain
+			-var tournaments = ['Premier League','King of Bahrain Cup'];
+			-var tournament_pers = ['22%','11%'];
+			-for(var i=0; i<2; i++){
+				.pr-curr-tournaments-row
+					a(href='javascript:void(0)')= tournaments[i]
+						span= tournament_pers[i]
+			-}
+//MAIN END

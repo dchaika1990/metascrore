@@ -1,0 +1,133 @@
+@import "../common/settings";
+
+.standings-table {
+	margin-bottom: 30px;
+}
+
+.standings-row {
+	border-bottom: @border-base;
+	color: @color-gray-base;
+	cursor: pointer;
+	display: flex;
+	font-family: @font-HelveticaNeueCyr-Roman;
+	font-size: 11px;
+	justify-content: space-between;
+	padding: 6px 0;
+
+	&:not(.-th-row):hover {
+		background-color: @border-base-color;
+
+		.team-title {
+			color: @text-hover-color;
+		}
+	}
+
+	&.-th-row {
+		justify-content: flex-end;
+	}
+}
+
+.standings-col {
+	display: flex;
+
+	&.-to-right {
+		justify-content: flex-end;
+	}
+
+	> .team-logo > .ic {
+		display: block;
+		height: 15px;
+		margin: 0 5px;
+		width: auto;
+	}
+
+	> .points,
+	> .team-title {
+		color: @color-black-base;
+	}
+
+	> .score {
+		margin: 0 5px;
+		min-width: 15px;
+		text-align: center;
+	}
+
+	> .goals {
+		justify-content: center;
+		width: 36px;
+	}
+
+	> .last {
+		display: flex;
+		justify-content: center;
+		width: 100px;
+	}
+
+	> .points {
+		width: 20px;
+	}
+}
+
+.standings-th {
+	color: #a1a6ac;
+	margin: 0 5px;
+	min-width: 15px;
+	text-align: center;
+}
+
+.standings-position {
+	border-radius: 50%;
+	height: 15px;
+	line-height: 15px;
+	margin: 0 5px;
+	text-align: center;
+	width: 15px;
+
+	&.-first  { background-color: #33ed9c; }
+	&.-top    { background-color: @color-blue-base; color: @color-white-base }
+	&.-penult { background-color: #f7c24f; color: @color-white-base }
+	&.-last   { background-color: #ed334d; color: @color-white-base }
+}
+
+.match-result {
+	border-radius: 50%;
+	height: 15px;
+	line-height: 15px;
+	margin: 0 1.5px;
+	position: relative;
+	width: 15px;
+
+	&:after {
+		color: @color-white-base;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		text-align: center;
+		top: 0;
+		width: 100%;
+	}
+
+	&.-loss {
+		background-color: @color-red-base;
+
+		&:after {
+			content: 'L';
+		}
+	}
+
+	&.-draw {
+		background-color: #a8adb2;
+
+		&:after {
+			content: 'D';
+		}
+	}
+
+	&.-win {
+		background-color: @color-green-light;
+
+		&:after {
+			content: 'W';
+		}
+	}
+}

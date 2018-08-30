@@ -1,0 +1,14 @@
+.team-about {
+  color: #000;
+  column-gap: 30px;
+  column-count: 2;
+  font-family: 'HelveticaNeueCyr-Light-user', sans-serif;
+  font-size: 14px;
+  margin: 20px 0 -20px;
+}
+.team-about a {
+  color: #486e7c;
+}
+.team-about p {
+  margin-bottom: 20px;
+}

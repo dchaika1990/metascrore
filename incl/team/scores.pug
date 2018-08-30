@@ -1,0 +1,31 @@
+-
+	var topScores = [
+		{ src: '#', ic : 'img/ma/avatar126.png', name: 'Jonathan Menendez', matches: '8', goals: '8'},
+		{ src: '#', ic : 'img/ma/avatar126.png', name: 'Jonathan Menendez', matches: '8', goals: '7'},
+		{ src: '#', ic : 'img/ma/avatar126.png', name: 'Jonathan Menendez', matches: '6', goals: '7'},
+		{ src: '#', ic : 'img/ma/avatar126.png', name: 'Jonathan Menendez', matches: '4', goals: '5'},
+		{ src: '#', ic : 'img/ma/avatar126.png', name: 'Jonathan Menendez', matches: '9', goals: '5'},
+		{ src: '#', ic : 'img/ma/avatar126.png', name: 'Jonathan Menendez', matches: '7', goals: '5'},
+		{ src: '#', ic : 'img/ma/avatar126.png', name: 'Jonathan Menendez', matches: '9', goals: '5'},
+		{ src: '#', ic : 'img/ma/avatar126.png', name: 'Jonathan Menendez', matches: '6', goals: '4'}
+	];
+
+.box-container
+	.box-title.-bottom-border
+		.title TOP SCORERS
+	.box-inner
+		include division-dropdown
+		.box-content
+			.top-scorers-wrapper
+				.top-scorers-head
+					.th Matches
+					.th Goals
+				each item in topScores
+					.top-predictors-item
+						a.top-predictors-link(href=item.src)
+							img.ic(src=item.ic)
+						.top-scorers-detail
+							.name= item.name
+							.top-scorers-outcome
+								.count= item.matches
+								.count= item.goals

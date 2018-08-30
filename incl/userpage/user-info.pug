@@ -1,0 +1,67 @@
+-
+	var userInfo = {
+		logo: 'img/ma/avatar126.png',
+		name: 'SOMEGREAT_256547h',
+		registration: 'Apr 2017',
+		favorites: {
+			players : 3,
+			teams: 1,
+			leagues: 1
+		},
+		comments: {
+			total_comments: 5,
+			likes_recieved: 0
+		}
+	};
+	var isLogging = true;
+
+.box-container
+	.user-info-container
+		.user-detail
+			form.user-logo-form
+				label.user-logo-label(for="user-logo-file")
+					svg.svg-ic(width="15" height="14")
+						use(xlink:href="#icon-photo")
+				input.user-logo-field.js-user-file-input#user-logo-file(type="file" accept="image/png, image/jpeg" size="")
+				img.user-logo-icon.js-user-logo-img(src=userInfo.logo)
+			.user-info-row
+				form.user-name-form
+					.user-name-field
+						.name.js-user-name-field=userInfo.name
+						.user-name-edit-btn.js-user-name-edit-btn
+							svg.svg-ic(width="15" height="14")
+								use(xlink:href="#editfield")
+					.user-name-edit-fields
+						input.user-name-edit-field.js-user-name-input(type="text" value=userInfo.name readonly)
+						input.user-name-confirm-btn.js-user-name-submit(type="submit" value="Confirm")
+					if isLogging
+				if isLogging
+					a.btn-userpage-signout(href='javascript:void(0)')
+						| SIGN OUT
+						svg.svg-ic(width="8" height="11")
+							use(xlink:href="#sign-out-icon")
+			.user-info-row
+				.user-info-item
+					.title Join date
+					.value= userInfo.registration
+				if isLogging
+					a.user-unsubscribe-link(href='javascript:void(0)') Unsubscribe from email
+		.user-statistics
+			.user-statistics-col
+				.box-title
+					.title Favorites
+				each val, title in userInfo.favorites
+					.user-info-item
+						.title= title.replace(/_/g, ' ')
+						.value= val
+			.user-statistics-col
+				.box-title
+					.title Comments
+				each val, title in userInfo.comments
+					.user-info-item
+						.title= title.replace(/_/g, ' ')
+						.value= val
+
+
+
+

@@ -1,0 +1,217 @@
+//MODALS FORMS BEGIN
+
+//Modal Contact Us Form 
+.remodal.nm-modal.nm-modal-contact-us(data-remodal-id="contact_us" data-remodal-options="hashTracking:false" role="dialog")
+	.nm-modal-header
+		.nm-modal-caption Contact with us
+		.nm-modal-subcaption We are soon as possibly contact with you to discuss details.
+	form.nm-modal-body
+		.nm-double-input
+			.nm-input-block
+				label.nm-label-error You forgot about your name!
+				input.nm-input.nm-input-name(type="text" name="name" placeholder="Your name" required)
+				
+			.nm-input-block
+				label.nm-label-error Invalid email!
+				input.nm-input.nm-input-email(type="email" name="email" placeholder="Your email" required)
+				
+		.nm-input-block.nm-text-area-block
+			label.nm-label-error Invalid message!
+			textarea.nm-textarea.nm-textarea-counted(maxlength="1000" rows="3" placeholder="Your message" required)
+			.nm-text-counter 0/1000
+			
+		.nm-btns-row
+			a.nm-modal-close(href="javascript:void(0)" data-remodal-action="close" aria-label="Close") Close
+			input.nm-btn.nm-btn-send(type="submit" value="Send")
+
+//Modal Login Form 
+.remodal.nm-modal.nm-modal-login-register.nm-modal-login(data-remodal-id="login" data-remodal-options="hashTracking:false" role="dialog")
+	.nm-modal-top-part.nm-block
+		.nm-modal-header
+			.nm-modal-header-wrapper
+				.nm-modal-caption Log in
+				a.nm-link-account(href="javascript:void(0)") Don't have an account?
+		form.nm-modal-body
+			.nm-form-error Invalid email or password
+
+			.nm-input-block
+				input.nm-input.nm-input-email(type="email" name="email" id="login_email" placeholder="Your email" maxlength="32" required)
+				label.nm-icon-block(for="login_email")
+					svg.nm-svg(width="10" height="7")
+						use(xlink:href="#icon-email")
+				.nm-approve
+					img(src="img/icons/icon-checker-checked.svg" width="11" height="10" alt="check")
+					
+			
+			.nm-input-block
+				input.nm-input.nm-input-password(type="password" name="password" id="login_pass" placeholder="Password" maxlength="32" required)
+				label.nm-icon-block(for="login_pass")
+					svg.nm-svg(width="10" height="10")
+						use(xlink:href="#icon-password")
+				a.nm-show-pass(href="javascript:void(0)")
+					svg.nm-svg(width="16" height="10")
+						use(xlink:href="#icon-show-password")
+			
+			.nm-forgot-pass.text-right
+				a(href="javascript:void(0)") Forgot password?
+				
+			input.nm-btn.nm-btn-submit.nm-btn-login(type="submit" value="Login")
+			
+	.nm-modal-divider
+		.nm-text or
+		
+	.nm-modal-social-part.nm-block
+		a.nm-social-btn.nm-fb(href="javascript:void(0)")
+			.nm-icon
+				img(src="img/icons/icon-social-facebook.svg" width="7" height="15" alt="facebook")
+			.nm-text Sign in with facebook
+
+		a.nm-social-btn.nm-google(href="javascript:void(0)")
+			.nm-icon
+				img(src="img/icons/icon-social-googleplus.svg" width="16" height="16" alt="google+")
+			.nm-text Sign in with google
+		
+	.nm-modal-bottom-block.nm-block
+		a.nm-terms(href="javascript:void(0)") TERMS OF SERVICE
+		a.nm-modal-close(href="javascript:void(0)" data-remodal-action="close" aria-label="Close") 
+			img(src="img/icons/icon-popup-close.svg" width="8" height="8" alt="close")
+			.nm-text Close
+		
+//Modal Register Form 
+.remodal.nm-modal.nm-modal-login-register.nm-modal-register(data-remodal-id="register" data-remodal-options="hashTracking:false" role="dialog")
+	.nm-modal-top-part.nm-block
+		.nm-modal-header
+			.nm-modal-header-wrapper
+				.nm-modal-caption Create Account
+				a.nm-link-account(href="javascript:void(0)") Already have an account?
+		form.nm-modal-body
+			.nm-form-error Invalid email or password
+
+			.nm-input-block
+				input.nm-input.nm-input-email(type="email" name="email" id="register_email" placeholder="Your email" maxlength="32" required)
+				label.nm-icon-block(for="register_email")
+					svg.nm-svg(width="10" height="7")
+						use(xlink:href="#icon-email")
+				.nm-approve
+					img(src="img/icons/icon-checker-checked.svg" width="11" height="10" alt="check")
+					
+			
+			.nm-input-block
+				input.nm-input.nm-input-password.nm-input-new-password(type="password" name="password" id="register_pass_new" placeholder="Password" maxlength="32" required)
+				label.nm-icon-block(for="register_pass_new")
+					svg.nm-svg(width="10" height="10")
+						use(xlink:href="#icon-password")
+				a.nm-show-pass(href="javascript:void(0)")
+					svg.nm-svg(width="16" height="10")
+						use(xlink:href="#icon-show-password")
+			
+			.nm-input-block
+				input.nm-input.nm-input-password.nm-input-check-password(type="password" name="password_check" id="register_pass_check" placeholder="Password" maxlength="32" required)
+				label.nm-icon-block(for="register_pass_check")
+					svg.nm-svg(width="10" height="10")
+						use(xlink:href="#icon-password")
+				a.nm-show-pass(href="javascript:void(0)")
+					svg.nm-svg(width="16" height="10")
+						use(xlink:href="#icon-show-password")
+			
+			input.nm-btn.nm-btn-submit.nm-btn-register(type="submit" value="Register")
+			
+	.nm-modal-divider
+		.nm-text or
+		
+	.nm-modal-social-part.nm-block
+		a.nm-social-btn.nm-fb(href="javascript:void(0)")
+			.nm-icon
+				img(src="img/icons/icon-social-facebook.svg" width="7" height="15" alt="facebook")
+			.nm-text Connect with facebook
+
+		a.nm-social-btn.nm-google(href="javascript:void(0)")
+			.nm-icon
+				img(src="img/icons/icon-social-googleplus.svg" width="16" height="16" alt="google+")
+			.nm-text Connect with google
+		
+	.nm-modal-bottom-block.nm-block
+		a.nm-terms(href="javascript:void(0)") TERMS OF SERVICE
+		a.nm-modal-close(href="javascript:void(0)" data-remodal-action="close" aria-label="Close") 
+			img(src="img/icons/icon-popup-close.svg" width="8" height="8" alt="close")
+			.nm-text Close
+
+//Modal Player Info
+.remodal.nm-modal.nm-modal-player-info(data-remodal-id="player_info" data-remodal-options="hashTracking:false" role="dialog")
+	.nm-modal-header
+		.nm-player-block
+			.nm-img-block
+				.nm-player-img.nm-bg-img(style="background-image: url('img/temp/photo-player-4.jpg')")
+				.nm-team-img.nm-bg-img(style="background-image: url('img/icons/badge-real-madrid.png')")
+			.nm-player-name Cristiano Ronaldo
+			.nm-player-rating 7.3
+			
+		.nm-field-block
+			.nm-mark(style="width:16px; top:25%; left: 74%")
+			.nm-mark(style="width:28px; top:62%; left: 72%")
+			.nm-mark(style="width:48px; top:70%; left: 67%")
+			
+		
+	.nm-modal-body
+		.nm-player-stats
+			.nm-player-stats-block
+				.nm-player-stats-row
+					div Minutes played
+					div 7
+				.nm-player-stats-row
+					div Passes (acc.)
+					div 0 (0%)
+				.nm-player-stats-row
+					div Key passes
+					div 0
+				.nm-player-stats-row
+					div Crosses (acc.)
+					div 0 (0)
+				.nm-player-stats-row
+					div Long balls (acc.)
+					div 0 (0)
+				.nm-player-stats-row
+					div Shots (on target)
+					div 0 (0)
+				.nm-player-stats-row
+					div Key passes
+					div 0 (0)
+				.nm-player-stats-row
+					div Dribble attempts (succ.)
+					div 0 (0)
+				.nm-player-stats-row
+					div Goals
+					div -
+				.nm-player-stats-row
+					div Assists
+					div -
+				
+			.nm-player-stats-block
+				.nm-player-stats-row
+					div Duels (won)
+					div 3 (2)
+				.nm-player-stats-row
+					div Dispossessed
+					div 0
+				.nm-player-stats-row
+					div Was fouled
+					div 2
+				.nm-player-stats-row
+					div Fouls
+					div 0
+				.nm-player-stats-row
+					div Clearances
+					div 0
+				.nm-player-stats-row
+					div Blocked shots
+					div 0
+				.nm-player-stats-row
+					div Interceptions
+					div 0
+				.nm-player-stats-row
+					div Tackles
+					div 0
+			
+		a.nm-modal-close(href="javascript:void(0)" data-remodal-action="close" aria-label="Close") Close
+
+//MODALS FORMS END

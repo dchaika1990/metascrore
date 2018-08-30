@@ -1,0 +1,27 @@
+doctype html
+html(lang='en')
+	head
+		title MetaScore: Search Page
+		include incl/head
+	body.search-page
+		include incl/svg
+			
+		.nm-main-overlay
+		//MAIN-WRAPPER BEGIN
+		.main-wrapper
+			include incl/header
+			include incl/topbar
+			include incl/above_searchpage
+			
+			//GROW BEGIN
+			.nm-grow.nm-big-wrapper
+				.nm-content-overlay
+				
+				include incl/search_empty_content
+				
+			//GROW END
+			include incl/newstape
+			include incl/footer
+		//MAIN-WRAPPER END
+		include incl/modals
+		include incl/scripts

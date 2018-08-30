@@ -1,0 +1,12 @@
+-
+	var divisions = [
+		{id: 0, title: 'Primera Division 16/17'},
+		{id: 1, title: 'UEFA Europe league 16/17'},
+		{id: 2, title: 'Premier league 16/17'}
+	]
+
+.division-dropdown.nm-toogle-div
+	.division-dropdown-selected.nm-toggler= divisions[0].title
+	.division-dropdown-list.js-dropdown-list.nm-dropdown
+		each item, index in divisions
+			.item(data-id= item.id, class= (index === 0 ? '-selected' : ''))= item.title

@@ -1,0 +1,983 @@
+/*================================================*/
+/*					  MODALS					  */
+/*================================================*/
+html.nm-ios.remodal-is-locked,
+html.nm-ios.remodal-is-locked body {
+  position: fixed;
+  overflow: hidden !important;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.remodal-overlay {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.remodal-wrapper {
+  padding: 0;
+}
+.nm-modal {
+  background-color: #fff;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  margin-bottom: 0;
+}
+.nm-modal .nm-modal-caption {
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 1.1875;
+}
+.nm-modal-contact-us {
+  max-width: 430px;
+}
+.nm-modal-contact-us .nm-modal-header {
+  border-bottom: 1px solid #f7f7f7;
+  padding: 30px;
+}
+.nm-modal-contact-us .nm-modal-subcaption {
+  color: #cccdcf;
+  font-size: 14px;
+  font-weight: 300;
+  max-width: 230px;
+  margin: 0 auto;
+}
+.nm-modal-contact-us .nm-modal-body {
+  text-align: left;
+  padding: 30px;
+}
+.nm-modal-contact-us .nm-input-block.nm-error .nm-label-error {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  -webkit-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+.nm-modal-contact-us .nm-input-block.nm-error .nm-input,
+.nm-modal-contact-us .nm-input-block.nm-error .nm-textarea {
+  border-color: #ed334d;
+}
+.nm-modal-contact-us .nm-double-input {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+.nm-modal-contact-us .nm-double-input .nm-input-block {
+  width: 46%;
+}
+.nm-modal-contact-us .nm-input {
+  display: block;
+  color: #43474d;
+  font-family: "HelveticaNeueCyr", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #f7f7f7;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  width: 100%;
+  min-width: 0;
+  max-width: none;
+  height: 30px;
+  padding: 0;
+  margin: 0 0 15px 0;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+}
+.nm-modal-contact-us .nm-input:focus {
+  border-color: #4186b1;
+}
+.nm-modal-contact-us .nm-input:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+.nm-modal-contact-us .nm-input:focus:-ms-input-placeholder {
+  opacity: 0;
+}
+.nm-modal-contact-us .nm-input:focus::-moz-placeholder {
+  opacity: 0;
+}
+.nm-modal-contact-us .nm-input::-webkit-input-placeholder {
+  color: #cccdcf;
+  font-family: "HelveticaNeueCyr", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 1;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+  will-change: opacity;
+}
+.nm-modal-contact-us .nm-input:-ms-input-placeholder {
+  color: #cccdcf;
+  font-family: "HelveticaNeueCyr", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 1;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+  will-change: opacity;
+}
+.nm-modal-contact-us .nm-input::-moz-placeholder {
+  color: #cccdcf;
+  font-family: "HelveticaNeueCyr", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 1;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+  will-change: opacity;
+}
+.nm-modal-contact-us .nm-textarea {
+  display: block;
+  color: #43474d;
+  font-family: "HelveticaNeueCyr", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #f7f7f7;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  width: 100%;
+  min-width: 0;
+  max-width: none;
+  height: 49px;
+  resize: none;
+  overflow: hidden !important;
+  padding: 0;
+  margin: 0;
+  -webkit-transition: border .2s;
+  -o-transition: border .2s;
+  transition: border .2s;
+}
+.nm-modal-contact-us .nm-textarea:focus {
+  border-color: #4186b1;
+}
+.nm-modal-contact-us .nm-textarea:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+.nm-modal-contact-us .nm-textarea:focus:-ms-input-placeholder {
+  opacity: 0;
+}
+.nm-modal-contact-us .nm-textarea:focus::-moz-placeholder {
+  opacity: 0;
+}
+.nm-modal-contact-us .nm-textarea::-webkit-input-placeholder {
+  color: #cccdcf;
+  font-family: "HelveticaNeueCyr", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 1;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+  will-change: opacity;
+}
+.nm-modal-contact-us .nm-textarea:-ms-input-placeholder {
+  color: #cccdcf;
+  font-family: "HelveticaNeueCyr", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 1;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+  will-change: opacity;
+}
+.nm-modal-contact-us .nm-textarea::-moz-placeholder {
+  color: #cccdcf;
+  font-family: "HelveticaNeueCyr", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 1;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+  will-change: opacity;
+}
+.nm-modal-contact-us .nm-text-counter {
+  text-align: right;
+  color: #d0d1d2;
+  font-size: 11px;
+  line-height: 1;
+  font-weight: 400;
+  margin-top: 3px;
+}
+.nm-modal-contact-us .nm-label-error {
+  display: block;
+  text-align: right;
+  color: #ed334d;
+  font-size: 11px;
+  font-weight: 400;
+  margin-bottom: 5px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+.nm-modal-contact-us .nm-btns-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: baseline;
+  -webkit-align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  margin-top: 30px;
+}
+.nm-modal-contact-us .nm-modal-close {
+  color: #4186b1;
+  font-family: "Gotham Pro", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 9px 10px;
+}
+.nm-modal-contact-us .nm-modal-close:hover {
+  color: #4186b0;
+}
+.nm-modal-contact-us .nm-btn-send {
+  text-align: center;
+  color: #fff;
+  font-family: "Gotham Pro", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: #33ed9c;
+  background-image: url("../img/icons/icon-send.svg");
+  background-repeat: no-repeat;
+  background-size: 15px 12px;
+  background-position: center right 10px;
+  border-radius: 4px;
+  padding: 9px 35px 9px 10px;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+}
+.nm-modal-contact-us .nm-btn-send:hover {
+  background-color: #79f3be;
+}
+.nm-modal-contact-us .nm-btn-send:active {
+  background-color: #11c275;
+}
+.nm-modal-login-register {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  max-width: 276px;
+}
+.nm-modal-login-register .nm-modal-header {
+  position: relative;
+  background-image: url("../img/popup_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 4px 4px 0 0;
+}
+.nm-modal-login-register .nm-modal-header:after {
+  position: absolute;
+  display: block;
+  content: "";
+  background-image: -webkit-gradient(linear, right top, left top, from(#486e7c), to(#4186b1));
+  background-image: -webkit-linear-gradient(right, #486e7c 0%, #4186b1 100%);
+  background-image: -o-linear-gradient(right, #486e7c 0%, #4186b1 100%);
+  background-image: linear-gradient(to left, #486e7c 0%, #4186b1 100%);
+  border-radius: 4px 4px 0 0;
+  opacity: 0.89;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+.nm-modal-login-register .nm-modal-header .nm-modal-header-wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  height: 106px;
+  padding: 10px 30px;
+  z-index: 2;
+}
+.nm-modal-login-register .nm-modal-header .nm-link-account {
+  color: #a3dcff;
+  font-family: "HelveticaNeueCyr", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  margin: 3px auto 5px auto;
+}
+.nm-modal-login-register .nm-modal-header .nm-link-account:hover {
+  color: #fff;
+}
+.nm-modal-login-register .nm-modal-body {
+  position: relative;
+  text-align: left;
+  padding: 30px;
+}
+.nm-modal-login-register .nm-form-error {
+  position: absolute;
+  color: #ed334d;
+  font-size: 11px;
+  font-weight: 400;
+  top: 10px;
+  left: 30px;
+  right: 30px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+}
+.nm-modal-login-register .nm-form-error.error-active {
+  opacity: 1;
+  visibility: visible;
+}
+.nm-modal-login-register .nm-input-block {
+  position: relative;
+}
+.nm-modal-login-register .nm-input-block .nm-icon-block {
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-right: 1px solid #f7f7f7;
+  border-radius: 4px 0 0 4px;
+  top: 1px;
+  bottom: 1px;
+  left: 0;
+  width: 28px;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+}
+.nm-modal-login-register .nm-input-block .nm-icon-block .nm-svg {
+  fill: #aec8d2;
+}
+.nm-modal-login-register .nm-input-block .nm-approve {
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  top: 1px;
+  bottom: 1px;
+  right: 0;
+  width: 28px;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+}
+.nm-modal-login-register .nm-input-block .nm-approve img {
+  display: block;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+  pointer-events: none;
+  opacity: 0;
+}
+.nm-modal-login-register .nm-input-block .nm-show-pass {
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  top: 1px;
+  bottom: 1px;
+  right: 0;
+  width: 28px;
+  overflow: hidden;
+}
+.nm-modal-login-register .nm-input-block .nm-show-pass .nm-svg {
+  fill: #d9dbdc;
+}
+.nm-modal-login-register .nm-input-block .nm-show-pass.showing .nm-svg {
+  fill: #63bcf3;
+}
+.nm-modal-login-register .nm-input-block.nm-error .nm-input {
+  border-color: #ee495e;
+}
+.nm-modal-login-register .nm-input-block.nm-error .nm-input ~ .nm-icon-block {
+  border-color: #ee495e;
+}
+.nm-modal-login-register .nm-input-block.nm-error .nm-icon-block .nm-svg {
+  fill: #ee495e;
+}
+.nm-modal-login-register .nm-input {
+  display: block;
+  color: #43474d;
+  font-family: "HelveticaNeueCyr", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  background: none;
+  border: 1px solid #f7f7f7;
+  border-radius: 4px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  width: 100%;
+  min-width: 0;
+  max-width: none;
+  height: 30px;
+  padding: 0 30px 0 35px;
+  margin: 0 0 15px 0;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+}
+.nm-modal-login-register .nm-input:focus {
+  border-color: #63bcf3;
+}
+.nm-modal-login-register .nm-input:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+.nm-modal-login-register .nm-input:focus:-ms-input-placeholder {
+  opacity: 0;
+}
+.nm-modal-login-register .nm-input:focus::-moz-placeholder {
+  opacity: 0;
+}
+.nm-modal-login-register .nm-input:focus ~ .nm-icon-block {
+  border-color: #63bcf3;
+}
+.nm-modal-login-register .nm-input:focus ~ .nm-icon-block .nm-svg {
+  fill: #63bcf3;
+}
+.nm-modal-login-register .nm-input::-webkit-input-placeholder {
+  color: #cccdcf;
+  font-family: "HelveticaNeueCyr", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  opacity: 1;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+  will-change: opacity;
+}
+.nm-modal-login-register .nm-input:-ms-input-placeholder {
+  color: #cccdcf;
+  font-family: "HelveticaNeueCyr", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  opacity: 1;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+  will-change: opacity;
+}
+.nm-modal-login-register .nm-input::-moz-placeholder {
+  color: #cccdcf;
+  font-family: "HelveticaNeueCyr", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  opacity: 1;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+  will-change: opacity;
+}
+.nm-modal-login-register .nm-input-email.nm-valid ~ .nm-approve img {
+  opacity: 1;
+}
+.nm-modal-login-register .nm-forgot-pass {
+  margin-top: -16px;
+  margin-bottom: 14px;
+}
+.nm-modal-login-register .nm-forgot-pass a {
+  color: #aec8d2;
+  font-family: "Gotham Pro", sans-serif;
+  font-size: 8px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.nm-modal-login-register .nm-forgot-pass a:hover {
+  color: #4186b0;
+}
+.nm-modal-login-register .nm-btn-submit {
+  display: block;
+  background-color: #33ed9c;
+  border-radius: 4px;
+  background-image: url("../img/icons/icon-arrow-right-white.svg");
+  background-repeat: no-repeat;
+  background-size: 5px 8px;
+  color: #fff;
+  font-family: "Gotham Pro", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  width: 100%;
+  height: 30px;
+  padding-right: 15px;
+}
+.nm-modal-login-register .nm-btn-submit:hover {
+  background-color: #62f1b3;
+}
+.nm-modal-login-register .nm-btn-submit:active {
+  background-color: #13da83;
+}
+.nm-modal-login-register .nm-btn-login {
+  background-position: left 132px center;
+}
+.nm-modal-login-register .nm-btn-register {
+  background-position: left 145px center;
+  margin-top: 30px;
+}
+.nm-modal-login-register .nm-modal-divider {
+  padding: 13px 30px;
+}
+.nm-modal-login-register .nm-modal-divider .nm-text {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+  font-style: italic;
+  opacity: 0.75;
+}
+.nm-modal-login-register .nm-modal-divider .nm-text:before,
+.nm-modal-login-register .nm-modal-divider .nm-text:after {
+  display: block;
+  content: "";
+  opacity: 0.5;
+  border-bottom: 1px solid #fff;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  width: 10%;
+  -webkit-transform: translateY(-6px);
+  -ms-transform: translateY(-6px);
+  transform: translateY(-6px);
+}
+.nm-modal-login-register .nm-modal-divider .nm-text:before {
+  margin-right: 10px;
+}
+.nm-modal-login-register .nm-modal-divider .nm-text:after {
+  margin-left: 10px;
+}
+.nm-modal-login-register .nm-modal-social-part {
+  position: relative;
+  padding: 30px;
+  z-index: 3;
+}
+.nm-modal-login-register .nm-modal-social-part .nm-social-btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+  height: 30px;
+  border-radius: 4px;
+  color: #fff;
+  font-family: "Gotham Pro", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.nm-modal-login-register .nm-modal-social-part .nm-social-btn:not(:last-child) {
+  margin-bottom: 15px;
+}
+.nm-modal-login-register .nm-modal-social-part .nm-social-btn .nm-icon {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 4px 0 0 4px;
+  width: 30px;
+  min-width: 30px;
+  height: 30px;
+}
+.nm-modal-login-register .nm-modal-social-part .nm-social-btn .nm-text {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  width: 10%;
+  padding-left: 12px;
+}
+.nm-modal-login-register .nm-modal-social-part .nm-fb {
+  background-color: #4267b2;
+}
+.nm-modal-login-register .nm-modal-social-part .nm-fb:hover {
+  background-color: #6283c5;
+}
+.nm-modal-login-register .nm-modal-social-part .nm-fb:active {
+  background-color: #34518d;
+}
+.nm-modal-login-register .nm-modal-social-part .nm-google {
+  background-color: #f8354c;
+}
+.nm-modal-login-register .nm-modal-social-part .nm-google:hover {
+  background-color: #fa6678;
+}
+.nm-modal-login-register .nm-modal-social-part .nm-google:active {
+  background-color: #f20824;
+}
+.nm-modal-login-register .nm-modal-bottom-block {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #4186b1;
+  padding: 35px 30px 15px 30px;
+  margin-top: -15px;
+  z-index: 2;
+}
+.nm-modal-login-register .nm-modal-bottom-block .nm-terms {
+  color: #aec8d2;
+  font-family: "Gotham Pro", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.nm-modal-login-register .nm-modal-bottom-block .nm-terms:hover {
+  color: #fff;
+}
+.nm-modal-login-register .nm-modal-bottom-block .nm-modal-close {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #fff;
+  font-family: "Gotham Pro", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.nm-modal-login-register .nm-modal-bottom-block .nm-modal-close img {
+  display: block;
+  min-width: 8px;
+  margin-right: 4px;
+}
+.nm-modal-player-info {
+  text-align: left;
+  max-width: 430px;
+}
+.nm-modal-player-info .nm-modal-header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border-bottom: 1px solid #f7f7f7;
+  padding: 30px;
+}
+.nm-modal-player-info .nm-modal-header > div {
+  width: 46.113%;
+}
+.nm-modal-player-info .nm-modal-header .nm-player-block .nm-img-block {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+}
+.nm-modal-player-info .nm-modal-header .nm-player-block .nm-img-block .nm-bg-img {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  border: solid 1px #d5d5d5;
+  border-radius: 50%;
+  height: 100%;
+}
+.nm-modal-player-info .nm-modal-header .nm-player-block .nm-img-block .nm-team-img {
+  position: absolute;
+  background-color: #fff;
+  width: 21px;
+  height: 21px;
+  bottom: 0;
+  left: 0;
+}
+.nm-modal-player-info .nm-modal-header .nm-player-block .nm-player-name {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  margin: 7px 0;
+}
+.nm-modal-player-info .nm-modal-header .nm-player-block .nm-player-rating {
+  display: inline-block;
+  text-align: center;
+  border-radius: 4px;
+  background-color: #f7c24f;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 4px 6px 5px 6px;
+}
+.nm-modal-player-info .nm-modal-header .nm-field-block {
+  position: relative;
+  background-image: url("../img/icons/football-field-popup.svg");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 100% 100%;
+  height: 107px;
+}
+.nm-modal-player-info .nm-modal-header .nm-field-block .nm-mark {
+  position: absolute;
+  display: block;
+  background: -webkit-radial-gradient(center, circle, #f3ff44 0%, rgba(243, 255, 68, 0.8) 12%, rgba(177, 167, 62, 0.15) 35%, rgba(177, 167, 62, 0) 100%);
+  background: -o-radial-gradient(center, circle, #f3ff44 0%, rgba(243, 255, 68, 0.8) 12%, rgba(177, 167, 62, 0.15) 35%, rgba(177, 167, 62, 0) 100%);
+  background: radial-gradient(circle at center, #f3ff44 0%, rgba(243, 255, 68, 0.8) 12%, rgba(177, 167, 62, 0.15) 35%, rgba(177, 167, 62, 0) 100%);
+  border-radius: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+.nm-modal-player-info .nm-modal-header .nm-field-block .nm-mark:after {
+  display: block;
+  content: "";
+  padding-top: 100%;
+}
+.nm-modal-player-info .nm-modal-body {
+  padding: 22px 30px;
+}
+.nm-modal-player-info .nm-player-stats {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+.nm-modal-player-info .nm-player-stats > div {
+  width: 46.113%;
+}
+.nm-modal-player-info .nm-player-stats .nm-player-stats-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border-bottom: 1px solid #f4f4f4;
+  font-size: 14px;
+  padding: 6px 0 5px 0;
+}
+.nm-modal-player-info .nm-player-stats .nm-player-stats-row > div:last-child {
+  font-weight: 300;
+  white-space: nowrap;
+}
+.nm-modal-player-info .nm-modal-close {
+  color: #4186b1;
+  font-family: "Gotham Pro", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 9px 10px;
+}
+.nm-modal-player-info .nm-modal-close:hover {
+  color: #4186b0;
+}
+.nm-leagues-modal,
+.nm-datepicker-modal {
+  text-align: left;
+  max-width: 320px;
+  padding: 0;
+}
+.nm-leagues-modal .pr-leftside-calendar-wrap,
+.nm-datepicker-modal .pr-leftside-calendar-wrap {
+  left: 0;
+}
+.nm-leagues-modal .nm-modal-close,
+.nm-datepicker-modal .nm-modal-close {
+  display: inline-block;
+  color: #4186b1;
+  font-family: "Gotham Pro", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-top: 10px;
+  padding: 9px 4px;
+}
+.nm-leagues-modal .nm-modal-close:hover,
+.nm-datepicker-modal .nm-modal-close:hover {
+  color: #4186b1;
+}
+.nm-leagues-modal .leagues-block,
+.nm-datepicker-modal .leagues-block {
+  padding: 8px 8px 4px 8px;
+}
+.nm-leagues-modal .filter,
+.nm-datepicker-modal .filter {
+  right: 0;
+  z-index: 11;
+}
+.nm-leagues-modal .filter__open,
+.nm-datepicker-modal .filter__open {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  right: 7px;
+  top: 14px;
+  left: auto;
+}
+.nm-leagues-modal .filter.active .filter__open,
+.nm-datepicker-modal .filter.active .filter__open {
+  right: auto;
+  left: 17px;
+}
+.nm-leagues-modal .leagues__all .leagues__title-wrap,
+.nm-datepicker-modal .leagues__all .leagues__title-wrap {
+  padding-right: 0;
+}
+/*================================================*/
+/*						  MEDIA				      */
+/*================================================*/
+@media (max-width: 620px) {
+  .nm-modal-contact-us {
+    max-width: none;
+  }
+  .nm-modal-contact-us .nm-modal-body {
+    padding: 25px 8px 8px 8px;
+  }
+  .nm-modal-contact-us .nm-double-input {
+    display: block;
+  }
+  .nm-modal-contact-us .nm-double-input .nm-input-block {
+    width: 100%;
+  }
+  .nm-modal-contact-us .nm-text-area-block {
+    margin-top: 20px;
+  }
+  .nm-modal-contact-us .nm-label-error {
+    margin-bottom: 0;
+  }
+  .nm-modal-player-info {
+    max-width: 430px;
+  }
+  .nm-modal-player-info .nm-modal-header {
+    display: block;
+    padding-bottom: 10px;
+  }
+  .nm-modal-player-info .nm-modal-header > div {
+    width: 100%;
+  }
+  .nm-modal-player-info .nm-modal-header .nm-player-block {
+    position: relative;
+    width: 199px;
+    margin: auto;
+  }
+  .nm-modal-player-info .nm-modal-header .nm-player-block .nm-player-name {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .nm-modal-player-info .nm-modal-header .nm-player-block .nm-player-rating {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .nm-modal-player-info .nm-modal-header .nm-field-block {
+    width: 199px;
+    height: 124px;
+    margin: auto;
+  }
+  .nm-modal-player-info .nm-modal-body {
+    padding: 22px 6px 14px 6px;
+  }
+  .nm-modal-player-info .nm-player-stats {
+    display: block;
+  }
+  .nm-modal-player-info .nm-player-stats > div {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=modals.css.map */

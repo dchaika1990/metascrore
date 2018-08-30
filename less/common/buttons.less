@@ -1,0 +1,93 @@
+@import 'settings';
+
+.btn-userpage-navigation {
+	border: 1px solid @btn-border-color;
+	border-radius: @border-base-radius;
+	color: @btn-color-base;
+	fill: @btn-color-base;
+	cursor: pointer;
+	font-family: @font-HelveticaNeueCyr-Roman;
+	font-size: 14px;
+	line-height: 1;
+	padding: 7px 10px;
+
+	&:hover {
+		color: @btn-color-active;
+		border-color: @btn-color-active;
+		fill: @btn-color-active;
+	}
+
+	> .svg-ic {
+		height: 11px;
+		margin-right: 10px;
+		vertical-align: middle;
+	}
+
+	&.-next > .svg-ic {
+		margin-left: 10px;
+		margin-right: 0;
+	}
+}
+
+.btn-userpage-signout {
+	border: 1px solid @btn-border-color;
+	border-radius: @border-base-radius;
+	color: @btn-color-base;
+	cursor: pointer;
+	fill: @btn-color-base;
+	font-family: @font-GothamPro-Medium;
+	font-size: 11px;
+	line-height: 1.1;
+	margin-top: @box-base-inner-indent;
+	padding: 5px 8px;
+	white-space: nowrap;
+
+	&:hover {
+		border-color: @color-blue-base;
+		color: @color-blue-base;
+		fill: @color-blue-base;
+	}
+
+	> .svg-ic {
+		margin-left: 8px;
+	}
+
+	@media @mobile {
+		&  {
+			margin-top: 0;
+		}
+	}
+}
+
+.aside-slide-btn {
+	color: @btn-aside-color;
+	fill: @btn-aside-color;
+	cursor: pointer;
+	display: inline-block;
+	height: 11px;
+	vertical-align: middle;
+	width: 18px;
+
+	&:hover {
+		color: @btn-color-active;
+		fill: @btn-color-active;
+	}
+
+	&.-prev {
+		margin-right: 4px;
+	}
+	&.-next {
+		margin-left: 4px;
+		text-align: right;
+	}
+}
+
+.svg-ic {
+	fill: inherit;
+	display: inline-block;
+	vertical-align: top;
+
+	&:hover {
+		fill: inherit;
+	}
+}

@@ -1,0 +1,266 @@
+//HEADER BEGIN
+header
+	.nm-header-top
+		.nm-big-wrapper
+			.nm-menu-burger
+				a.nm-toggler.nm-menu-toggler(href="javascript:void(0)")
+				.nm-dropdown.nm-dropdown-menu
+					.nm-profile-mob
+						//registered
+							.nm-user
+								.nm-img(style="background-image: url('img/temp/user.jpg')")
+								.nm-username Username123456789
+							.nm-profile-links
+								a(href="javascript:void(0)") My profile
+								a(href="javascript:void(0)") Log out
+						//unregistered
+						.nm-links
+							a.nm-sign-in(href="javascript:void(0)" data-remodal-target="login") 
+								svg.nm-svg(width="11" height="13")
+									use(xlink:href="#icon-signin")
+								.nm-text sign in
+								
+							a.nm-register(href="javascript:void(0)" data-remodal-target="register")
+								svg.nm-svg(width="13" height="13")
+									use(xlink:href="#icon-signup")
+								.nm-text register
+							
+					.nm-dropdowns-row-mob
+						.nm-toogle-div
+							a.nm-toggler.nm-toggle-arrow.nm-lang-toggle(href="javascript:void(0)")
+								img.nm-lang-flag(src="img/icons/flag-en.jpg" alt="en")
+								.nm-lang-abb en
+
+							.nm-dropdown.nm-dropdown-lang
+								ul
+									li
+										a(href="javascript:void(0)" data-locale="en")
+											img(src="img/icons/flag-en.jpg" alt="en")
+											| English
+									li
+										a(href="javascript:void(0)" data-locale="ru")
+											img(src="img/icons/flag-ru.jpg" alt="ru")
+											| Русский
+									li
+										a(href="javascript:void(0)" data-locale="es")
+											img(src="img/icons/flag-es.jpg" alt="es")
+											| Español
+							
+						.nm-toogle-div
+							a.nm-toggler.nm-toggle-arrow.nm-odds-toggle(href="javascript:void(0)") Odds
+							.nm-dropdown.nm-dropdown-odds
+								ul
+									li
+										a(href="javascript:void(0)" data-odds="decimal") Decimal
+									li
+										a(href="javascript:void(0)" data-odds="fractional") Fractional
+									li
+										a(href="javascript:void(0)" data-odds="american") American
+
+							
+			a.nm-logo(href="javascript:void(0)")
+				img(src="img/logo.svg" alt="logo" width="17" height="18")
+
+			.nm-header-main-block
+				.nm-toogle-div.nm-mob-hide
+					a.nm-toggler.nm-toggle-arrow.nm-lang-toggle(href="javascript:void(0)")
+						img.nm-lang-flag(src="img/icons/flag-en.jpg" alt="en")
+						.nm-lang-abb en
+					
+					.nm-dropdown.nm-dropdown-lang
+						ul
+							li
+								a(href="javascript:void(0)" data-locale="en")
+									img(src="img/icons/flag-en.jpg" alt="en")
+									| English
+							li
+								a(href="javascript:void(0)" data-locale="ru")
+									img(src="img/icons/flag-ru.jpg" alt="ru")
+									| Русский
+							li
+								a(href="javascript:void(0)" data-locale="es")
+									img(src="img/icons/flag-es.jpg" alt="es")
+									| Español
+
+				.nm-toogle-div.nm-mob-hide
+					a.nm-toggler.nm-toggle-arrow.nm-odds-toggle(href="javascript:void(0)") Odds
+					.nm-dropdown.nm-dropdown-odds
+						ul
+							li
+								a(href="javascript:void(0)" data-odds="decimal") Decimal
+							li
+								a(href="javascript:void(0)" data-odds="fractional") Fractional
+							li
+								a(href="javascript:void(0)" data-odds="american") American
+				
+				form.nm-search-form.nm-search-closed
+					input.nm-btn.nm-search-toggle(type="submit" value="search")
+					input.nm-input(type="text" placeholder="Search sofascore.com" required)
+					.nm-search-btns-area
+						a.nm-btn-clear.nm-disabled(href="javascript:void(0)")
+						a.nm-btn-close(href="javascript:void(0)")
+					
+				a.nm-favorite(href="javascript:void(0)")
+				
+				.nm-profile
+					//registered
+						.nm-toogle-div.nm-profile-registered
+							a.nm-toggler.nm-img(style="background-image: url('img/temp/user.jpg')" href="javascript:void(0)")
+							.nm-dropdown.nm-dropdown-profile
+								ul
+									li: a(href="javascript:void(0)") My profile
+									li: a(href="javascript:void(0)") Log out
+							
+					//unregistered
+					.nm-toogle-div.nm-profile-unregistered
+						a.nm-toggler.nm-btn-signup(href="javascript:void(0)")
+							svg.nm-svg(width="13" height="13")
+								use(xlink:href="#icon-signup")
+							.nm-text Sign up
+						.nm-dropdown.nm-dropdown-profile.nm-dropdown-login
+							ul
+								li: a(href="javascript:void(0)" data-remodal-target="login") Sign in
+								li: a(href="javascript:void(0)" data-remodal-target="register") Register
+		
+	.nm-search-results
+		.nm-scroll-area
+			.nm-results-wrapper
+				.nm-result-col.nm-suggestions-block.nm-no-results
+					//no results
+					.nm-block-caption-empty No Suggestions
+
+					//results
+						.nm-block-caption Suggestions
+						ul.nm-results-block
+							li
+								a(href="javascript:void(0)") FC 
+									span.search-hint Porto
+							li
+								a(href="javascript:void(0)") FC 
+									span.search-hint Porto
+									|  B
+							li
+								a(href="javascript:void(0)") FC 
+									span.search-hint Porto
+									|  U19
+							li
+								a(href="javascript:void(0)") FC 
+									span.search-hint Porto
+									|  Vitalis
+							li
+								a(href="javascript:void(0)")
+									span.search-hint Porto
+									| carrero, Segundo
+							li
+								a(href="javascript:void(0)") Arlen Alessio Lo 
+									span.search-hint Porto
+
+				.nm-result-col.nm-teams-block.active
+					//no results
+					.nm-block-caption-empty No Teams
+
+					//results
+						.nm-block-caption Teams
+						ul.nm-results-block
+							li
+								.nm-icon(style="background-image: url('img/temp/photo-team-1.jpg')")
+								.nm-info
+									ul.nm-mini-breadcrumbs
+										li: a(href="javascript:void(0)") Football
+										li: a(href="javascript:void(0)") Primeira Liga
+									.nm-team
+										a(href="javascript:void(0)") FC 
+											span.search-hint Porto
+							li
+								.nm-icon(style="background-image: url('img/temp/photo-team-1.jpg')")
+								.nm-info
+									ul.nm-mini-breadcrumbs
+										li: a(href="javascript:void(0)") Football
+										li: a(href="javascript:void(0)") Segunda Liga
+									.nm-team
+										a(href="javascript:void(0)") FC 
+											span.search-hint Porto
+											| B
+							li
+								.nm-icon(style="background-image: url('img/temp/photo-team-1.jpg')")
+								.nm-info
+									ul.nm-mini-breadcrumbs
+										li: a(href="javascript:void(0)") Football
+										li: a(href="javascript:void(0)") U19 Championship
+									.nm-team
+										a(href="javascript:void(0)") FC 
+											span.search-hint Porto
+											| U19
+
+						.text-right
+							a.nm-link-all(href="javascript:void(0)")
+								.nm-text See All 15
+								svg.nm-svg(width="6" height="9")
+									use(xlink:href="#icon-caret-right")
+
+				.nm-result-col.nm-players-block
+					//no results
+					.nm-block-caption-empty No Players
+
+					//results
+						.nm-block-caption Players
+						ul.nm-results-block
+							li
+								a.nm-player-row(href="javascript:void(0)")
+									.nm-icon
+									.nm-name Segundo Arlen 
+										span.search-hint Porto
+										| carrero
+							li
+								a.nm-player-row(href="javascript:void(0)")
+									.nm-icon
+									.nm-name Alessio Lo 
+										span.search-hint Porto
+							li
+								a.nm-player-row(href="javascript:void(0)")
+									.nm-icon(style="background-image: url('img/temp/photo-player-1.jpg')")
+									.nm-name Alex 
+										span.search-hint Porto
+
+						.text-right
+							a.nm-link-all(href="javascript:void(0)")
+								.nm-text See All 7
+								svg.nm-svg(width="6" height="9")
+									use(xlink:href="#icon-caret-right")
+
+				.nm-result-col.nm-tournaments-block
+					//no results
+					.nm-block-caption-empty No Tournaments
+
+					//results
+						.nm-block-caption Tournaments
+						ul.nm-results-block
+							li
+								.nm-icon(style="background-image: url('img/temp/photo-team-1.jpg')")
+								.nm-info
+									ul.nm-mini-breadcrumbs
+										li: a(href="javascript:void(0)") Challenger
+									a.nm-name(href="javascript:void(0)") ATP Challenger  
+										span.search-hint Porto
+										| Porcocococ
+							li
+								.nm-icon(style="background-image: url('img/temp/photo-team-1.jpg')")
+								.nm-info
+									ul.nm-mini-breadcrumbs
+										li: a(href="javascript:void(0)") Challenger
+									a.nm-name(href="javascript:void(0)") ATP Challenger 
+										span.search-hint Porto
+										| roz, sdfsdfsdafs
+							li
+								.nm-icon(style="background-image: url('img/temp/photo-team-1.jpg')")
+								.nm-info
+									ul.nm-mini-breadcrumbs
+										li: a(href="javascript:void(0)") WTA
+									a.nm-name(href="javascript:void(0)")
+										span.search-hint Porto
+					
+				.nm-search-tabs
+					a.active(href="javascript:void(0)") teams
+					a(href="javascript:void(0)") players
+					a(href="javascript:void(0)") tournaments
+// HEADER END

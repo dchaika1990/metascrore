@@ -1,0 +1,33 @@
+-
+	var players = [
+		{name: 'Crisitiano Ronaldo', ic: 'img/temp/photo-player-4.jpg', position: 'forward', number: 7, country: 'Portugal', countryFlag: 'Португалия'},
+		{name: 'Gareth Bale', ic: 'img/temp/photo-player-4.jpg', position: 'forward', number: 11, country: 'Wales', countryFlag: 'Уэльс'},
+		{name: 'Karim Benzema', ic: 'img/temp/photo-player-4.jpg', position: 'forward', number: 8, country: 'France', countryFlag: 'Франция'},
+		{name: 'Alvaro Morata', ic: 'img/temp/photo-player-4.jpg', position: 'midfielder', number: 21, country: 'Espania', countryFlag: 'Испания'},
+		{name: 'Lucas Vazquez', ic: 'img/temp/photo-player-4.jpg', position: 'forward', number: 17, country: 'Espania', countryFlag: 'Испания'},
+		{name: 'Crisitiano Ronaldo', ic: 'img/temp/photo-player-4.jpg', position: 'forward', number: 7, country: 'Portugal', countryFlag: 'Португалия'},
+		{name: 'Gareth Bale', ic: null, position: 'forward', number: 11, country: 'Wales', countryFlag: 'Уэльс'},
+		{name: 'Birk Risa', ic: 'img/temp/photo-player-4.jpg', position: 'goalkeeper', number: 9, country: 'France', countryFlag: 'Франция'},
+		{name: 'Alvaro Morata', ic: 'img/temp/photo-player-4.jpg', position: 'defender', number: 21, country: 'Espania', countryFlag: 'Испания'},
+		{name: 'Lucas Vazquez', ic: 'img/temp/photo-player-4.jpg', position: 'defender', number: 17, country: 'Espania', countryFlag: 'Испания'}
+	]
+
+.team-players-caption Players
+.team-players-wrapper
+	each player in players
+		.team-player-item
+			.box-container.-no-margin
+				.team-player-header
+					.team-player-position(class='-' + player.position)= player.position
+					.team-player-number= '№' + player.number
+				.team-player-content
+					- var playerIcon = player.ic ? player.ic : 'img/photo-player-default.jpg'
+					img.ic(src=playerIcon)
+					.team-player-name= player.name
+					.team-player-controls
+						.team-player-page-btn Player Page
+						.team-player-favorite-btn
+							i.icon-icon-favorite
+				.team-player-footer
+					.flag(style='background-image: url("img/Флаги/' + player.countryFlag + '.svg");')
+					a(href="javascript:void(0)").name= player.country

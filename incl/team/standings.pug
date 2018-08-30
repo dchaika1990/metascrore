@@ -1,0 +1,63 @@
+-
+	var standings = [
+		{team: 'APOEL Niscosia', team_logo: 'img/ma/football_2900.png', matches: 28, win: 21, draw: 5, loss: 2, goals: '65:16', last: ['loss', 'draw', 'win', 'win', 'loss'], points: 68},
+		{team: 'APOEL Niscosia', team_logo: 'img/ma/football_2900.png', matches: 28, win: 21, draw: 5, loss: 2, goals: '60:23', last: ['loss', 'draw', 'win', 'win', 'loss'], points: 68},
+		{team: 'APOEL Niscosia', team_logo: 'img/ma/football_2900.png', matches: 28, win: 21, draw: 5, loss: 2, goals: '59:11', last: ['loss', 'draw', 'win', 'win', 'loss'], points: 68},
+		{team: 'APOEL Niscosia', team_logo: 'img/ma/football_2900.png', matches: 28, win: 21, draw: 5, loss: 2, goals: '52:00', last: ['loss', 'draw', 'win', 'win', 'loss'], points: 68},
+		{team: 'APOEL Niscosia', team_logo: 'img/ma/football_2900.png', matches: 28, win: 21, draw: 5, loss: 2, goals: '52:00', last: ['loss', 'draw', 'win', 'win', 'loss'], points: 68},
+		{team: 'APOEL Niscosia', team_logo: 'img/ma/football_2900.png', matches: 28, win: 21, draw: 5, loss: 2, goals: '52:00', last: ['loss', 'draw', 'win', 'win', 'loss'], points: 68},
+		{team: 'APOEL Niscosia', team_logo: 'img/ma/football_2900.png', matches: 28, win: 21, draw: 5, loss: 2, goals: '52:00', last: ['loss', 'draw', 'win', 'win', 'loss'], points: 68},
+		{team: 'APOEL Niscosia', team_logo: 'img/ma/football_2900.png', matches: 28, win: 21, draw: 5, loss: 2, goals: '52:00', last: ['loss', 'draw', 'win', 'win', 'loss'], points: 68},
+		{team: 'APOEL Niscosia', team_logo: 'img/ma/football_2900.png', matches: 28, win: 21, draw: 5, loss: 2, goals: '52:00', last: ['loss', 'draw', 'win', 'win', 'loss'], points: 68},
+		{team: 'APOEL Niscosia', team_logo: 'img/ma/football_2900.png', matches: 28, win: 21, draw: 5, loss: 2, goals: '52:00', last: ['loss', 'draw', 'win', 'win', 'loss'], points: 68},
+		{team: 'APOEL Niscosia', team_logo: 'img/ma/football_2900.png', matches: 28, win: 21, draw: 5, loss: 2, goals: '52:00', last: ['loss', 'draw', 'win', 'win', 'loss'], points: 68}
+	]
+
+
+.box-container
+	.box-title.-bottom-border
+		.title PREMIER LEAGUE STANDINGS
+		include division-dropdown
+	.box-inner
+		.box-content
+			.standings-table
+				.standings-row.-th-row
+					div.standings-col.-to-right
+						.standings-th P
+						.standings-th W
+						.standings-th D
+						.standings-th L
+						.standings-th.goals Goals
+						.standings-th.last Last 5
+						.standings-th.points Pts
+				each item, index in standings
+					.standings-row
+						div.standings-col
+							- var standingsPosition = '';
+								case index
+									when 0
+										- var standingsPosition = 'first';
+									when 1
+									when 2
+										- var standingsPosition = 'top';
+									when 9
+										- var standingsPosition = 'penult';
+									when 10
+										- var standingsPosition = 'last';
+							.standings-position(class='-' + standingsPosition)= index + 1
+							.team-logo
+								img.ic(src=item.team_logo)
+							a.team-title=item.team
+						div.standings-col.-right
+							.score.matches= item.matches
+							.score.win= item.win
+							.score.draw= item.draw
+							.score.loss= item.loss
+							.score.goals= item.goals
+							.score.last
+								each matchResult in item.last
+									.match-result(class='-' + matchResult)
+							.score.points= item.points
+			.box-text-small
+				| In the event that two (or more) teams have an equal number of points after the end of the season, the following rules break the tie:
+				| 1. H2H 2. Goal difference overall 3. Goals scored overall Please note that the table already reflects these tie-breaking procedures.

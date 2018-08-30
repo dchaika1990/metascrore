@@ -1,0 +1,173 @@
+@import "../common/settings";
+
+.team-players-caption {
+	border-bottom: 1px solid #dcdce3;
+	font-family: @font-HelveticaNeueCyr-Medium;
+	font-size: 14px;
+	line-height: 1.25;
+	margin-bottom: 15px;
+	padding: 10px 10px 10px 31px;
+}
+
+.team-players-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -2.5px @box-base-margin;
+}
+
+.team-player-item {
+	flex-basis: 20%;
+	padding: 2.5px;
+
+	&:hover > .box-container {
+		background-image: linear-gradient(to top, #486e7c, #3e80a9);
+		box-shadow: inset 0 5px 18px 0 rgba(0, 0, 0, 0.26);
+	}
+
+	> .box-container {
+		height: 100%;
+	}
+}
+
+.team-player-header {
+	border-bottom: @border-base;
+	display: flex;
+	font-size: 14px;
+	line-height: 1.2;
+	justify-content: space-between;
+	padding: 13px 15px;
+
+	.team-player-item:hover & {
+		display: none;
+	}
+}
+
+.team-player-position {
+	font-family: @font-HelveticaNeueCyr-Medium;
+	text-transform: capitalize;
+
+	&.-forward {
+		color: #f69051;
+	}
+
+	&.-midfielder {
+		color: #33ed5f;
+	}
+
+	&.-goalkeeper {
+		color: #dedc25;
+	}
+
+	&.-defender {
+		color: #90b6f4;
+	}
+}
+
+.team-player-number {
+	font-family: @font-HelveticaNeueCyr-Light;
+	color: @color-gray-base;
+}
+
+.team-player-content {
+	> .ic {
+		border: @border-base;
+		display: block;
+		border-radius: 50%;
+		height: 97px;
+		margin: 15px auto 13px;
+		width: 97px;
+	}
+
+	.team-player-item:hover & {
+		color: @color-white-base;
+		margin-top: 41px;
+	}
+}
+
+.team-player-name {
+	font-family: @font-HelveticaNeueCyr-Light;
+	font-size: 18px;
+	margin: 12px auto 12px;
+	text-align: center;
+	width: 100%;
+}
+
+.team-player-footer {
+	color: @color-black-base;
+	border-top: @border-base;
+	display: flex;
+	font-size: 11px;
+	line-height: 16px;
+	padding: 8px 15px;
+	width: 100%;
+
+	> .flag {
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		border-radius: 50%;
+		height: 16px;
+		margin-right: 9px;
+		width: 16px;
+	}
+
+	> .name {
+		color: @color-gray-base;
+	}
+
+	> .name:hover {
+		color: @text-hover-color;
+	}
+
+	.team-player-item:hover & {
+		display: none;
+	}
+}
+
+.team-player-controls {
+	display: none;
+	justify-content: space-between;
+	padding: 0 16px;
+	width: 100%;
+
+	.team-player-item:hover & {
+		display: flex;
+	}
+}
+
+.team-player-page-btn {
+	border: 1px solid @color-white-base;
+	border-radius: @border-base-radius;
+	cursor: pointer;
+	font-family: @font-GothamPro-Medium;
+	font-size: 11px;
+	line-height: 1.1;
+	padding: 8px 10px;
+	text-align: center;
+	text-transform: uppercase;
+
+	&:hover {
+		background-color: @color-white-base;
+		color: @btn-color-active;
+	}
+}
+
+.team-player-favorite-btn {
+	border: 1px solid @color-white-base;
+	border-radius: @border-base-radius;
+	cursor: pointer;
+	height: 30px;
+	padding-top: 5px;
+	padding-left: 1px;
+	text-align: center;
+	width: 30px;
+
+	> .icon-icon-favorite {
+		font-size: 13px;
+	}
+
+	&:hover {
+		background-color: @color-white-base;
+		color: @btn-color-active;
+	}
+}

@@ -1,0 +1,208 @@
+//MAIN BEGIN
+main
+	.pr-main-wrap
+		.pr-main
+			.pr-main-title
+				.pr-main-title-left
+					p Featured events
+				.pr-main-title-right
+					p Odds
+					.pr-switch
+						.pr-switch-container
+						.pr-switch-circle
+			.pr-main-odds
+				form
+					.pr-radio
+						label(for="odd_decimal")
+							input(name='odds_name' checked id='odd_decimal' type="radio")
+							span.pr-circle
+						span Decimal
+					.pr-radio
+						label(for="odd_fractional")
+							input(name='odds_name' id='odd_fractional' type="radio")
+							span.pr-circle
+						span Fractional
+					.pr-radio
+						label(for="odd_american")
+							input(name='odds_name' id='odd_american' type="radio")
+							span.pr-circle
+						span American
+			.pr-main-content
+				-var mainlandName = ['Europe','North & Central america','North & Central america','GERMANY AMAETUR','Turkey Amateur','North & Central america'];
+				-var cupName = ['UEFA Europa League, Knockout Cup','Carribien Cup','Carribien Cup','Regionalliga Südwest','3. Lig, Group 2','World Cup Qualification, CONCACAF 4th round'];
+				-var mainlandIcon = ['europe','north_central_america','north_central_america','Германия','Турция','north_central_america'];
+				-for(var i=0;i<6;i++){
+					.pr-main-content-row
+						.pr-arrow
+							svg.nm-svg(width="6" height="9")
+								use(xlink:href="#icon-caret-right")
+						.pr-main-content-row-title
+							.pr-main-content-row-title-left
+								.pr-country-icon
+									-if(i==3 || i==4){
+										.pr-icon(style="background: url('img/Флаги/"+mainlandIcon[i]+".svg') no-repeat center; background-size: cover;")
+									-}
+									-if( i!==3 && i!==4){
+										svg.nm-svg.pr-green-svg(width="45" height="45")
+											use(xlink:href="#"+mainlandIcon[i])
+									-}
+								.pr-country-name
+									.pr-mainland-name
+										a(href='javascript:void(0)').pr-mainland-link= mainlandName[i]
+									.pr-cup-name
+										a(href='javascript:void(0)').pr-cup-link= cupName[i]
+							.pr-main-content-row-title-right
+								.pr-lightgreen
+									p Player ratings
+										-if(i==0 || i==3){
+										| <br> & Heat map
+										-}
+								.pr-title-score-row
+									.pr-x-col
+										p 1
+									.pr-x-col
+										p X
+									.pr-x-col
+										p 2
+						-if(i==2){
+							.pr-match-rows-wrap
+								-for(var k=0; k<4; k++){
+									div(class= (k==3) ? "pr-match-row-active pr-match-row" : "pr-match-row")(href="javascript:void(0)")
+										.pr-match-row-left
+											.pr-left-col
+												-var rowLeft = ['Postponed at: 23:44', 'Cancelled at 00:12','18:00','live: '];
+												-if(k!=2 && k!=3){
+													p.pr-match-cancel= rowLeft[k]
+												-}
+												-if(k==2){
+													p.pr-match-time= rowLeft[k]
+												-}
+												-if(k==3){
+													p.pr-match-live= rowLeft[k]
+														span 28
+												-}
+											.pr-match-row-center
+												a(href="javascript:void(0)").pr-match-row-center-left
+													.pr-team-name-cont
+														p.pr-match-team-name APOEL Niscotia
+														-if(k==1){
+															// For blue coeff add class pr-blue
+															.pr-coeff.pr-dark 2
+															.pr-record
+														-}
+														-if(k==3){
+															// For blue coeff add class pr-blue
+															.pr-coeff.pr-blue 0
+															.pr-record.pr-record-pass
+														-}
+													.pr-team-name-cont
+														p.pr-match-team-name RSC Anderlecht
+														-if(k==1){
+															.pr-coeff.pr-bold.pr-dark 3
+															.pr-record.pr-record-red
+														-}
+														-if(k==3){
+															// For blue coeff add class pr-blue
+															.pr-coeff.pr-bold.pr-blue 1
+															.pr-record
+														-}
+											.pr-match-row-center-right
+												-if(k!==1 && k!==3){
+													.pr-event-container
+														svg.nm-svg(width="9" height="8")
+															use(xlink:href="#player-statistics")
+														span 7
+													.pr-event-container
+														svg.nm-svg(width="6" height="5")
+															use(xlink:href="#highlights")
+														span 3
+												-}
+												-if(k==3){
+													a.pr-goal Goal!
+												-}
+										.pr-match-row-right
+											.pr-match-row-right-wrap
+												.pr-favorite-container.nm-toogle-div
+													a(href='javascript:void(0)').pr-favorite-btn.nm-toggler
+														i(class='icon-icon-favorite')
+													.nm-dropdown.pr-dropdown-favorite
+														ul
+															li
+																a(href="javascript:void(0)").pr-remove
+																	| Remove
+															li
+																a(href="javascript:void(0)").pr-mute
+																	| Mute this event
+												a(href='javascript:void(0)').pr-more-btn more
+												.pr-odds-row
+													.pr-odds-row-wrap
+														div(class= (k==3) ? " pr-odds-col pr-odds-yellow" : "pr-odds-col")
+															.pr-odds-up
+															a(href="javascript:void(0)") 2.90
+														.pr-odds-col
+															.pr-odds-down
+															a(href="javascript:void(0)") 3.25
+														.pr-odds-col
+															.pr-odds-up
+															a(href="javascript:void(0)") 2.70
+								-}
+							-}
+						-if(i!=2){
+							.pr-match-rows-wrap
+								-for(var k=0; k<2; k++){
+									.pr-match-row(href="javascript:void(0)")
+										.pr-match-row-left
+											.pr-left-col
+												-if(k==0){
+													p.pr-match-time 20:00
+												-}
+												-if(k==1){
+													p.pr-match-time 21:00
+												-}
+											.pr-match-row-center
+												a(href="javascript:void(0)").pr-match-row-center-left
+													.pr-team-name-cont
+														p.pr-match-team-name APOEL Niscotia
+													.pr-team-name-cont
+														p.pr-match-team-name RSC Anderlecht
+											.pr-match-row-center-right
+												-if(k!==1){
+													.pr-event-container
+														svg.nm-svg(width="9" height="8")
+															use(xlink:href="#player-statistics")
+														span 7
+													.pr-event-container
+														svg.nm-svg(width="6" height="5")
+															use(xlink:href="#highlights")
+														span 3
+												-}
+										.pr-match-row-right
+											.pr-match-row-right-wrap
+												.pr-favorite-container.nm-toogle-div
+													a(href='javascript:void(0)').pr-favorite-btn.nm-toggler
+														i(class='icon-icon-favorite')
+													.nm-dropdown.pr-dropdown-favorite
+														ul
+															li
+																a(href="javascript:void(0)").pr-remove
+																	| Remove
+																	i(class='icon-icon-favorite')
+															li
+																a(href="javascript:void(0)").pr-mute
+																	| Mute this event
+												a(href='javascript:void(0)').pr-more-btn more
+												.pr-odds-row
+													.pr-odds-row-wrap
+														.pr-odds-col
+															.pr-odds-up
+															a(href="javascript:void(0)") 2.90
+														.pr-odds-col
+															.pr-odds-down
+															a(href="javascript:void(0)") 3.25
+														.pr-odds-col
+															.pr-odds-up
+															a(href="javascript:void(0)") 2.70
+								-}
+							-}
+				-}
+//MAIN END

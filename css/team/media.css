@@ -1,0 +1,30 @@
+.team-media-item {
+  display: flex;
+  margin-top: 10px;
+}
+.team-media-item:first-child {
+  margin-top: 0;
+}
+.team-media-item:hover > .team-media-caption > .title {
+  color: #4186b1;
+}
+.team-media-item:hover > .team-media-caption > .subtext {
+  color: #a8adb2;
+}
+.team-media-screensaver {
+  border-radius: 4px;
+  height: 53px;
+  margin-right: 17px;
+  width: 84px;
+}
+.team-media-caption {
+  font-size: 11px;
+}
+.team-media-caption > .title {
+  color: #56595e;
+  font-family: 'HelveticaNeueCyr-Roman-user', sans-serif;
+}
+.team-media-caption > .subtext {
+  color: #a8adb2;
+  font-family: 'HelveticaNeueCyr-Light-user', sans-serif;
+}

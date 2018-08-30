@@ -1,0 +1,127 @@
+/*================================================*/
+/*					  MAIN	HOMEPAGE		      */
+/*	 				    NO MATCHES 				  */
+/*================================================*/
+.fhaf .above-content-block-homepage .nm-above-panel {
+  display: none;
+}
+aside.aside-right.nm-block.pr-no-match {
+  visibility: hidden;
+}
+.homepage main .pr-nopage {
+  padding: 40px 90px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+.homepage main .pr-nopage-left {
+  position: relative;
+  width: 200px;
+  height: 400px;
+  z-index: -1;
+}
+.homepage main .pr-nopage-left img {
+  width: 500px;
+  position: absolute;
+  top: 70px;
+  right: -100px;
+}
+.homepage main .pr-nopage-right p.nopage-title {
+  font-family: 'Gotham Pro';
+  font-size: 48px;
+  text-align: left;
+  color: #43474d;
+}
+.homepage main .pr-nopage-right p.nopage-text {
+  margin-top: 10px;
+  font-size: 24px;
+  letter-spacing: 1.8px;
+  text-align: left;
+  font-weight: normal;
+  color: #43474d;
+}
+.homepage main .pr-nopage-right p.nopage-text span {
+  font-weight: 300;
+}
+.homepage main .pr-nopage-right-btn {
+  margin-top: 20px;
+  text-align: right;
+}
+.homepage main .pr-nopage-right-btn .pr-livescore-btn {
+  width: 150px;
+  height: 30px;
+  border-radius: 4px;
+  background-color: #486e7c;
+  font-family: 'Gotham Pro';
+  font-size: 11px;
+  display: inline-block;
+  line-height: 30px;
+  text-align: center;
+  font-weight: 500;
+  color: #ffffff;
+}
+.homepage main .pr-nopage-right-btn .pr-livescore-btn:hover {
+  background-color: #4186b0;
+}
+/*================================================*/
+/*						  MEDIA				      */
+/*================================================*/
+@media (max-width: 1200px) {
+  .homepage main .pr-nopage {
+    padding: 50px 0;
+  }
+  .homepage main .pr-nopage-left img {
+    right: -150px;
+  }
+}
+@media (max-width: 920px) {
+  .homepage main .pr-nopage {
+    padding: 30px 30px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+  .homepage main .pr-nopage-left {
+    width: 100%;
+  }
+  .homepage main .pr-nopage-left img {
+    width: 330px;
+    top: -30px;
+    left: 0;
+  }
+}
+@media (max-width: 620px) {
+  .homepage main .pr-nopage {
+    padding: 30px 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+  .homepage main .pr-nopage-left {
+    width: 100%;
+  }
+  .homepage main .pr-nopage-left img {
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .homepage main .pr-nopage-right p.nopage-text {
+    font-size: 14px;
+  }
+  .homepage main .pr-nopage-right-btn {
+    margin-bottom: 25px;
+    text-align: left;
+  }
+}
+
+/*# sourceMappingURL=404.css.map */

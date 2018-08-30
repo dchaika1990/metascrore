@@ -1,0 +1,56 @@
+//MAIN BEGIN
+main
+	.breadcrumbs
+		ul
+			li
+				a(href="javascript:void(0)") News
+			li 
+				span ›
+			li FAQ
+	.top-block 
+		.inner 			
+			.title FAQ
+			p
+				a(href="javascript:void(0)" data-remodal-target="contact_us") Contact us
+				If you haven’t found what you was looking for.
+			form 
+				input.zoom.results(type="submit" value="search")
+				input.help.results(type="text" placeholder="Sofascore rating" required)
+
+	.bottom-block
+		.inner.results
+			.title 
+				strong SEARCH RESULTS:  2
+				span General
+
+			//  F A Q -  results    R O W   
+			.item
+				.arrow
+					span
+						svg.nm-svg(width="8" height="10")
+							use(xlink:href="#icon-caret-right")
+					aside 
+						i SofaScore 
+						| player 
+						i rating
+						|s explained
+				.answer How do you calculate rating for “Top predictors”?
+	
+
+			//  F A Q -  results    R O W   
+			.item
+				.arrow
+					span
+						svg.nm-svg(width="8" height="10")
+							use(xlink:href="#icon-caret-right")
+					aside 
+						| How do you calculate 
+						i rating 
+						| for “Top predictors”?
+				.answer SofaScore player ratings explained
+	
+			.paddcontent 			
+
+
+		
+//MAIN END

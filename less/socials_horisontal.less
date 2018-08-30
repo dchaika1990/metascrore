@@ -1,0 +1,167 @@
+@clr: #486e7c;
+
+/*================================================*/
+/*				   M E D I A  K I T   P A G E     */
+/*================================================*/
+
+main {
+	
+	//social dropdown
+	.nm-share-block {
+		position: absolute;
+		top: -32px;
+		right: 160px;
+		padding: 10px 30px 10px 10px;
+		height: 54px;
+		z-index: 10;
+		.nm-share-toggle {
+			//position: relative;
+			position: absolute;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 50%;
+			width: 45px;
+			min-width: 45px;
+			height: 45px;
+			overflow: hidden;
+			z-index: 10;
+			background-image: linear-gradient(to top, #4c9fbe, #8a9be3);
+			box-shadow: 0px 3px 3px 0 rgba(0, 0, 0, 0.1);
+			right:-20px;
+			.nm-svg {
+				fill: #fff;
+			}
+			&:hover {
+				.nm-svg {
+					fill: #fff;
+				}
+			}
+		}
+		.nm-share-btn {
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 50%;
+			width: 34px;
+			min-width: 34px;
+			height: 34px;
+			margin-top: 6px;
+			margin-right: 12px;
+			pointer-events: none;
+			visibility: hidden;
+			opacity: 0;
+			will-change: opacity, transform, background;
+			z-index: 1;
+			color: #fff;
+			float: right;
+			background: #fff;
+			box-shadow: 0px 3px 3px 0 rgba(0, 0, 0, 0.1);
+			.nm-svg {
+				fill: #353c53;
+			}
+			&:hover {
+				background: #4186b1;
+				.nm-svg {
+					fill: #fff;
+				}
+			}
+		}
+		.nm-share-btn:nth-child(2) {
+			transform: translateX(44px);
+			transition: transform .5s cubic-bezier(0.875, 0.26, 0, 1.005) .2s, opacity .4s cubic-bezier(0.875, 0.26, 0, 1.005) .2s, visibility .5s linear .2s, background .2s linear 0s;
+			z-index: 5
+		}
+		.nm-share-btn:nth-child(3) {
+			transform: translateX(88px);
+			transition: transform .5s cubic-bezier(0.875, 0.26, 0, 1.005) .15s, opacity .4s cubic-bezier(0.875, 0.26, 0, 1.005) .15s, visibility .5s linear .15s, background .2s linear 0s;
+			z-index: 4
+		}
+		.nm-share-btn:nth-child(4) {
+			transform: translateX(132px);
+			transition: transform .5s cubic-bezier(0.875, 0.26, 0, 1.005) .1s, opacity .4s cubic-bezier(0.875, 0.26, 0, 1.005) .1s, visibility .5s linear .1s, background .2s linear 0s;
+			z-index: 3
+		}
+		.nm-share-btn:nth-child(5) {
+			transform: translateX(176px);
+			transition: transform .5s cubic-bezier(0.875, 0.26, 0, 1.005) .05s, opacity .4s cubic-bezier(0.875, 0.26, 0, 1.005) .05s, visibility .5s linear .05s, background .2s linear 0s;
+			z-index: 2
+		}
+		.nm-share-btn:nth-child(6) {
+			transform: translateX(220px);
+			transition: transform .5s cubic-bezier(0.875, 0.26, 0, 1.005) .0s, opacity .4s cubic-bezier(0.875, 0.26, 0, 1.005) .0s, visibility .5s linear .0s, background .2s linear 0s;
+			z-index: 1
+		}
+		&.open {
+			height: auto;
+			.nm-share-toggle {
+				background-image: linear-gradient(to top, #ffffff, #f0f0f0);
+				box-shadow: 0px 3px 3px 0 rgba(0, 0, 0, 0.1);
+				svg {
+					fill: #115a66!important;
+				}
+
+				.nm-svg {
+					fill: #fff;
+				}
+			}
+			.nm-share-btn {
+				pointer-events: all;
+				opacity: 1;
+				visibility: visible;
+				transform: none;
+			}
+			.nm-share-btn:nth-child(2) {
+				transition: transform .5s cubic-bezier(0.875, 0.26, 0, 1.005) .0s, opacity .4s cubic-bezier(0.875, 0.26, 0, 1.005) .0s, visibility .5s linear .0s, background .2s linear 0s;
+			}
+			.nm-share-btn:nth-child(3) {
+				transition: transform .5s cubic-bezier(0.875, 0.26, 0, 1.005) .05s, opacity .4s cubic-bezier(0.875, 0.26, 0, 1.005) .05s, visibility .5s linear .05s, background .2s linear 0s;
+			}
+			.nm-share-btn:nth-child(4) {
+				transition: transform .5s cubic-bezier(0.875, 0.26, 0, 1.005) .1s, opacity .4s cubic-bezier(0.875, 0.26, 0, 1.005) .1s, visibility .5s linear .1s, background .2s linear 0s;
+			}
+			.nm-share-btn:nth-child(5) {
+				transition: transform .5s cubic-bezier(0.875, 0.26, 0, 1.005) .12s, opacity .4s cubic-bezier(0.875, 0.26, 0, 1.005) .15s, visibility .5s linear .15s, background .2s linear 0s;
+			}
+			.nm-share-btn:nth-child(6) {
+				transition: transform .6s cubic-bezier(0.875, 0.26, 0, 1.005) .12s, opacity .5s cubic-bezier(0.875, 0.26, 0, 1.005) .15s, visibility .6s linear .15s, background .2s linear 0s;
+			}
+		}
+	}
+
+}
+
+
+
+/*================================================*/
+/*						  MEDIA				      */
+/*================================================*/
+@media (max-width: 1200px) {
+	main {	
+		.nm-share-block {
+			right:80px;
+		}
+	}
+}
+
+
+@media (max-width: 920px) {
+	main {	
+		.nm-share-block {
+			right:80px;
+		}
+	}
+}
+
+@media (max-width: 620px) {
+	main {	
+		.nm-share-block {
+			right: 50px;
+			.nm-share-btn {
+				margin-right: 6px;
+			}
+		}
+	}
+}
+

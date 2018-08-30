@@ -1,0 +1,350 @@
+/*================================================*/
+/*						ASIDE LEFT				  */
+/*================================================*/
+.leagues-overwrap.show,
+.datepicker-block.show {
+  display: block;
+}
+.leagues-overwrap.hide,
+.datepicker-block.hide {
+  display: none;
+}
+.leagues-overwrap.show {
+  display: block;
+}
+.leagues-overwrap.hide {
+  display: none;
+}
+.aside-left .datepicker-block {
+  margin-bottom: 30px;
+}
+.nm-big-wrapper {
+  position: relative;
+  z-index: 1;
+}
+.leagues__all .s-title-wrap {
+  position: relative;
+}
+.leagues__all .s-title .nm-svg {
+  display: none;
+}
+.leagues__title-wrap {
+  position: relative;
+  padding-right: 10px;
+}
+.leagues-block {
+  padding: 6px 17px 22px 26px;
+  font-size: 14px;
+}
+.leagues__wrap {
+  padding-top: 21px;
+}
+.leagues__list {
+  padding-top: 15px;
+}
+.leagues__link {
+  word-spacing: 1.5px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #486e7c;
+  padding: 4px 0 4px 25px;
+  position: relative;
+  border-radius: 4px;
+}
+.leagues__link > * {
+  pointer-events: none;
+}
+.leagues__link:hover {
+  background-color: #f4f4f4;
+  color: #4186b1;
+}
+.leagues__link .icn {
+  color: #a2a7ad;
+  font-size: 13px;
+  position: absolute;
+  left: 4px;
+  top: 5px;
+}
+.leagues__link [style*="background"] {
+  width: 13px;
+  height: 13px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10em;
+}
+.leagues__number {
+  color: #48637c;
+  font-weight: 500;
+  margin-right: 1px;
+}
+.leagues__number .pr-lighter {
+  color: #4186b1;
+}
+.leagues__item {
+  cursor: pointer;
+  padding-right: 10px;
+}
+.leagues__item-active > .leagues__link {
+  color: #4186b1;
+  background-color: #edeaea;
+  border-radius: 4px 4px 0 0;
+}
+.leagues__item-active .leagues__sublist {
+  display: block;
+}
+.leagues__sublist {
+  display: none;
+  background-color: #f4f4f4;
+  border-radius: 0 0 4px 4px;
+  padding: 5px 10px 5px 28px;
+  position: relative;
+  margin-bottom: 3px;
+}
+.leagues__sublist::before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-left: 1px solid #d1d1d1;
+  height: calc(100% - 16px);
+  top: 0;
+  left: 10px;
+}
+.leagues__sublist .leagues__link {
+  background-color: transparent;
+  padding-left: 8px;
+  padding-right: 10px;
+  word-spacing: 0;
+}
+.leagues__sublist .leagues__link:hover {
+  background-color: #fafafa;
+}
+.leagues__sublist .leagues__link::before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-top: 1px solid #d1d1d1;
+  width: 17px;
+  top: 50%;
+  left: -17px;
+}
+.s-title {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  border-bottom: 1px solid #f4f4f4;
+  padding-bottom: 11px;
+  position: relative;
+  margin-left: 4px;
+  margin-right: 3px;
+}
+.filter {
+  position: absolute;
+  top: -11px;
+  left: 0;
+  right: 10px;
+  z-index: 1;
+}
+.filter * {
+  border: none;
+}
+.filter input {
+  width: 0;
+  padding: 0;
+  background-color: #ffffff;
+  position: relative;
+  -webkit-box-shadow: 0px 5px 18px 0px rgba(0, 0, 0, 0.06);
+  box-shadow: 0px 5px 18px 0px rgba(0, 0, 0, 0.06);
+  font-size: 12px;
+  height: 39px;
+  color: #000000;
+}
+.filter input::-webkit-input-placeholder {
+  color: #c8cbce;
+}
+.filter input:-ms-input-placeholder {
+  color: #c8cbce;
+}
+.filter input::-ms-input-placeholder {
+  color: #c8cbce;
+}
+.filter input::placeholder {
+  color: #c8cbce;
+}
+.filter__open,
+.filter__close {
+  cursor: pointer;
+  z-index: 1;
+  background-color: transparent;
+  top: 14px;
+  position: absolute;
+  display: block;
+  width: 14px;
+  height: 14px;
+}
+.filter__open::before,
+.filter__close::before {
+  content: "\e908";
+  font-family: 'meta';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+.filter__open:hover,
+.filter__close:hover {
+  color: #000000;
+}
+.filter__open {
+  -webkit-transform: translateX(180px);
+  -ms-transform: translateX(180px);
+  transform: translateX(180px);
+  left: 17px;
+  color: #acacac;
+}
+.filter__open::before {
+  content: "\e908";
+}
+.filter__close {
+  display: none;
+  right: 10px;
+  color: #65686d;
+}
+.filter__close::before {
+  content: "\e904";
+}
+.filter.focus .filter__open {
+  color: #000000;
+}
+.filter.active input {
+  width: 100%;
+  padding-left: 40px;
+  padding-right: 30px;
+}
+.filter.active .filter__close {
+  display: block;
+}
+.filter.active .filter__close:before {
+  pointer-events: none;
+}
+.filter.active .filter__open {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+.filter.active .nm-leagues-search-results {
+  display: block;
+}
+.nm-leagues-search-results {
+  position: absolute;
+  display: none;
+  background-color: #fff;
+  -webkit-box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+.nm-leagues-search-results .nm-leagues-search-results-list {
+  padding: 7px 0;
+}
+.nm-leagues-search-results li {
+  display: block;
+}
+.nm-leagues-search-results li a {
+  display: block;
+  color: #000;
+  font-size: 12px;
+  font-weight: 400;
+  padding: 8px 15px;
+}
+.nm-leagues-search-results li a:hover {
+  color: #4186b1;
+  background-color: #f4f4f4;
+}
+.leagues-overwrap .nm-modal-close {
+  display: none;
+}
+/*================================================*/
+/*						  MEDIA				      */
+/*================================================*/
+@media (max-width: 1200px) {
+  .filter__open,
+  .filter__close {
+    top: 10px;
+  }
+  .filter__open {
+    -webkit-transform: translateX(222px);
+    -ms-transform: translateX(222px);
+    transform: translateX(222px);
+  }
+  .aside-left {
+    display: block;
+    position: absolute;
+    top: -73px;
+    z-index: 1;
+  }
+  .leagues__list {
+    height: 345px;
+    max-height: 345px;
+  }
+  .leagues-overwrap {
+    position: absolute;
+    left: 108px;
+    width: 320px;
+    display: none;
+  }
+  .leagues__all .s-title {
+    text-transform: uppercase;
+    color: #486e7c;
+    text-align: left;
+    letter-spacing: .7px;
+    cursor: pointer;
+  }
+  .leagues__all .s-title .nm-svg {
+    margin-right: 10px;
+    fill: #486e7c;
+    display: inline-block;
+  }
+  .leagues__all .leagues__title-wrap {
+    margin-bottom: 10px;
+  }
+  .datepicker-block,
+  .leagues__top {
+    display: none;
+  }
+}
+@media (max-width: 920px) {
+  .topbar__block {
+    margin-bottom: 22px;
+  }
+}
+@media (max-width: 620px) {
+  .topbar__block {
+    margin-bottom: 28px;
+  }
+  .leagues-overwrap {
+    left: -8px;
+  }
+}
+
+/*# sourceMappingURL=aside_left.css.map */

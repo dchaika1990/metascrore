@@ -1,0 +1,55 @@
+-
+    var topPredictors = [
+        { 'ic' : 'img/ma/avatar126.png', 'name' : 'mario10', 'count' : '380/716', 'percent' : '53%', 'ratio' : '2.07'},
+        { 'ic' : 'img/ma/avatar126.png', 'name' : 'mario10', 'count' : '380/716', 'percent' : '53%', 'ratio' : '2.07'},
+        { 'ic' : 'img/ma/avatar126.png', 'name' : 'mario10', 'count' : '380/716', 'percent' : '53%', 'ratio' : '2.07'},
+        { 'ic' : 'img/ma/avatar126.png', 'name' : 'mario10', 'count' : '380/716', 'percent' : '53%', 'ratio' : '2.07'},
+        { 'ic' : 'img/ma/avatar126.png', 'name' : 'mario10', 'count' : '380/716', 'percent' : '53%', 'ratio' : '2.07'},
+        { 'ic' : 'img/ma/avatar126.png', 'name' : 'mario10', 'count' : '380/716', 'percent' : '53%', 'ratio' : '2.07'},
+        { 'ic' : 'img/ma/avatar126.png', 'name' : 'mario10', 'count' : '380/716', 'percent' : '53%', 'ratio' : '2.07'},
+        { 'ic' : 'img/ma/avatar126.png', 'name' : 'mario10', 'count' : '380/716', 'percent' : '53%', 'ratio' : '2.07'},
+        { 'ic' : 'img/ma/avatar126.png', 'name' : 'mario10', 'count' : '380/716', 'percent' : '53%', 'ratio' : '2.07'},
+        { 'ic' : 'img/ma/avatar126.png', 'name' : 'mario10', 'count' : '380/716', 'percent' : '53%', 'ratio' : '2.07'},
+        { 'ic' : 'img/ma/avatar126.png', 'name' : 'mario10', 'count' : '380/716', 'percent' : '53%', 'ratio' : '2.07'},
+        { 'ic' : 'img/ma/avatar126.png', 'name' : 'mario10', 'count' : '380/716', 'percent' : '53%', 'ratio' : '2.07'},
+        { 'ic' : 'img/ma/avatar126.png', 'name' : 'mario10', 'count' : '380/716', 'percent' : '53%', 'ratio' : '2.07'},
+        { 'ic' : 'img/ma/avatar126.png', 'name' : 'mario10', 'count' : '380/716', 'percent' : '53%', 'ratio' : '2.07'},
+        { 'ic' : 'img/ma/avatar126.png', 'name' : 'mario10', 'count' : '380/716', 'percent' : '53%', 'ratio' : '2.07'},
+        { 'ic' : 'img/ma/avatar126.png', 'name' : 'mario10', 'count' : '380/716', 'percent' : '53%', 'ratio' : '2.07'},
+        { 'ic' : 'img/ma/avatar126.png', 'name' : 'mario10', 'count' : '380/716', 'percent' : '53%', 'ratio' : '2.07'},
+        { 'ic' : 'img/ma/avatar126.png', 'name' : 'mario10', 'count' : '380/716', 'percent' : '53%', 'ratio' : '2.07'},
+        { 'ic' : 'img/ma/avatar126.png', 'name' : 'mario10', 'count' : '380/716', 'percent' : '53%', 'ratio' : '2.07'},
+        { 'ic' : 'img/ma/avatar126.png', 'name' : 'mario10', 'count' : '380/716', 'percent' : '53%', 'ratio' : '2.07'},
+        { 'ic' : 'img/ma/avatar126.png', 'name' : 'mario10', 'count' : '380/716', 'percent' : '53%', 'ratio' : '2.07'},
+        { 'ic' : 'img/ma/avatar126.png', 'name' : 'mario10', 'count' : '380/716', 'percent' : '53%', 'ratio' : '2.07'}
+    ];
+    var limit = 10;
+    var topPredictorsLen = topPredictors.length;
+    var topPredictorsCount = Math.ceil(topPredictorsLen/limit);
+    var topPredictorsStart = 1;
+    var topPredictorsIndex = 0;
+    var topPredictorsEndLen = topPredictorsStart*limit < topPredictorsLen ? topPredictorsStart*limit : topPredictorsLen;
+
+.box-container
+    .box-title.-bottom-border.aside-owl-nav-container
+        .title
+            | TOP PREDICTORS&nbsp;
+            span.js-top-predictors-from=topPredictorsStart
+            | &nbsp;-&nbsp;
+            span.js-top-predictors-to=topPredictorsEndLen
+    .box-inner
+        .aside-slide-container.owl-carousel.js-aside-owl-carousel
+            while topPredictorsStart <= topPredictorsCount
+                - topPredictorsEndLen = topPredictorsStart*limit < topPredictorsLen ? topPredictorsStart*limit : topPredictorsLen
+                - topPredictorsStart++
+                .aside-slide-item.js-aside-owl-item
+                    - for (topPredictorsIndex; topPredictorsIndex < topPredictorsEndLen; topPredictorsIndex++)
+                        .top-predictors-item
+                            a.top-predictors-link(href='javascript:void(0)')
+                                img.ic(src=topPredictors[topPredictorsIndex].ic)
+                            div.top-predictors-detail
+                                .name= topPredictors[topPredictorsIndex].name
+                                div.top-predictors-outcome
+                                    span.count= topPredictors[topPredictorsIndex].count
+                                    span.persent= topPredictors[topPredictorsIndex].percent
+                                    span.ratio= topPredictors[topPredictorsIndex].ratio

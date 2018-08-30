@@ -1,0 +1,121 @@
+@import 'settings';
+
+.userpage-favorite-container {
+	position: relative;
+
+	@media @mobile {
+		& {
+			display: none;
+		}
+	}
+}
+
+.userpage-favorite-btn {
+	border: 1px solid @btn-border-color;
+	border-radius: @border-base-radius;
+	display: inline-block;
+	color: @btn-border-color;
+	fill: @btn-border-color;
+	height: 28px;
+	line-height: 27px;
+	position: relative;
+	text-align: center;
+	vertical-align: top;
+	width: 28px;
+	z-index: 3;
+
+	&:hover,
+	&.pr-favorite-btn-active:hover {
+		background: @btn-color-active;
+		border-color: @btn-color-active;
+		color: @color-white-base;
+		fill:  @color-white-base;
+	}
+
+	&.pr-favorite-btn-active {
+		border-color: @btn-color-active;
+		color: @btn-color-active;
+		fill: @btn-color-active;
+	}
+
+	&.pr-fvr-muted:after {
+		background-color: @btn-border-color;
+		content: '';
+		height: 1px;
+		transform: rotate(-45deg) translateX(-50%);
+		top: 0;
+		right: -19px;
+		position: absolute;
+		width: 38px;
+	}
+
+	&.pr-fvr-muted:hover:after {
+		background-color: @color-white-base;
+	}
+
+	> .icon-icon-favorite {
+		font-size: 13px;
+		padding-left: 2px;
+	}
+}
+
+.userpage-favorite-dropdown {
+	position: absolute;
+	display: none;
+	top: 39px;
+	right: 0;
+	min-width: 90px;
+	will-change: opacity;
+	z-index: 90;
+}
+
+.userpage-favorite-dropdown-list {
+	background-color: @color-white-base;
+	border-radius: @border-base-radius;
+	box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+	overflow: hidden;
+	min-width: 150px;
+
+	> .item {
+		border-bottom: 1px solid #c9cccf;
+	}
+	> .item:last-child {
+		border-bottom: none;
+	}
+
+	> .item:first-child:before {
+		border-style: solid;
+		border-width: 0 5px 5px 5px;
+		border-color: transparent transparent @color-white-base transparent;
+		content: "";
+		display: block;
+		position: absolute;
+		right: 10px;
+		transition: .2s;
+		top: -5px;
+	}
+	> .item:first-child:hover:before {
+		border-bottom-color: @text-hover-color;
+	}
+}
+
+.userpage-favorite-dropdown-btn {
+	color: #a1a6ac;
+	display: block;
+	font-family: @font-GothamPro-Medium;
+	font-size: 9px;
+	line-height: 20px;
+	height: 30px;
+	padding: 5px 12px;
+	text-transform: uppercase;
+	white-space: nowrap;
+
+	&:hover,
+	&.pr-remove:hover {
+		background: @text-hover-color;
+		color: @color-white-base;
+	}
+	&.pr-remove {
+		color: @color-red-base;
+	}
+}

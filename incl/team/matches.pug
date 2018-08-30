@@ -1,0 +1,811 @@
+-
+	var matchPredictions = [
+	{ date: '09 Apr 17',teams: [{name: 'Real Madrid', score: 2}, {name: 'RSC Anderlecht', score: 3}], isFavorite: false},
+	{ date: '03 Apr 17',teams: [{name: 'Trindad and Tobago', score: 1}, {name: 'Real Madrid', score: 2}], isFavorite: false},
+	{ date: '02 Apr 17',teams: [{name: 'Real Madrid', score: 3}, {name: 'RSC Anderlecht', score: 3, record: 'pass'}], isFavorite: false},
+	{ date: '01 Apr 17',teams: [{name: 'Trindad and Tobago', score: 1}, {name: 'Real Madrid', score: 2}], isFavorite: false},
+	{ date: '01 Apr 17',teams: [{name: 'Real Madrid', score: 2}, {name: 'RSC Anderlecht', score: 4}], isFavorite: false}
+	]
+
+.box-container
+	.box-title.-bottom-border
+		.title MATCHES
+	.box-row
+		.box-column
+			.box-inner
+				.box-pagination
+					a.btn-userpage-navigation.-prev
+						svg.svg-ic(width="6" height="9")
+							use(xlink:href="#arrow-left")
+						| Older
+
+					a.btn-userpage-navigation.-next
+						| Newer
+						svg.svg-ic(width="6" height="9")
+							use(xlink:href="#arrow-right")
+
+				.box-content.-bottom-border
+					each val in matchPredictions
+						.match-predictions-item
+							.match-prediction-event
+								.date= val.date
+								.match-prediction-title
+									- var firstTeamScore = val.teams[0].score;
+									each team in val.teams
+										.match-prediction-team
+											span.name= team.name
+											span.score(class= team.score > firstTeamScore ? '-bold' : '')= team.score
+											if team.record
+												span.mp-record
+													span(class='mp-record-' + team.record)
+							.match-predictions-outcome
+								include favorite
+		.box-column
+			.aside-right.aside-right-scrollable(style="width: 100%")
+				.nm-share-block
+					a.nm-share-toggle(href="javascript:void(0)")
+						svg.nm-svg(width="14" height="15")
+							use(xlink:href="#icon-share")
+
+					a.nm-share-btn.nm-share-fb(href="javascript:void(0)")
+						svg.nm-svg(width="6" height="10")
+							use(xlink:href="#icon-share-facebook")
+
+					a.nm-share-btn.nm-share-twitter(href="javascript:void(0)")
+						svg.nm-svg(width="10" height="8")
+							use(xlink:href="#icon-share-twitter")
+
+					a.nm-share-btn.nm-share-google(href="javascript:void(0)")
+						svg.nm-svg(width="12" height="8")
+							use(xlink:href="#icon-share-google")
+
+					a.nm-share-btn.nm-share-youtube(href="javascript:void(0)")
+						svg.nm-svg(width="14" height="10")
+							use(xlink:href="#icon-share-youtube")
+
+					a.nm-share-btn.nm-share-inst(href="javascript:void(0)")
+						svg.nm-svg(width="11" height="11")
+							use(xlink:href="#icon-share-inst")
+
+				.nm-aside-headblock
+					ul.nm-mini-breadcrumbs
+						li: a(href="javascript:void(0)") Spain
+						li: a(href="javascript:void(0)") Primera Division
+
+					.nm-match-name APOEL Niscotia - RSC Anderlecht
+
+				div(style="overflow: hidden; height: 600px")
+					.nm-scroll-area.scrollbar-outer
+						.nm-aside-match-headblock
+							.nm-team-col
+								.nm-team-badge
+									img(src="img/icons/badge-apoel.png" alt="APOEL Niscotia")
+
+								.nm-team-name APOEL Niscotia
+
+								a.nm-btn.nm-btn-border(href="javascript:void(0)") Follow
+
+							.nm-middle-col
+								.nm-info
+									.nm-date 14 days
+
+								a.nm-btn.nm-btn-border.nm-btn-play(href="javascript:void(0)")
+									svg.nm-svg(width="13" height="13")
+										use(xlink:href="#icon-tab-live")
+
+							.nm-team-col
+								.nm-team-badge
+									img(src="img/icons/badge-rsc-anderlecht.png" alt="RSC Anderlecht")
+
+								.nm-team-name RSC Anderlecht
+
+								a.nm-btn.nm-btn-border(href="javascript:void(0)") Follow
+
+						.nm-aside-bigtabs-block
+						.nm-tabs-wrapper
+							.nm-scroll-area
+								.nm-scroll-wrapper
+									ul.nm-tabs-list.nm-big-tabs
+										li.active: a(href="javascript:void(0)") Details
+										li: a(href="javascript:void(0)") Statistics
+										li: a(href="javascript:void(0)") Lineups
+										li: a(href="javascript:void(0)") Matches
+										li: a(href="javascript:void(0)") Standings
+
+							.nm-tabs-content
+								.nm-tab-content.details__wrap#details-tab.active
+									.details
+										.cell.cell--justified.details__time
+											.cell__section
+												.cell__content Today at 21:45
+											.cell__section
+												.cell__content Not started
+										.details__willwin.details-inner-wrap
+											.s-title Who will win?
+											.details__vote.vote
+												.cell
+													.cell__section
+														.cell__content
+															button.vote__button.vote__button-green 1
+													.cell__section
+														.cell__content
+															button.vote__button X
+													.cell__section
+														.cell__content
+															button.vote__button.vote__button-blue 2
+										.details__willwin.odds__wrap.details-inner-wrap
+											.match__odds.odds
+												.odds__left
+													.odds__left-bottom
+														.s-title Odds
+														a(href='#')
+															div Full time
+												.odds__right
+													.odds__right-top
+														div 1
+														div Х
+														div 2
+													.odds__right-bottom
+														a(href='#' data-tooltip='Tooltip text' class='odds__value up') 2.90
+														a(href='#' data-tooltip='Tooltip text' class='odds__value down') 3.25
+														a(href='#' class='odds__value up') 2.70
+											.match__odds.odds
+												.odds__left
+													.odds__left-bottom
+														a(href='#')
+															div Double chanse
+												.odds__right
+													.odds__right-top
+														div 1Х
+														div Х2
+														div 12
+													.odds__right-bottom
+														a.nm-blue-bg(href='#' class='odds__value up')
+															span 2.90
+														a(href='#' class='odds__value down')
+															span 3.25
+														a.nm-grey-bg(href='#' class='odds__value up')
+															span 2.70
+											.match__odds.odds
+												.odds__left
+													.odds__left-bottom
+														a(href='#')
+															div 1st half
+												.odds__right
+													.odds__right-top
+														div 1
+														div Х
+														div 2
+													.odds__right-bottom
+														a.nm-grey-bg(href='#' class='odds__value up')
+															span 2.90
+														a.nm-grey-bg(href='#' class='odds__value down')
+															span 3.25
+														a(href='#' class='odds__value up')
+															span 2.70
+											.match__odds.odds
+												.odds__left
+													.odds__left-bottom
+														a(href='#')
+															div Draw no bet
+												.odds__right
+													.odds__right-top
+														div 1
+														div
+														div 2
+													.odds__right-bottom
+														a(href='#' class='odds__value up') 2.90
+														a(href='#' class='odds__value')
+														a(href='#' class='odds__value up') 2.70
+											.match__odds.odds
+												.odds__left
+													.odds__left-bottom
+														a(href='#')
+															div Both teams to score
+												.odds__right
+													.odds__right-top
+														div Yes
+														div
+														div No
+													.odds__right-bottom
+														a(href='#' class='odds__value up') 2.90
+														a(href='#' class='odds__value')
+														a(href='#' class='odds__value up') 2.70
+											.match__odds.odds
+												.odds__left
+													.odds__left-bottom
+														a(href='#')
+															div First team to score
+												.odds__right
+													.odds__right-top
+														div team1
+														div no-goal
+														div team2
+													.odds__right-bottom
+														a(href='#' class='odds__value up') 2.90
+														a(href='#' class='odds__value down') 3.25
+														a(href='#' class='odds__value up') 2.70
+
+											.odds__goals
+												.odds
+													.odds__right
+														.odds__right-top
+															.odds__goals-title Match <br> goals
+															div Over
+															div Under
+														.odds__right-bottom
+															a(href='#' class='odds__value') 0.5
+															a(href='#' class='odds__value up') 2.90
+															a(href='#' class='odds__value up') 2.70
+												.odds
+													.odds__right
+														.odds__right-bottom
+															a(href='#' class='odds__value') 1.5
+															a(href='#' class='odds__value down') 2.90
+															a(href='#' class='odds__value up') 2.70
+												.odds
+													.odds__right
+														.odds__right-bottom
+															a(href='#' class='odds__value') 2.5
+															a(href='#' class='odds__value down') 2.90
+															a(href='#' class='odds__value up') 2.70
+												.odds
+													.odds__right
+														.odds__right-bottom
+															a(href='#' class='odds__value') 3.5
+															a(href='#' class='odds__value down') 2.90
+															a(href='#' class='odds__value up') 2.70
+												.odds
+													.odds__right
+														.odds__right-bottom
+															a(href='#' class='odds__value') 4.5
+															a(href='#' class='odds__value down') 2.90
+															a(href='#' class='odds__value up') 2.70
+												.odds
+													.odds__right
+														.odds__right-bottom
+															a(href='#' class='odds__value') 5.5
+															a(href='#' class='odds__value down') 2.90
+															a(href='#' class='odds__value up') 2.70
+
+
+									.h2h.bg-gray.details-inner-wrap
+										.s-title H2H
+										.nm-aside-match-headblock
+											.nm-team-col
+												.nm-team-badge
+													img(src="img/icons/badge-apoel.png" alt="APOEL Niscotia")
+
+												.nm-team-num 2
+
+												.nm-team-name Apoel Niscotia
+
+											.nm-middle-col
+												.nm-info
+													.nm-team-num 3
+
+											.nm-team-col
+												.nm-team-badge
+													img(src="img/icons/badge-rsc-anderlecht.png" alt="RSC Anderlecht")
+
+												.nm-team-num 0
+
+												.nm-team-name Rsc Anderlecht
+
+
+									.pregame
+										.s-title Pregame form
+										.pregame__odds
+											.odds
+												.odds__right
+													.odds__right-top
+														div Last 5
+														div Pts
+											.odds
+												.odds__left
+													.odds__left-bottom
+														a(href='#')
+															.odds__rank.odds__rank-blue 5
+															div Apoel Niscotia
+												.odds__right
+													.odds__right-bottom
+														.odds__last
+															a(href='#' class='odds__w')
+															a(href='#' class='odds__l')
+															a(href='#' class='odds__w')
+															a(href='#' class='odds__d')
+															a(href='#' class='odds__w')
+														a(href='#' class='odds__value') 48
+											.odds
+												.odds__left
+													.odds__left-bottom
+														a(href='#')
+															.odds__rank.odds__rank 12
+															div Rsc Anderlecht
+												.odds__right
+													.odds__right-bottom
+														.odds__last
+															a(href='#' class='odds__w')
+															a(href='#' class='odds__l')
+															a(href='#' class='odds__w')
+															a(href='#' class='odds__d')
+															a(href='#' class='odds__w')
+														a(href='#' class='odds__value') 48
+
+
+									.h2h.manager.bg-gray.details-inner-wrap
+										.s-title Manager H2H
+										.nm-aside-match-headblock
+											.nm-team-col
+												.nm-team-badge
+													img(src="img/ma/avatar126.png" alt="APOEL Niscotia")
+
+												.nm-team-num 2
+
+												.nm-team-name Arnold Alois Schwarzenegger
+
+											.nm-middle-col
+												.nm-info
+													.nm-team-num 3
+
+											.nm-team-col
+												.nm-team-badge
+													img(src="img/ma/avatar127.png" alt="RSC Anderlecht")
+
+												.nm-team-num 0
+
+												.nm-team-name Jean-Claude Van Damme
+
+									.winnings
+										.s-title Winning odds
+										.winnings__items
+											.winnings__item
+												a(href='#' class='winnings__link')
+													img(src="img/icons/badge-apoel.png" alt="APOEL Niscotia")
+													div Apoel Niscotia
+												.winnings__description
+													| When the odds are <span class='dark'>2.63</span> the expected chance of winning is <span>38%</span>, but this team actually <mark>wins 46.7%</mark> matches with these odds.
+
+											.winnings__item
+												a(href='#' class='winnings__link')
+													img(src="img/icons/badge-rsc-anderlecht.png" alt="RSC Anderlecht")
+													div Rsc Anderlecht
+												.winnings__description
+													| When the odds are <span class='dark'>2.63</span> the expected chance of winning is <span>38%</span>, but this team actually <mark>wins 46.7%</mark> matches with these odds.
+
+									.matchinfo.bg-gray
+										.s-title Match info
+										.odds
+											.odds__left
+												div Start date
+											.odds__right
+												div 17. Mar 2017, 21:45
+										.odds
+											.odds__left
+												div Referee
+											.odds__right
+												div Inaki Vicandi Garrido, Spain
+										.odds
+											.odds__left
+												div Avg. cards
+											.odds__right
+												.card.card-red 0.28
+												.card.card-yellow 4.12
+										.odds
+											.odds__left
+												div Location
+											.odds__right
+												div Las Palmas de Gran Canaria, Spain
+										.odds
+											.odds__left
+												div Venue
+											.odds__right
+												div Gran Canaria
+
+									.media
+										.s-title Media
+										.odds
+											.odds__left
+												a(href='#')
+													img(src='img/ma/media-video-example.jpg' alt="img")
+											.odds__right
+												a(href='#') Arsenal de Sarandi 1-2 Atletico Rafaela
+												div Full highlights
+										.odds
+											.odds__left
+												a(href='#')
+													img(src='img/ma/media-video-example.jpg' alt="img")
+											.odds__right
+												a(href='#') Arsenal de Sarandi 1-2 Atletico Rafaela long description...
+												div Full highlights
+
+
+
+								.nm-tab-content#statistics-tab
+									.nm-tabs-wrapper
+										ul.nm-tabs-list.nm-small-tabs.nm-statistics-tabs
+											li.active: a(href="javascript:void(0)") All
+											li: a(href="javascript:void(0)") 1ST
+											li: a(href="javascript:void(0)") 2ND
+
+										.nm-tabs-content
+											mixin stat(l, m, r, leftbets, rightbest)
+												.nm-statistic-row
+													div(class= leftbets ? "nm-best" : "")
+														if ((i == 0) || !(l > 0))
+															span= l
+														if ((i == 1) && (l > 0))
+															span= ++l
+														if ((i == 2) && (l > 0))
+															span= --l
+													div
+														span= m
+													div(class= rightbest ? "nm-best" : "")
+														if ((i == 0) || !(r > 0))
+															span= r
+														if ((i == 1) && (r > 0))
+															span= ++r
+														if ((i == 2) && (r > 0))
+															span= --r
+
+											- for (i=0; i<3; i++) {
+											div(class="nm-tab-content" + ((i == 0) ? " active" : ""))
+												.nm-statistics-section
+													.nm-statistics-block
+														+stat("47%", "Ball possession", "53%", "", "")
+
+													.nm-statistics-block
+														+stat("13", "Total shot", "10", "+", "")
+														+stat("13", "Shots on target ", "10", "+", "")
+														+stat("13", "Shots off target ", "13", "", "")
+														+stat("3", " Blocked shots ", "12", "", "+")
+
+													.nm-statistics-block
+														+stat("2", "Shots inside box", "4", "", "+")
+														+stat("6", "Shots outside box", "6", "", "")
+														+stat("6", "Big canses created", "6", "", "")
+														+stat("13", "Hit woodwork", "10", "+", "")
+														+stat("13", "Goalkeepers saves", "10", "+", "")
+
+													.nm-statistics-block
+														+stat("6", "Corner kicks", "2", "+", "")
+														+stat("1", "Passes", "4", "", "+")
+														+stat("6", "Accurate passes", "6", "", "")
+														+stat("75%", "Accurate passes %", "75%", "", "")
+
+													.nm-statistics-block
+														+stat("0", "Offsides", "0", "", "")
+														+stat("4", "Fouls", "4", "", "")
+														+stat("2", "Yellow cards", "2", "", "")
+
+													.nm-statistics-block
+														+stat("6", "Duels won", "6", "", "")
+														+stat("2", "Aerials won", "2", "", "")
+											-}
+
+
+								.nm-tab-content#lineups-tab
+									.nm-btn-detail-wrap
+										a.nm-btn.nm-btn-green-border(href="javascript:void(0)") Detailed Player statistics
+
+									.nm-tabs-wrapper
+										ul.nm-tabs-list.nm-small-tabs.nm-double-tabs.nm-lineups-tabs
+											li.active: a(href="javascript:void(0)") APOEL Niscotia
+											li: a(href="javascript:void(0)") RSC Anderlecht
+
+										mixin player(tshirt, TOP, position, name, rating, goal, substitution, card)
+											.nm-player-block(style="top:" + TOP)
+												.nm-shirt
+													img(src="img/tshirts/tshirt-" + tshirt + ".svg" alt="t-shirt")
+													.nm-position.white= position
+													.nm-player-info-block
+														.nm-icons-row
+															.nm-extra-block
+																if goal
+																	.nm-img-wrap.nm-goal
+																		img(src="img/icons/icon-lineup-goal.svg" alt="substitution")
+																if substitution
+																	.nm-img-wrap.nm-substitution
+																		img(src="img/icons/icon-lineup-substitution.svg" alt="substitution")
+															.nm-card-block
+																if card
+																	.nm-yellow-card
+														.nm-player-rating= rating
+												a.nm-player-name(href="javascript:void(0)" data-remodal-target="player_info")= name
+
+										.nm-players-lineups-block
+											.nm-field-wrap.left-side
+												.nm-lineup-scheme.left-scheme 4-2-3-1
+												.nm-lineup-scheme.right-scheme 4-2-3-1
+
+												.nm-columns-wrap
+													.nm-column.nm-column-goalkeeper
+														+player('1', '50%', '24', 'Stefan Frei', '6.5', '', '', '')
+													.nm-column
+														+player('2', '10%', '33', 'Joevin Jones', '7.0', '', '', '')
+														+player('2', '30%', '14', 'Chad Marshall', '6.0', '', '', '')
+														+player('2', '66%', '19', 'Gustav Stevenson', '6.0', '', '', '')
+														+player('2', '87%', '6', 'Oniel Fisher', '6.6', '', '', 'card')
+													.nm-column
+														+player('2', '21%', '4', 'Cristian Roldan', '6.0', '', '', '')
+														+player('2', '78%', '8', 'Osvaldo  Alonso', '6.0', '', '', '')
+													.nm-column
+														+player('2', '10%', '7', 'Harrison  Shipp', '7.2', 'goal', '', '')
+														+player('2', '50%', '2', 'Clint  Dempsey', '6.0', '', 's', '')
+														+player('2', '87%', '10', 'Nicolas Rodiero', '6.0', '', '', '')
+													.nm-column
+														+player('2', '50%', '13', 'Oniel Fisher', '6.6', '', '', 'card')
+
+													.nm-column.nm-column-central
+
+													.nm-column
+														+player('2', '50%', '13', 'Oniel Fisher', '6.6', '', '', 'card')
+													.nm-column
+														+player('2', '10%', '7', 'Harrison  Shipp', '7.2', 'goal', '', '')
+														+player('2', '50%', '2', 'Clint  Dempsey', '6.0', '', 's', '')
+														+player('2', '87%', '10', 'Nicolas Rodiero', '6.0', '', '', '')
+													.nm-column
+														+player('2', '21%', '4', 'Cristian Roldan', '6.0', '', '', '')
+														+player('2', '78%', '8', 'Osvaldo  Alonso', '6.0', '', '', '')
+													.nm-column
+														+player('2', '10%', '33', 'Joevin Jones', '7.0', '', '', '')
+														+player('2', '30%', '14', 'Chad Marshall', '6.0', '', '', '')
+														+player('2', '66%', '19', 'Gustav Stevenson', '6.0', '', '', '')
+														+player('2', '87%', '6', 'Oniel Fisher', '6.6', '', '', 'card')
+													.nm-column.nm-column-goalkeeper
+														+player('1', '50%', '24', 'Stefan Frei', '6.5', '', '', '')
+
+										.nm-light-grey-bg
+											.nm-tabs-content
+												.nm-tab-content.active
+													.nm-lineups-info-block
+														.nm-team-info
+															.nm-team-badge.nm-img-wrap
+																img(src="img/icons/badge-apoel.png" alt="APOEL Niscotia")
+															.nm-text-block
+																.nm-team-name APOEL Niscotia
+																.nm-coach-row
+																	span.nm-coach-name Brian Schmetizer
+																	span.nm-grey-normal Coach
+
+														.nm-players-info-section
+															a.nm-player-info-row(href="javascript:void(0)" data-remodal-target="player_info")
+																.nm-player-img(style="background-image: url('img/temp/photo-player-2.jpg')")
+																.nm-player-text
+																	.nm-player-name Tyler Austin Miller
+																	.nm-player-about 1 Goalkeeper
+																.nm-player-icons
+
+															a.nm-player-info-row(href="javascript:void(0)" data-remodal-target="player_info")
+																.nm-player-img(style="background-image:url('img/temp/photo-player-3.jpg')")
+																.nm-player-text
+																	.nm-player-name Tony Alfaro
+																	.nm-player-about 15 Defender
+																.nm-player-icons
+																	.nm-player-icon-card.nm-card-substitution
+																		img(src="img/icons/icon-lineup-substitution2.svg" alt="icon" width="9" height="8")
+																		.nm-time 52’
+
+																	.nm-player-icon-card.nm-card-rating 7.3
+
+												.nm-tab-content
+													.nm-lineups-info-block
+														.nm-team-info
+															.nm-team-badge.nm-img-wrap
+																img(src="img/icons/badge-rsc-anderlecht.png" alt="rsc anderlecht")
+															.nm-text-block
+																.nm-team-name RSC ANDERLECHT
+																.nm-coach-row
+																	span.nm-coach-name Brian Schmetizer
+																	span.nm-grey-normal Coach
+
+														.nm-players-info-section
+															a.nm-player-info-row(href="javascript:void(0)" data-remodal-target="player_info")
+																.nm-player-img(style="background-image: url('img/temp/photo-player-1.jpg')")
+																.nm-player-text
+																	.nm-player-name Austin Shmiller
+																	.nm-player-about 24 Goalkeeper
+																.nm-player-icons
+
+															a.nm-player-info-row(href="javascript:void(0)" data-remodal-target="player_info")
+																.nm-player-img(style="background-image:url('img/temp/photo-player-2.jpg')")
+																.nm-player-text
+																	.nm-player-name Tony Banderas
+																	.nm-player-about 12 Defender
+																.nm-player-icons
+																	.nm-player-icon-card.nm-card-rating 6.8
+
+											.nm-lineups-addlink-wrap
+												a.nm-add-to-web.nm-link(href="javascript:void(0)") Add live player ratings and lineups to your website!
+
+
+								.nm-tab-content#matches-tab
+									.nm-team-streaks-block
+										.nm-subcaption Team Streaks
+										.nm-team-row
+											.nm-team-badge
+												img(src="img/icons/badge-apoel.png" alt="APOEL Niscotia")
+
+											.nm-team-name APOEL Niscotia
+
+										.nm-team-stats-row
+											.nm-losses No losses
+											.nm-wins 7
+
+									.nm-tabs-wrapper
+										.nm-scroll-area
+											.nm-scroll-wrapper
+												ul.nm-tabs-list.nm-small-tabs.nm-triple-tabs
+													li.active: a(href="javascript:void(0)") APOEL Niscotia
+													li: a(href="javascript:void(0)") H2H
+													li: a(href="javascript:void(0)") RSC ANDERLECHT
+
+										.nm-tabs-content
+											- for (i=0; i<3; i++) {
+											div(class="nm-tab-content " + ((i == 0) ? "active" : ""))
+												- if (i!==1) {
+												.nm-matches-filters-wrap
+													.nm-matches-filters-row
+														.nm-radio-block
+															input.nm-invisible(type="checkbox" name="match_filters_home_" + (i + 1) id="match_filters_home_" + (i + 1))
+															label.nm-radio-label(for="match_filters_home_" + (i + 1))
+																span.nm-icon
+																span.nm-text Home
+
+														.nm-radio-block
+															input.nm-invisible(type="checkbox" name="match_filters_this_" + (i + 1) id="match_filters_this_" + (i + 1))
+															label.nm-radio-label(for="match_filters_this_" + (i + 1))
+																span.nm-icon
+																span.nm-text This tournament
+												-}
+
+												.nm-streaks-matches-wrapper
+													.nm-streaks-matches-block
+														a.nm-division-name.nm-link(href="javascript:void(0)") 1st Division, Championship group
+
+														.nm-table.nm-table-group
+															- var table_score1=["", "2"];
+															- var table_score2=["", "3"];
+															- for (m=0; m<2; m++) {
+															div(class="nm-tr " + ((m == 1) && (i == 2) ? "line_win" : "") + ((m == 1) && (i == 0) ? "line_lose" : ""))
+																.nm-td.nm-table-datetime
+																	.nm-grey-normal 01 Apr 17
+																	.nm-grey-normal 19:00
+
+																.nm-td.nm-table-teams
+																	div APOEL Niscotia
+																	div RSC Anderlecht
+
+																.nm-td.nm-table-score
+																	div= table_score1[m]
+																	div(class= (m == 1) ? "win" : "")= table_score2[m]
+
+																.nm-td.nm-table-icon
+																	- if (m==0)
+																	a(href="javascript:void(0)")
+																		img(src="img/icons/icon-matches-statistics.svg" alt="stat" width="9" height="9")
+																	- if (m==1)
+																	a(href="javascript:void(0)")
+																		img(src="img/icons/icon-matches-highlight.svg" alt="view" width="9" height="9")
+
+																.nm-td.nm-table-result
+																	- if (m==0||i==1) {
+																	.pr-favorite-container.nm-toogle-div
+																		a.pr-favorite-btn.nm-toggler(href='javascript:void(0)')
+																			i(class='icon-icon-favorite')
+																		.nm-dropdown.pr-dropdown-favorite
+																			ul
+																				li
+																					a(href="javascript:void(0)").pr-remove
+																						| Remove
+																				li
+																					a(href="javascript:void(0)").pr-mute
+																						| Mute this event
+																	-}
+																	- if (m==1&&i==2)
+																	.nm-res-letter W
+																	- if (m==1&&i==0)
+																	.nm-res-letter L
+															-}
+
+													.nm-streaks-matches-block
+														a.nm-division-name.nm-link(href="javascript:void(0)") 1st Division, Championship group
+
+														.nm-table.nm-table-group
+															- var table_score3=["2", "3"];
+															- var table_score4=["2", "2"];
+															- for (m=0; m<2; m++) {
+															div(class="nm-tr " + ((m == 0) ? "line_draw" : "") + ((m == 1 && i == 2) ? "line_lose" : "") + ((m == 1 && i == 0) ? "line_win" : ""))
+																.nm-td.nm-table-datetime
+																	.nm-grey-normal 01 Apr 17
+																	.nm-grey-normal 19:00
+
+																.nm-td.nm-table-teams
+																	div APOEL Niscotia
+																	div RSC Anderlecht
+
+																.nm-td.nm-table-score
+																	div(class= (m == 1) ? "win" : "")= table_score3[m]
+																	div= table_score4[m]
+
+																.nm-td.nm-table-icon
+
+																.nm-td.nm-table-result
+																	- if (m==0&&i!==1)
+																	.nm-res-letter D
+																	- if (m==1 && i==2)
+																	.nm-res-letter L
+																	- if (m==1 && i==0)
+																	.nm-res-letter W
+																	- if (i==1)
+																	.pr-favorite-container.nm-toogle-div
+																		a.pr-favorite-btn.nm-toggler(href='javascript:void(0)')
+																			i(class='icon-icon-favorite')
+																		.nm-dropdown.pr-dropdown-favorite
+																			ul
+																				li
+																					a(href="javascript:void(0)").pr-remove
+																						| Remove
+																				li
+																					a(href="javascript:void(0)").pr-mute
+																						| Mute this event
+															-}
+											-}
+
+
+								.nm-tab-content#standings-tab
+									- var standings_team = ["APOEL Niscotia", "APOEL Niscotia", "AEK", "APOEL Niscotia", "APOEL Niscotia", "RSC Anderlecht", "RSC Anderlecht"];
+									- var standings_count1 = ["28", "28", "26", "22", "22", "20", "19"];
+									- var standings_count2 = ["21", "18", "18", "12", "12", "11", "10"];
+									- var standings_count3 = ["5", "5", "5", "8", "8", "9", "9"];
+									- var standings_count4 = ["2", "3", "3", "1", "1", "1", "2"];
+									- var standings_goals = ["65:16", "60:23", "59:11", "52:00", "52:00", "51:25", "50:58"];
+									- var standings_pts = ["68", "61", "56", "52", "52", "50", "48"];
+
+									.nm-tabs-wrapper
+										ul.nm-tabs-list.nm-small-tabs.nm-triple-tabs
+											li.active: a(href="javascript:void(0)") Overall
+											li: a(href="javascript:void(0)") Home
+											li: a(href="javascript:void(0)") Away
+
+										.nm-mini-block
+											a.nm-division-name.nm-link(href="javascript:void(0)") 1st Division, Championship group
+											.nm-grey-normal Crypus
+
+											.nm-tabs-content
+												- var standings_id = ["overall-tab", "home-tab", "away-tab"];
+												- var Position_class = ["green_bg", "light_bg", "light_bg", "no_bg", "red_bg"];
+												- for (i=0; i<3; i++) {
+												div(id=standings_id[i] class= (i == 0) ? "nm-tab-content active" : "nm-tab-content")
+													.nm-table.nm-table-standings
+														.nm-thead
+															.nm-tr
+																.nm-td.nm-table-position
+																.nm-td.nm-table-team
+																.nm-td.nm-table-count.nm-grey-normal P
+																.nm-td.nm-table-count.nm-grey-normal W
+																.nm-td.nm-table-count.nm-grey-normal D
+																.nm-td.nm-table-count.nm-grey-normal L
+																.nm-td.nm-table-goals.nm-grey-normal Goals
+																.nm-td.nm-table-pts Pts
+
+														.nm-tbody
+															- for (j=0; j<5; j++) {
+															div(class="nm-tr " + ((j == i) ? "team-away" : "") + ((j == (i + 2)) ? "team-home" : ""))
+																div(class="nm-td nm-table-position " + Position_class[j])
+																	.nm-number= (j + 1)
+																.nm-td.nm-table-team
+																	a(href="javascript:void(0)")= standings_team[j + i]
+																.nm-td.nm-table-count= standings_count1[j + i]
+																.nm-td.nm-table-count= standings_count2[j + i]
+																.nm-td.nm-table-count= standings_count3[j + i]
+																.nm-td.nm-table-count= standings_count4[j + i]
+																.nm-td.nm-table-goals= standings_goals[j + i]
+																.nm-td.nm-table-pts= standings_pts[j + i]
+															-}
+												-}
+
+											.nm-grey-normal In the event that two teams finish with an equal number of points, the following system will be applied to break the tie: 1.
+
+											.text-right
+												a.nm-add-to-web.nm-link(href="javascript:void(0)") Add live standings to your website!

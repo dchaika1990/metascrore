@@ -1,0 +1,226 @@
+/*----------------------------*/
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.text-justify {
+  text-align: justify;
+}
+.nm-hidden {
+  display: none;
+}
+.nm-hidden-imp {
+  display: none !important;
+}
+.nm-invisible {
+  position: absolute;
+  display: block;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  margin: 0;
+  padding: 0;
+  width: 0;
+  height: 0;
+}
+.nm-grey-normal {
+  color: #a1a6ac;
+  font-size: 11px;
+  font-weight: 400;
+}
+.nm-clear:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.nm-img-wrap {
+  display: block;
+}
+.nm-img-wrap img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+.nm-link {
+  color: #486e7c;
+}
+.nm-link:hover {
+  color: #4186b0;
+}
+.nm-btn {
+  display: inline-block;
+  cursor: pointer;
+  background: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+}
+.nm-btn-border {
+  border: 1px solid #3e80a9;
+  border-radius: 4px;
+  color: #3e80a9;
+  font-family: "Gotham Pro", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding: 4px 5px 3px 5px;
+}
+.nm-btn-border:hover {
+  color: #fff;
+  background-color: #3e80a9;
+}
+.nm-svg {
+  display: block;
+  pointer-events: none;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+}
+input::-ms-clear {
+  display: none;
+}
+input::-ms-clear {
+  display: none;
+}
+input[type=password]::-ms-reveal {
+  display: none;
+}
+/*================================================*/
+/*                    MAIN STYLES                 */
+/*================================================*/
+.html {
+  overflow: auto !important;
+  height: 100%;
+}
+.html.nm-fixed {
+  height: 100% !important;
+  overflow: hidden !important;
+}
+body {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  background-color: #f5f5fd;
+  color: #43474d;
+  width: 100%;
+  min-width: 320px;
+  max-width: 100%;
+  min-height: 100%;
+  font-family: "HelveticaNeueCyr", sans-serif;
+}
+.nm-main-overlay {
+  position: absolute;
+  display: none;
+  background: rgba(0, 0, 0, 0.1);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  will-change: opacity;
+  z-index: 90;
+}
+.nm-content-overlay {
+  position: fixed;
+  cursor: pointer;
+  display: none;
+  background: rgba(0, 0, 0, 0.1);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  will-change: opacity;
+  z-index: 80;
+}
+.main-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+  padding: 90px 0 0 0;
+  margin: 0;
+}
+.nm-big-wrapper {
+  width: 100%;
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+.nm-grow {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  width: 100%;
+  margin: 0 auto 60px auto;
+  z-index: 10 !important;
+}
+.nm-block {
+  background-color: #fff;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+}
+main {
+  width: 20%;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+aside {
+  width: 270px;
+}
+/*================================================*/
+/*						  MEDIA				      */
+/*================================================*/
+@media (max-width: 620px) {
+  .main-wrapper {
+    padding-top: 68px;
+  }
+  .nm-big-wrapper {
+    padding: 0 8px;
+  }
+  .nm-grow {
+    margin-bottom: 40px;
+  }
+  .nm-mob-hide {
+    display: none !important;
+  }
+}
+
+/*# sourceMappingURL=nm_style.css.map */

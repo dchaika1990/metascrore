@@ -1,0 +1,21 @@
+-
+	var teamMedia = [
+		{ href:'#', screen: 'img/ma/media-video-example.jpg', title: 'Arsenal de Sarandi 1-2 Atletico Rafaela', descr: 'Full highlights' },
+		{ href:'#', screen: 'img/ma/media-video-example.jpg', title: 'Arsenal de Sarandi 1-2 Atletico Rafaela long description...', descr: 'Full highlights' }
+	];
+
+
+.box-container
+	.box-title.-bottom-border
+		.title MEDIA
+	.box-inner
+		.box-content
+			each item in teamMedia
+				a.team-media-item(href=item.href)
+					.team-media-screensaver
+						img.screen(src=item.screen)
+						svg.play(width="26" height="27")
+							use(xlink:href="#media-playvideo")
+					.team-media-caption
+						.title= item.title
+						.subtext= item.descr

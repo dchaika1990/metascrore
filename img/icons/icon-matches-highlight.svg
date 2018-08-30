@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="8.875" height="9" viewBox="0 0 8.875 9">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #5b9de9;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="_-e-event-matches-has_highlighrs" data-name="-e-event-matches-has_highlighrs" class="cls-1" d="M529.125,631H530a4,4,0,0,1,4,4v1a4,4,0,0,1-4,4h-0.875a4,4,0,0,1-4-4v-1A4,4,0,0,1,529.125,631Zm0.375,1a3.5,3.5,0,1,1-3.5,3.5A3.5,3.5,0,0,1,529.5,632Zm2,3.6-2.753,1.612V633.99Z" transform="translate(-525.125 -631)"/>
+</svg>

@@ -1,0 +1,82 @@
+@import "../common/settings";
+
+.division-dropdown {
+	display: inline-block;
+	margin-left: -10px;
+	position: relative;
+	vertical-align: top;
+}
+
+.division-dropdown-selected {
+	color: @color-blue-base;
+	font-family: @font-HelveticaNeueCyr-Medium;
+	font-size: 14px;
+	line-height: 1.2;
+	padding: 6px 21px 6px 10px;
+	position: relative;
+	white-space: nowrap;
+
+	&:after {
+		border-color: #486e7c transparent transparent transparent;
+		border-style: solid;
+		border-width: 3px 3px 0 3px;
+		content: '';
+		display: block;
+		position: absolute;
+		right: 8px;
+		top: 50%;
+		margin-top: -2px;
+	}
+}
+
+.division-dropdown-list {
+	display: none;
+	left: 0;
+	font-family: @font-GothamPro-Medium;
+	font-size: 9px;
+	position: absolute;
+	text-transform: uppercase;
+	top: 100%;
+	width: 100%;
+
+	> .item:first-child {
+		border-top: none;
+	}
+
+	> .item:last-child {
+		border-bottom-left-radius: @border-base-radius;
+		border-bottom-right-radius: @border-base-radius;
+	}
+
+	> .item {
+		background: @color-white-base;
+		color: #a1a6ac;
+		cursor: pointer;
+		border-top: 1px solid @btn-border-color;
+		padding: 8px 10px;
+	}
+
+	> .item.-selected {
+		color: @btn-color-active;
+	}
+
+	> .item.-selected:before {
+		background-color: @btn-color-active;
+		border-radius: 50%;
+		display: inline-block;
+		content: '';
+		height: 7px;
+		margin-right: 12px;
+		width: 7px;
+	}
+
+	> .item.-selected:hover,
+	> .item:hover {
+		background-color: @btn-color-active;
+		color: @color-white-base;
+	}
+
+	> .item.-selected:hover:before {
+		background-color: @color-white-base;
+	}
+}

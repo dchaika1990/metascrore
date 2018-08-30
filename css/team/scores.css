@@ -1,0 +1,7 @@
+.top-scorers-head {
+  text-align: right;
+}
+.top-scorers-head > .th {
+  display: inline-block;
+  vertical-align: top;
+}

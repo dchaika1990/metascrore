@@ -1,0 +1,29 @@
+doctype html
+html(lang='en')
+	head
+		title MetaScore: Homepage
+		include incl/head
+	body.homepage
+		include incl/svg
+			
+		.nm-main-overlay
+		//MAIN-WRAPPER BEGIN
+		.main-wrapper
+			include incl/header_unlog
+			include incl/topbar
+			include incl/above_homepage
+				
+			//GROW BEGIN
+			.nm-grow.nm-big-wrapper
+				.nm-content-overlay
+				
+				include incl/aside_left
+				include incl/live_content_homepage
+				include incl/aside_right_live
+				
+			//GROW END
+			include incl/newstape
+			include incl/footer
+		//MAIN-WRAPPER END
+		include incl/modals
+		include incl/scripts

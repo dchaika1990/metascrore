@@ -1,0 +1,28 @@
+doctype html
+html(lang='en')
+	head
+		title MetaScore: Favorites
+		include incl/head
+	body.homepage
+		include incl/svg
+			
+		.nm-main-overlay
+		//MAIN-WRAPPER BEGIN
+		.main-wrapper.favorites
+			include incl/header
+			include incl/topbar
+			include incl/above_favorites
+			
+			//GROW BEGIN
+			.nm-grow.nm-big-wrapper
+				.nm-content-overlay
+				
+				include incl/content_favorites
+				include incl/aside_right_favorites
+				
+			//GROW END
+			include incl/newstape
+			include incl/footer
+		//MAIN-WRAPPER END
+		include incl/modals
+		include incl/scripts

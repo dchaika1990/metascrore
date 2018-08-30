@@ -1,0 +1,308 @@
+.SumoSelect {
+    cursor: pointer;
+	background-color: #fff;
+	font-size: 16px;
+	font-weight: 300;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+    height: 40px;
+	-webkit-box-shadow: 0 1px 4px rgba(45, 96, 148, 0.24);
+	box-shadow: 0 1px 4px rgba(45, 96, 148, 0.24);
+	transition: border-radius 0.1s ease-in-out, -webkit-box-shadow 0.1s ease-in-out, border-color 0.2s;
+	margin-bottom: 13px;
+}
+.SumoSelect:hover {
+	border-color: #0075b8;
+}
+.SumoSelect p {
+    margin: 0;
+}
+.SumoSelect.open {
+	background-color: #fff;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+.SumoSelect.open > .CaptionCont > label > i:before {
+	-webkit-transform: rotate(-25deg);
+	-ms-transform: rotate(-25deg);
+	transform: rotate(-25deg);
+}
+.SumoSelect.open > .CaptionCont > label > i:after {
+	left: 7px;
+	-webkit-transform: rotate(25deg);
+	-ms-transform: rotate(25deg);
+	transform: rotate(25deg);
+}
+.SelectBox {
+    cursor: pointer;
+	border-radius: 4px;
+    padding: 5px 15px;
+}
+.sumoStopScroll {
+    overflow: hidden;
+}
+
+/*this is applied on that hidden select. DO NOT USE display:none; or visiblity:hidden; and Do not override any of these properties. */
+.SelectClass,
+.SumoUnder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    border: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+	border-radius: 4px;
+    opacity: 0;
+	z-index: -1;
+}
+.SelectClass {
+    z-index: 1002;
+}
+.SumoSelect > .optWrapper > .options li.opt label,
+.SumoSelect > .CaptionCont,
+.SumoSelect .select-all > label {
+    -ms-user-select: none;
+    user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+}
+.SumoSelect {
+    display: inline-block;
+    position: relative;
+    outline: none;
+}
+
+.SumoSelect.open > .CaptionCont {
+	background-color: #fff;
+	z-index: 1001;
+}
+.SumoSelect > .CaptionCont {
+    position: relative;
+	line-height: 28px;
+    min-height: 14px;
+	min-width: 222px;
+	max-width: 222px;
+    height: 100%;
+    margin: 0;
+/*	z-index: 1001;*/
+}
+
+.SumoSelect > .nm-select-number ~ .CaptionCont {
+	text-align: right;
+	min-width: 118px;
+	max-width: 118px;
+}
+.SumoSelect > .nm-select-number ~ .CaptionCont > span {
+	padding-right: 50px;
+}
+.SumoSelect > .nm-select-number ~ .CaptionCont:before {
+	position: absolute;
+	display: block;
+	content: "шт";
+	color: #bbb;
+	font-family: "Roboto";
+	font-size: 16px;
+	font-weight: 300;
+	right: 40px;
+	top: 5px;
+}
+.SumoSelect > .nm-select-number ~ .optWrapper > .options li.opt {
+	padding-left: 35px;	
+}
+.SumoSelect > .CaptionCont > span {
+    display: block;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+	padding-right: 25px;
+}
+
+/*placeholder style*/
+.SumoSelect > .CaptionCont > span.placeholder {
+	color: #000;
+}
+.SumoSelect > .CaptionCont > label {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 15px;
+    bottom: 0;
+    width: 14px;
+}
+.SumoSelect > .CaptionCont > label > i {
+	position: absolute;
+	display: block;
+	background-color: white;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    opacity: 1;
+}
+.SumoSelect > .CaptionCont > label > i:before,
+.SumoSelect > .CaptionCont > label > i:after {
+	position: absolute;
+	display: block;
+	content: "";
+	background: #0f76b9;
+	width: 10px;
+	height: 2px;
+	top: 19px;
+}
+.SumoSelect > .CaptionCont > label > i:before {
+	left: 0;
+	-webkit-transform: rotate(25deg);
+	-ms-transform: rotate(25deg);
+	transform: rotate(25deg);
+	-webkit-transition: background 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+	transition: background 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+	-o-transition: background 0.2s ease-in-out, transform 0.2s ease-in-out;
+	transition: background 0.2s ease-in-out, transform 0.2s ease-in-out;
+	transition: background 0.2s ease-in-out, transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+}
+.SumoSelect > .CaptionCont > label > i:after {
+	left: 8px;
+	-webkit-transform: rotate(-25deg);
+	-ms-transform: rotate(-25deg);
+	transform: rotate(-25deg);
+	-webkit-transition: background 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+	transition: background 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+	-o-transition: background 0.2s ease-in-out, transform 0.2s ease-in-out;
+	transition: background 0.2s ease-in-out, transform 0.2s ease-in-out;
+	transition: background 0.2s ease-in-out, transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+}
+.SumoSelect > .optWrapper {
+    max-height: 0;
+    z-index: 1000;
+    top: 39px;
+    position: absolute;
+    left: -1px;
+    right: -1px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #fff;
+	color: #000;
+	border-top: none;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+    overflow: hidden;
+	-webkit-box-shadow: 0 1px 4px rgba(45, 96, 148, 0.24);
+	box-shadow: 0 1px 4px rgba(45, 96, 148, 0.24);
+	-webkit-transition: all 0.1s linear;
+	-o-transition: all 0.1s linear;
+	transition: all 0.1s linear;
+}
+.SumoSelect.open > .optWrapper {
+    max-height: 250px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;	
+	-webkit-transition: all 0.1s ease-in-out;
+	-o-transition: all 0.1s ease-in-out;
+	transition: all 0.1s ease-in-out;
+}
+.SumoSelect.open > .optWrapper.up {
+    top: auto;
+    bottom: 100%;	
+    margin-bottom: 5px;
+}
+.SumoSelect > .optWrapper ul {
+    list-style: none;
+    display: block;	
+	border: 1px solid #ccc;
+	border-top: none;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+    padding: 0;
+    margin: 0;
+    overflow: auto;
+}
+.SumoSelect > .optWrapper > .options {
+    position: relative;
+    max-height: 230px;
+}
+.SumoSelect > .optWrapper > .options li.group.disabled > label {
+    opacity: 1;
+}
+.SumoSelect > .optWrapper > .options li ul li.opt {
+    padding-left: 22px;
+}
+.SumoSelect > .optWrapper.multiple > .options li ul li.opt {
+    padding-left: 50px;
+}
+.SumoSelect > .optWrapper.isFloating > .options {
+    max-height: 100%;
+}
+.SumoSelect > .optWrapper > .options li.opt {
+	position: relative;
+	font-weight: 300;
+    padding: 5px 25px 5px 15px;
+}
+.SumoSelect > .optWrapper > .options > li.opt:first-child {
+    
+}
+.SumoSelect > .optWrapper > .options > li.opt:last-child {
+    border-bottom: none;
+}
+.SumoSelect > .optWrapper > .options li.opt:hover {
+    background-color: #f4f4f5;
+}
+.SumoSelect > .optWrapper > .options li.opt.sel {
+   
+}
+.SumoSelect > .optWrapper > .options li label {
+    display: block;
+    cursor: pointer;
+}
+.SumoSelect > .optWrapper > .options li span {
+    display: none;
+}
+.SumoSelect > .optWrapper > .options li.group > label {
+    cursor: default;
+    padding: 8px 6px;
+}
+
+/*Floating styles*/
+.SumoSelect > .optWrapper.isFloating {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 90%;
+    bottom: 0;
+    margin: auto;
+    max-height: 90%;
+}
+
+/*disabled state*/
+.SumoSelect > .optWrapper > .options li.opt.disabled {
+    background-color: inherit;
+    pointer-events: none;
+    padding: 0;
+}
+.SumoSelect > .optWrapper > .options li.opt.disabled * {
+    opacity: 1;
+}
+
+/*disabled state*/
+.SumoSelect.disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+.SumoSelect.disabled > .CaptionCont {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+/*styling for optgroups*/
+.SumoSelect > .optWrapper > .options li.optGroup {
+    padding-left: 5px;
+}

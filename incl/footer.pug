@@ -1,0 +1,65 @@
+//FOOTER BEGIN
+footer
+	.pr-top-footer-wrap
+		.pr-top-footer.pr-big-wrapper
+			.pr-top-footer-about
+				.pr-top-footer-title
+					h3 About
+				.pr-top-footer-about-text
+					p Football live scores on SofaScore livescore has live coverage from more than 500 worldwide soccer leagues, cups and tournaments with live updated results, statistics, league tables, video highlights, fixtures and live streaming.
+					p Live matches from all football leagues have fast and accurate updates for minutes, scores, halftime and full time soccer results, goal scorers and assistants, cards, substitutions, match statistics and live stream. Video highlights are available for most popular football leagues: Spain La Liga BBVA league and Copa del Rey , Italy Serie and Coppa Italia, German Bundesliga and DFB pokal, France Ligue 1 and UEFA Champions League, Europa league and International tournaments like World Championship, European Championship. SofaScore live score has details for each team where you can see last 10 soccer matches, tables, fixtures, results, statistics and much more. In match details you can find dropping/rising odds. Also, all scores on SofaScore.com livescore are automatically updated and you don't need to refresh it manually. With adding football matches or teams you want to follow in favorites, following your matches or teams livescores, results and statistics will be even more simple. There is an option to select All or Live football matches.
+			.pr-top-footer-right
+				.pr-top-footer-scores
+					.pr-top-footer-title
+						h3 Top live scores and streaming
+					- var ftrul=["Juventus - FC Porto", "AS Monaco - Manchester City", "Atlético Madrid - Bayer 04 Leverkusen", "Leicester City - Sevilla", "Roma - Olympique Lyon", "Del Potro J. - Djokovic N.", "Monfils G. - Thiem D.", "Houston Rockets - Los Angeles Lakers", "Montreal Canadiens - Chicago Blackhawks"];
+					- var ftrul2=["India - Australia", "Barcelona live stream", "Real Madrid live stream", "Manchester UTD live stream", "Chelsea live stream", "Arsenal live stream", "PSG live stream", "Bayern live stream", "Liverpool live stream"];
+					.pr-top-footer-scores-ul
+						ul
+							- for (i=0;i<9;i++) {
+								li
+									a(href="javascript:void(0)")= ftrul[i]
+							- }
+						ul
+							- for (i=0;i<9;i++) {
+								li
+									a(href="javascript:void(0)")= ftrul2[i]
+							- }
+				.pr-top-footer-sofascore
+					.pr-top-footer-title
+						h3 SofaScore
+					- var ftrul3=["Privacy & policy", "Media kit", "Contact", "Livescore App"];
+					ul
+						- for (i=0;i<4;i++) {
+							li
+								- if (i!==2) 
+									a(href="javascript:void(0)")= ftrul3[i]
+								- if (i==2)
+									a(href="javascript:void(0)" data-remodal-target="contact_us")= ftrul3[i]
+						- }
+	.pr-bot-footer-wrap
+		.pr-bot-footer.pr-big-wrapper
+			.pr-bot-footer-left
+				.pr-bot-footer-left-logo
+					a(href="javascript:void(0)").pr-logo-circle
+						img(src="img/icons/B.svg" alt='logo')
+					a(href="javascript:void(0)").pr-logo_name SofaScore.com
+				.pr-bot-footer-left-news
+					a(href="javascript:void(0)").pr-logo-circle
+						img(src="img/icons/news-logo.svg" alt='logo')
+					a(href="javascript:void(0)").pr-logo_name News.SofaScore.com
+			.pr-bot-footer-right
+				span.pr-bot-footer-right-copyright 2017 All rights reserved.
+				- var ftricons=["facebook", "twitter", "instagram", "youtube"];
+				.pr-bot-footer-right-links
+					ul
+						- for(j=0; j<4; j++){
+							li
+								a(href="javascript:void(0)")
+									.pr-logo-circle
+										img(src="img/icons/" + ftricons[j] + ".svg" alt=""+ftricons[j])
+						- }
+					a(href="javascript:void(0)").pr-to-top
+						.pr-logo-circle.pr-logo-empty
+							img(src="img/icons/to-top.svg" alt="carette")
+//FOOTER END

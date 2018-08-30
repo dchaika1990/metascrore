@@ -1,0 +1,50 @@
+@import "common/settings";
+@import "common/fonts";
+@import "common/box";
+@import "common/buttons";
+@import "common/favorite";
+@import "common/owl-carousel";
+@import "userpage/user-info";
+@import "userpage/match-prediction";
+@import "userpage/top-predictions";
+
+.userpage-wrapper {
+	margin-top: 8px;
+
+	@media (max-width: 780px) {
+		& {
+			margin-top: 28px;
+		}
+	}
+	@media @mobile-xs {
+		margin-top: 8px;
+	}
+
+	@media @desktop-lg {
+		& {
+			flex-wrap: wrap;
+		}
+	}
+}
+
+.userpage-main-container {
+	margin-right: @box-base-margin;
+	flex-basis: 870px;
+	/*width: 100%;*/
+
+	@media @desktop-lg {
+		& {
+			flex-basis: 100%;
+			margin-right: 0;
+		}
+	}
+	@media @tablet {
+		& {
+			margin-right: 0;
+		}
+	}
+}
+
+.userpage-aside-container {
+	flex-grow: 1;
+}

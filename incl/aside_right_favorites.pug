@@ -1,0 +1,112 @@
+//ASIDE RIGHT BEGIN
+aside.aside-right.nm-block.aside-right-favorites
+    .nm-aside-bigtabs-block
+        .nm-tabs-wrapper
+                ul.nm-tabs-list.nm-big-tabs
+                    li.active: a(href="javascript:void(0)") Teams  
+                    li: a(href="javascript:void(0)") Leagues
+                    li: a(href="javascript:void(0)") Players
+
+                .nm-tabs-content#teams
+                    .nm-tab-content.active
+                        .pr-main-content
+                            .pr-main-content-row
+                                -for(var k=0; k<4; k++){
+                                    .pr-match-row(href="javascript:void(0)")
+                                        .pr-match-row-left
+                                            .pr-left-col
+                                                -if(k==0){
+                                                    img(src="img/icons/icons-team.jpg" alt="Teams")
+                                                -}
+                                                -if(k==1){
+                                                    img(src="img/icons/icons-team.jpg" alt="Teams")
+                                                -}
+                                                -if(k==2){
+                                                    img(src="img/icons/icons-team.jpg" alt="Teams")
+                                                -}
+                                                -if(k==3){
+                                                    img(src="img/icons/icons-team.jpg" alt="Teams")
+                                                -}
+                                            .pr-match-row-center
+                                                .pr-match-row-center-left(data-href="#")
+                                                    .pr-team-name-cont
+                                                        p.pr-match-team-name Feyenoord
+                                        .pr-match-row-right
+                                            .pr-match-row-right-wrap
+                                                .pr-favorite-container.nm-toogle-div
+                                                    a(href='javascript:void(0)').pr-favorite-btn.nm-toggler
+                                                        i(class='icon-icon-favorite')
+                                                    .nm-dropdown.pr-dropdown-favorite
+                                                        ul
+                                                            li
+                                                                a(href="javascript:void(0)").pr-remove
+                                                                    | Remove
+                                                                    i(class='icon-icon-favorite')
+                                                            li
+                                                                a(href="javascript:void(0)").pr-mute
+                                                                    | Mute this event
+
+                                -}
+                    .nm-tab-content
+                        .pr-main-content
+                            .pr-main-content-row
+                                -for(var k=0; k<1; k++){
+                                    .pr-match-row(href="javascript:void(0)")
+                                        .pr-match-row-left
+                                            .pr-left-col
+                                                -if(k==0){
+                                                    img(src="img/icons/icons-leagues.jpg" alt="Leagues")
+                                                -}
+                                            .pr-match-row-center
+                                                .pr-match-row-center-left(data-href="#")
+                                                    .pr-team-name-cont
+                                                        p.pr-match-team-name Premier League
+                                        .pr-match-row-right
+                                            .pr-match-row-right-wrap
+                                                .pr-favorite-container.nm-toogle-div
+                                                    a(href='javascript:void(0)').pr-favorite-btn.nm-toggler
+                                                        i(class='icon-icon-favorite')
+                                                    .nm-dropdown.pr-dropdown-favorite
+                                                        ul
+                                                            li
+                                                                a(href="javascript:void(0)").pr-remove
+                                                                    | Remove
+                                                                    i(class='icon-icon-favorite')
+                                                            li
+                                                                a(href="javascript:void(0)").pr-mute
+                                                                    | Mute this event
+                                -}
+                    .nm-tab-content
+                        .pr-main-content
+                            .pr-main-content-row
+                                -for(var k=0; k<2; k++){
+                                    .pr-match-row(href="javascript:void(0)")
+                                        .pr-match-row-left
+                                            .pr-left-col
+                                                -if(k==0){
+                                                    img(src="img/icons/icons-players.jpg" alt="Players")
+                                                -}
+                                                -if(k==1){
+                                                    img(src="img/icons/icons-players.jpg" alt="Players")
+                                                -}
+                                            .pr-match-row-center
+                                                .pr-match-row-center-left(data-href="#")
+                                                    .pr-team-name-cont
+                                                        p.pr-match-team-name Christiano Ronaldo
+                                        .pr-match-row-right
+                                            .pr-match-row-right-wrap
+                                                .pr-favorite-container.nm-toogle-div
+                                                    a(href='javascript:void(0)').pr-favorite-btn.nm-toggler
+                                                        i(class='icon-icon-favorite')
+                                                    .nm-dropdown.pr-dropdown-favorite
+                                                        ul
+                                                            li
+                                                                a(href="javascript:void(0)").pr-remove
+                                                                    | Remove
+                                                                    i(class='icon-icon-favorite')
+                                                            li
+                                                                a(href="javascript:void(0)").pr-mute
+                                                                    | Mute this event
+                                -}
+
+//ASIDE RIGHT END

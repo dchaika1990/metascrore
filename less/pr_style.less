@@ -1,0 +1,256 @@
+/* Colors */
+@mainBlue: #486e7c;
+@bgBlue: #4186b1;
+@maingray: #a1a6ac;
+@lightgray: #d1d1d1;
+@hovgray: #c9cccf;
+@darkgray: #43474d;
+@ftrgray: #bbbfc3;
+@ftrlink: #7b9098;
+@ftrlinkH: #90b8c7;
+
+.pr-big-wrapper{
+	width: 100%;
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.scrollbar-outer > .scroll-element.scroll-y .scroll-bar{
+	height: 22px!important;
+	background-color: #c9ccd1;
+	border-radius: 3.5px;
+}
+.scrollbar-outer > .scroll-element.scroll-y{
+	width: 8px;
+}
+.scrollbar-outer > .scroll-element.scroll-y .scroll-element_outer{
+	left: 0;
+}
+.scrollbar-outer > .scroll-element .scroll-element_track{
+	background-color: #fafaff;
+}
+
+.nm-ie .pr-leftside-calendar-wrap .pr-leftside-calendar td a.ui-state-default{
+	line-height: 19px;
+}
+
+// Calendar start
+.pr-leftside-calendar-wrap{
+	min-width: 270px;
+	min-height: 320px;
+	width: 100%;
+	height: 100%;
+	border-radius: 3px;
+	position: relative;
+	.pr-leftside-calendar{
+		margin: 0 auto;
+		padding-top: 20px;
+		margin: 0 20px;
+		table{
+			margin: 0 auto;
+			width: 100%;
+			thead{
+				margin-top: 25px;
+				th{
+					padding-bottom: 7px;
+				}
+			}
+		}
+		.ui-datepicker-header{
+			position: relative;
+			margin-bottom: 30px;
+		}
+		td{
+			text-align: center;
+		}
+		.ui-datepicker-title{
+			font-size: 14px;
+			line-height: 2.71;
+			text-align: center;
+			font-weight: 500;
+			color: #43474d;
+			margin: 0 7px;
+			border-bottom: 1px solid #f4f4f4;
+		}
+		.ui-datepicker-calendar>thead>tr>th{
+			font-size: 11px;
+			color: @maingray;
+			font-family: "Gotham Pro";
+			font-weight: 600;
+			text-transform: uppercase;
+		}
+		span.ui-state-default{
+			font-size: 11px;
+			font-family: "Gotham Pro";
+			font-weight: 500;
+			line-height: 18px;
+			color: @lightgray;
+			text-align: center;
+		}
+		td a.ui-state-default{
+			font-size: 11px;
+			color: #486e7c;
+			font-family: "Gotham Pro";
+			font-weight: 500;
+			line-height: 20px;
+			display: block;
+			margin: 6px;
+			width: 21px;
+			height: 21px;
+			border-radius: 50%;
+			text-align: center;
+			border: 1px solid transparent;
+			&:hover{
+				border: 1px solid @lightgray;
+			}
+		}
+		td.ui-datepicker-today{
+			a{
+				border-radius: 0;
+				background-color: transparent;
+				border-bottom: 1px solid @maingray;
+				color: @mainBlue;
+				&:hover{
+					border-radius: 50%;
+				}
+			}
+		}
+		.ui-icon.ui-icon-circle-triangle-w, .ui-icon.ui-icon-circle-triangle-e{
+			display: none;
+		}
+		td a.ui-state-active{
+			color: #fff;
+			background: @bgBlue;
+			border-radius: 50%;
+			border: 1px solid @bgBlue;
+			&:hover{
+				border: 1px solid @mainBlue;
+			}
+		}
+		.ui-datepicker-next, .ui-datepicker-prev{
+			position: absolute;
+			display: block;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 8px;
+			width: 6px;
+			height: 9px;
+			color: transparent;
+			cursor: pointer;
+		}
+		.ui-datepicker-next{
+			right: 8px;
+			left: auto;
+		}
+		.ui-datepicker-prev:before{
+			content: '';
+			position: absolute;
+			display: inline-block;
+			width: 6px;
+			height: 9px;
+			background: url('../img/icons/icon-arrow-right-grey.svg');
+			background-size: cover;
+			transform: rotate(180deg);
+		}
+		.ui-datepicker-next:before{
+			content: '';
+			position: absolute;
+			display: inline-block;
+			width: 6px;
+			height: 9px;
+			background: url('../img/icons/icon-arrow-right-grey.svg');
+			background-size: cover;
+		}
+	}
+	.calendar__action{
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin: 0 auto;
+		max-width: 218px;
+		margin-top: 7px;
+		padding-bottom: 30px;
+		border-top: 1px solid #f4f4f4;
+		padding-top: 20px;
+
+		.calendar__time{
+			font-size: 14px;
+			color: #a1a6ac;
+			line-height: 18px;
+		}
+		.interactive{
+			.calendar__today-btn{
+				font-size: 11px;
+				font-family: "Gotham Pro";
+				font-weight: normal;
+				color: #fff;
+				background: #4186b1;
+				border-radius: 9px;
+				text-align: center;
+				vertical-align: middle;
+				line-height: 18px;
+				width: 61px;
+				height: 18px;
+				text-transform: uppercase;
+				letter-spacing: .8px;
+				transition: all .2s;
+			}
+			&:hover .calendar__today-btn{
+				background: #486e7d;
+			}
+		}
+	}
+}
+.pr-macos .pr-leftside-calendar-wrap .calendar__action .interactive .calendar__today-btn{
+	line-height: 21px;
+}
+
+// Calendar end
+
+@media (max-width: 1200px){
+	.pr-big-wrapper{
+		max-width: 930px;
+	}
+	.pr-leftside-calendar-wrap{
+		max-width: 320px;
+		width: 100%;
+		min-width: 320px;
+		background-color: #fff;
+		box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+		left: -8px;
+	}
+	.aside-left .nm-block{
+		box-shadow: none;
+	}
+	.pr-leftside-calendar-wrap .pr-leftside-calendar .ui-datepicker-next{
+		right: 11px;
+	}
+	.pr-leftside-calendar-wrap .pr-leftside-calendar .ui-datepicker-prev{
+		left: 11px;
+	}
+	.pr-leftside-calendar-wrap .calendar__action{
+		max-width: 265px;
+	}
+	.aside-left .leagues-overwrap{
+		box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+	}
+}
+
+@media (max-width: 920px){
+	.pr-big-wrapper{
+		width: 100%;
+		min-width: 100%;
+		max-width: 100%;
+	}
+
+
+}
+
+@media (max-width: 620px) {
+	
+}

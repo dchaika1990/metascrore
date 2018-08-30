@@ -1,0 +1,46 @@
+@import 'settings';
+
+.aside-slide-container {
+	overflow: hidden;
+}
+
+.aside-owl-nav-container {
+	margin-bottom: @box-base-padding;
+
+	.owl-prev,
+	.owl-next {
+		color: @btn-aside-color;
+		fill: @btn-aside-color;
+		cursor: pointer;
+		display: inline-block;
+		height: 11px;
+		vertical-align: middle;
+		width: 18px;
+
+		&:hover {
+			color: @btn-color-active;
+			fill: @btn-color-active;
+		}
+	}
+
+	.owl-prev {
+		margin-right: 4px;
+	}
+	.owl-next {
+		margin-left: 4px;
+		text-align: right;
+	}
+
+	@media @mobile {
+		& {
+			text-align: center;
+		}
+	}
+	@media @mobile-xs {
+		& {
+			margin-bottom: 0;
+			text-align: center;
+		}
+	}
+}
+

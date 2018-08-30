@@ -1,0 +1,29 @@
+doctype html
+html(lang='en')
+	head
+		title MetaScore: UserPage
+		include incl/head
+
+	body.search-page
+		include incl/svg
+
+		.nm-main-overlay
+		//MAIN-WRAPPER BEGIN
+		.main-wrapper
+			include incl/header
+			include incl/topbar
+
+			//GROW BEGIN
+			.nm-grow.nm-big-wrapper
+				.above-content-block-homepage
+
+			.nm-grow.nm-big-wrapper
+				include incl/team-main
+				include incl/team-aside
+
+			//GROW END
+			include incl/newstape
+			include incl/footer
+		//MAIN-WRAPPER END
+		include incl/modals
+		include incl/scripts

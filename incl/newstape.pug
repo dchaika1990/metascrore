@@ -1,0 +1,48 @@
+//News Tape BEGIN
+.pr-news-slider-wrap
+	.pr-news-slider
+		.pr-slider-wrap
+			-var newsName = ['CHAMPIONS LEAGUE','CHAMPIONS LEAGUE','CHELTENHAM FESTIVAL 2017','PREMIER LEAGUE NEWS','Betting news','Betting news'];
+			-var newsTitle = ['Leicester NOPE vs Sevilla – Match preview, team news & predicted lineups','Leicester City vs Sevilla – Match preview, team news & predicted lineups','Cheltenham Festival: Day One Preview','Premier League- SofaScore Team of the Week ','Advertisment block','Premier League- SofaScore Team of the Week ','Advertisment block','Premier League- SofaScore Team of the NOPE '];
+			-var newsTags = ['football','match previews','UFA CHAMPIONS LEAGUE','OTHER SPORTS','TEAM OF WEEK','hot','TEAM OF WEEK'];
+			-var newsAuthor = ['Odry Hepbern','Odry Hepbern','Luke Skywalker','Luke Skywalker','SofaScore','Luke Skywalker','Luke Skywalker'];
+			-for(var k=0; k<2;k++){
+				- for(var i=0; i<6; i++){
+					.pr-new-wrap
+						.pr-new
+							.pr-new-content
+								.pr-new-top
+									.pr-new-top-title
+										p= newsName[i]
+											-if(i<2){
+											| <br> round of 16
+											-}
+									.pr-new-top-date
+										span 11.03.17
+								.pr-new-text
+									- if(i!==4){
+										p= newsTitle[i]
+									-}
+									- if(i==4){
+										p.pr-adw-red= newsTitle[i]
+									-}
+								.pr-new-tags
+									p
+										- if(i<2){
+											-for(var j=0; j<3; j++){
+											span.pr-tag= newsTags[j]
+											-}
+										- } 
+										-if(i>=2){
+											span.pr-tag= newsTags[i+1]
+										-}
+								.pr-new-bot
+									.pr-new-bot-avatar
+										-if(i!==4){
+											img(src="img/temp/news-avatar-1.png" alt="avatar")
+										-}
+									.pr-new-bot-name
+										span.pr-name= newsAuthor[i]
+				- }
+			-}
+//News Tape END

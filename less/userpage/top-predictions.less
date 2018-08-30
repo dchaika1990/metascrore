@@ -1,0 +1,93 @@
+@import '../common/settings';
+
+.top-predictors-item {
+	padding-left: 44px;
+	position: relative;
+}
+
+.top-predictors-link {
+	height: 28px;
+	left: 0;
+	position: absolute;
+	top: 7px;
+	width: 28px;
+
+	> .ic {
+		display: block;
+		height: 100%;
+		width: 100%;
+	}
+}
+
+.top-predictors-detail {
+	align-items: center;
+	border-bottom: @border-base;
+	display: flex;
+	font-family: @font-HelveticaNeueCyr-Light;
+	font-size: 11px;
+	line-height: 28px;
+	justify-content: space-between;
+	padding: 7px 0;
+	width: 100%;
+
+	.name {
+		cursor: pointer;
+		display: inline-block;
+		font-family: @font-HelveticaNeueCyr-Medium;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: normal;
+		width: 55px;
+	}
+
+	.name:hover {
+		color: @text-hover-color;
+
+	}
+}
+
+.top-predictors-outcome {
+	display: flex;
+	flex-grow: 1;
+	justify-content: flex-end;
+
+	> .count {
+		color: @color-blue-base;
+		text-align: right;
+		width: 50px;
+	}
+
+	> .ratio {
+		text-align: right;
+		width: 32px;
+	}
+
+	> .persent {
+		color: #ccbd1c;
+		text-align: right;
+		width: 32px;
+	}
+
+	.count,
+	.ratio {
+		cursor: pointer;
+		&:hover {
+			color: @text-hover-color;
+		}
+	}
+
+	@media @tablet {
+		& {
+			flex-grow: 0;
+			flex-basis: 180px;
+			justify-content: space-between;
+		}
+	}
+	@media @mobile-xs {
+		& {
+			flex-grow: 0;
+			flex-basis: 130px;
+			justify-content: space-between;
+		}
+	}
+}

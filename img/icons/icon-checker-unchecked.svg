@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="9.813" height="9.813" viewBox="0 0 9.813 9.813">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #c9cccf;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="checker_unchecked" data-name="checker unchecked" class="cls-1" d="M372.509,524.008l-4,3.9-2.22-2.123,0.769-.768,1.451,1.349,3.226-3.125Zm-3.109-2.517a3.9,3.9,0,1,1-1.521.307,3.874,3.874,0,0,1,1.521-.307m0-.991a4.9,4.9,0,1,0,4.9,4.9,4.9,4.9,0,0,0-4.9-4.9h0Z" transform="translate(-364.5 -520.5)"/>
+</svg>
